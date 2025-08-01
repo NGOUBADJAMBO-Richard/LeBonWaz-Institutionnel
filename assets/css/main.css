@@ -124,6 +124,15 @@ h6 {
   font-family: var(--heading-font);
 }
 
+.hover-effect {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.hover-effect:hover {
+  transform: translateY(-5px); /* Déplace légèrement la carte vers le haut */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Augmente l'ombre */
+}
+
 /* PHP Email Form Messages
 ------------------------------*/
 .php-email-form .error-message {
