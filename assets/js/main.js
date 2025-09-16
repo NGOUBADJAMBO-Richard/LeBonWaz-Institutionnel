@@ -225,7 +225,7 @@
     const email = document.getElementById("email").value;
 
     // Utilisation de fetch (ou XMLHttpRequest) pour envoyer les données
-    fetch("traitement_newsletter.php", {
+    fetch("newsletter.php", {
       method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
