@@ -1,0 +1,21 @@
+/* Utilisation d'une police plus moderne et lisible */
+body {
+  font-family: "Inter", sans-serif;
+}
+/* Style personnalisé pour les liens au survol */
+.link-hover {
+  transition-property: color, transform;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+}
+.link-hover:hover {
+  color: #4f46e5;
+  transform: translateX(5px);
+}
+.hover-scale {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover-scale:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
