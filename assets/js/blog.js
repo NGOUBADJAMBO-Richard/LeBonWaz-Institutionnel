@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
         author: "L'équipe Le Bon Waz",
         date: "2025-09-15",
         commentsCount: 12,
-        image: "https://placehold.co/900x600/FCA5A5/FFFFFF?text=Top+5+Ventes",
+        image: "assets/img/blog/blog-1.jpg",
         content: `
                             <p class="text-gray-700 leading-relaxed mb-4">Découvrez les articles phares et les tendances du moment sur Le Bon Waz qui ont conquis nos clients ce mois-ci. Des produits locaux aux accessoires technologiques, voici ce qui fait fureur sur notre plateforme et pourquoi ces articles méritent toute votre attention.</p>
                             <p class="text-gray-700 leading-relaxed mb-4"><strong>1. Le Kit de Survie Urbain.</strong> Cet ensemble, comprenant une gourde réutilisable, une batterie externe solaire et un sac en tissu local, est un véritable best-seller. Il répond à un besoin croissant de produits durables et pratiques pour la vie quotidienne en ville.</p>
@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
         author: "L'équipe Le Bon Waz",
         date: "2025-05-18",
         commentsCount: 25,
-        image: "https://placehold.co/900x600/FCA5A5/FFFFFF?text=Fête+des+Mères",
+        image: "assets/img/blog/lbw-fete-des-mêres.jpg",
         content:
           "Cette année, célébrez votre maman avec un cadeau unique et mémorable. Découvrez notre sélection spéciale pour la Fête des Mères, des produits locaux aux créations artisanales qui sauront la toucher en plein cœur. Trouvez l'inspiration et faites-lui plaisir avec Le Bon Waz.",
         category: "Événements",
@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
         author: "L'équipe Le Bon Waz",
         date: "2025-09-02",
         commentsCount: 8,
-        image: "https://placehold.co/900x600/FCA5A5/FFFFFF?text=Kit+Étudiant",
+        image: "assets/img/blog/lbw-kit-etudiant.jpg",
         content:
           "La rentrée universitaire est là, et nous avons préparé le guide ultime pour bien vous équiper. Du matériel de papeterie aux gadgets technologiques, découvrez notre sélection d'articles essentiels pour une année scolaire réussie. Ne manquez pas nos offres spéciales pour les étudiants !",
         category: "Conseils",
@@ -130,8 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
         author: "L'équipe Le Bon Waz",
         date: "2025-08-20",
         commentsCount: 5,
-        image:
-          "https://placehold.co/900x600/FCA5A5/FFFFFF?text=Locations+Véhicules",
+        image: "assets/img/blog/lbw-locations-vehicules.jpg",
         content:
           "Pour vos vacances, un déménagement ou un simple déplacement en ville, la location de véhicules n'a jamais été aussi simple. Découvrez notre large choix de voitures, camions et scooters disponibles sur notre plateforme. Réservez en quelques clics et prenez la route sereinement.",
         category: "Services",
@@ -144,7 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
         author: "Le Bon Waz Photographie",
         date: "2025-09-10",
         commentsCount: 5,
-        image: "https://placehold.co/900x600/FCA5A5/FFFFFF?text=Photographie",
+        image: "assets/img/blog/blog-2.jpg",
         content:
           "La qualité des photos est cruciale pour attirer l'attention des acheteurs. Apprenez nos astuces pour prendre des clichés professionnels de vos produits avec votre smartphone et booster vos ventes.",
         category: "Conseils",
@@ -157,8 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
         author: "Le Bon Waz Découverte",
         date: "2025-09-08",
         commentsCount: 9,
-        image:
-          "https://placehold.co/900x600/FCA5A5/FFFFFF?text=Vintage+Gabonais",
+        image: "assets/img/blog/blog-3.jpg",
         content:
           "Le marché de l'occasion et des objets de collection prend de l'ampleur. Explorez le potentiel des articles vintage et artisanaux du Gabon et comment Le Bon Waz vous aide à les valoriser auprès de la communauté.",
         category: "Tendance",
@@ -171,7 +169,7 @@ document.addEventListener("DOMContentLoaded", () => {
         author: "L'équipe Le Bon Waz",
         date: "2025-09-05",
         commentsCount: 2,
-        image: "https://placehold.co/900x600/FCA5A5/FFFFFF?text=Guide+Vendeurs",
+        image: "assets/img/blog/blog-4.jpg",
         content:
           "Vous débutez sur notre plateforme ? Ce guide est fait pour vous ! Nous vous expliquons pas à pas comment créer votre boutique, publier votre première annonce et gérer vos commandes facilement.",
         category: "Conseils",
@@ -184,8 +182,7 @@ document.addEventListener("DOMContentLoaded", () => {
         author: "Le Bon Waz Actualités",
         date: "2025-09-01",
         commentsCount: 15,
-        image:
-          "https://placehold.co/900x600/FCA5A5/FFFFFF?text=Économie+Locale",
+        image: "assets/img/blog/blog-inside-post.jpg",
         content:
           "Plus qu'une simple plateforme, Le Bon Waz est un moteur de développement. Découvrez comment nous soutenons les entrepreneurs locaux, créons des opportunités et favorisons la croissance du commerce au Gabon.",
         category: "Actualités",
