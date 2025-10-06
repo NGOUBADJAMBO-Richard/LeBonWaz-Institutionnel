@@ -138,6 +138,51 @@ document.addEventListener("DOMContentLoaded", () => {
         comments: [],
       },
       {
+        id: "octobre-rose",
+        title:
+          "Octobre Rose : Soutenons ensemble la lutte contre le cancer du sein.",
+        author: "L'équipe Le Bon Waz",
+        date: "2025-10-01",
+        commentsCount: 5,
+        image: "assets/img/blog/lbw-octobre_rose.jpeg",
+        content:
+          "En ce mois d'Octobre Rose, Le Bon Waz s'engage aux côtés des associations de lutte contre le cancer du sein. Découvrez comment vous pouvez contribuer à cette cause importante en achetant des produits solidaires sur notre plateforme. Ensemble, faisons la différence et soutenons la recherche et la sensibilisation.",
+        category: "Campagne",
+        tags: ["Cancer du sein", "Solidarité", "Santé"],
+        comments: [
+          {
+            author: "Alice Dupont",
+            date: "2025-10-02",
+            image: "https://placehold.co/50x50/334155/FFFFFF?text=AD",
+            text: "Merci Le Bon Waz pour votre engagement. J'ai acheté un produit solidaire et je suis fière de contribuer à cette cause.",
+          },
+          {
+            author: "Bruno Martin",
+            date: "2025-10-02",
+            image: "https://placehold.co/50x50/334155/FFFFFF?text=BM",
+            text: "C'est important de sensibiliser sur le cancer du sein. Bravo pour cette initiative.",
+          },
+          {
+            author: "Claire Lefevre",
+            date: "2025-10-03",
+            image: "https://placehold.co/50x50/334155/FFFFFF?text=CL",
+            text: "J'ai partagé cette campagne avec mes amis. Plus on est de fous, plus on rit !",
+          },
+          {
+            author: "David Moreau",
+            date: "2025-10-03",
+            image: "https://placehold.co/50x50/334155/FFFFFF?text=DM",
+            text: "J'espère que cette campagne aidera à financer la recherche.",
+          },
+          {
+            author: "Emma Dubois",
+            date: "2025-10-04",
+            image: "https://placehold.co/50x50/334155/FFFFFF?text=ED",
+            text: "J'ai acheté un t-shirt rose pour soutenir la cause. Merci Le Bon Waz !",
+          },
+        ],
+      },
+      {
         id: "photographier-articles",
         title: "Comment photographier vos articles pour un maximum d'impact",
         author: "Le Bon Waz Photographie",
@@ -215,52 +260,70 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
     mainContentWrapper.innerHTML = `
-                    <section id="blog-posts-container" class="space-y-8"></section>
-                    <div id="pagination-container" class="flex justify-center mt-8"></div>
-                `;
+        <section id="blog-posts-container" class="space-y-12"></section>
+        <div id="pagination-container" class="flex justify-center mt-12"></div>
+    `;
     const container = document.getElementById("blog-posts-container");
 
     postsToRender.forEach((post) => {
       const article = document.createElement("article");
-      article.className = "bg-white p-6 md:p-10 rounded-lg shadow-md";
+      // CLASSE AMÉLIORÉE : ombre, bordure, coin plus arrondi, et effet de transition/survol
+      article.className =
+        "bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-2xl hover:border-blue-200 cursor-pointer";
+      article.onclick = () => (window.location.href = `?id=${post.id}`); // Rendre tout l'article cliquable
+
       article.innerHTML = `
-                        <div class="post-img mb-4">
-                            <img src="${
-                              post.image
-                            }" alt="Image de l'article de blog : ${
-        post.title
-      }" class="rounded-lg w-full h-auto" />
-                        </div>
-                        <h2 class="title text-2xl font-bold text-gray-800 mb-2">
-                            <a href="?id=${
-                              post.id
-                            }" class="hover:text-blue-600">${post.title}</a>
-                        </h2>
-                        <div class="meta-top flex items-center space-x-4 text-sm text-gray-500 mb-4">
-                            <div class="d-flex items-center">
-                                <i class="bi bi-person mr-1"></i>
-                                <span class="font-medium">${post.author}</span>
-                            </div>
-                            <div class="d-flex items-center">
-                                <i class="bi bi-clock mr-1"></i>
-                                <time datetime="${post.date}">${formatDate(
+            <div class="post-img mb-6 overflow-hidden rounded-lg">
+                <img 
+                    src="${post.image}" 
+                    alt="Image de l'article de blog : ${post.title}" 
+                    class="w-full h-48 object-cover transition-transform duration-500 hover:scale-105" 
+                />
+            </div>
+            
+            <div class="meta-top flex items-center space-x-6 text-sm text-gray-500 mb-3">
+                <div class="flex items-center">
+                    <i class="bi bi-person mr-2 text-blue-500"></i>
+                    <span class="font-semibold text-gray-700">${
+                      post.author
+                    }</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="bi bi-clock mr-2 text-blue-500"></i>
+                    <time datetime="${post.date}" class="italic">${formatDate(
         post.date
       )}</time>
-                            </div>
-                            <div class="d-flex items-center">
-                                <i class="bi bi-chat-dots mr-1"></i>
-                                <span>${post.commentsCount} Commentaires</span>
-                            </div>
-                        </div>
-                        <div class="content text-gray-700 leading-relaxed">
-                            <p>${post.content.substring(0, 200)}...</p>
-                            <div class="read-more mt-4">
-                                <a href="?id=${
-                                  post.id
-                                }" class="inline-block text-blue-600 font-semibold hover:underline">Lire la suite</a>
-                            </div>
-                        </div>
-                    `;
+                </div>
+            </div>
+
+            <h2 class="title text-2xl lg:text-3xl font-extrabold text-gray-900 mb-4 leading-tight">
+                 ${post.title}
+            </h2>
+            
+            <div class="flex items-center space-x-4 text-sm text-gray-500 mb-5">
+                 <span class="bg-blue-100 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full">${
+                   post.category || "Général"
+                 }</span>
+                 <div class="flex items-center">
+                    <i class="bi bi-chat-dots mr-2 text-gray-400"></i>
+                    <span>${post.commentsCount} Commentaires</span>
+                 </div>
+            </div>
+
+            <div class="content text-gray-700 leading-relaxed mb-6">
+                <p>${post.content.substring(0, 200)}...</p> 
+            </div>
+            
+            <div class="read-more">
+                <a 
+                    href="?id=${post.id}" 
+                    class="inline-flex items-center px-4 py-2 border border-blue-600 text-blue-600 font-semibold rounded-full transition-colors duration-300 hover:bg-blue-600 hover:text-white"
+                >
+                    Lire la suite
+                    <i class="bi bi-arrow-right ml-2"></i>
+                </a>
+            </div>
+        `;
       container.appendChild(article);
     });
 
@@ -273,21 +336,68 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!paginationContainer) return;
 
     paginationContainer.innerHTML = "";
-    const totalPages = Math.ceil(blogData.posts.length / postsPerPage);
+    const totalPosts = blogData.posts.length;
+    const totalPages = Math.ceil(totalPosts / postsPerPage);
+
+    // Si moins de 2 pages, on n'affiche pas la pagination
+    if (totalPages <= 1) return;
+
+    const nav = document.createElement("nav");
+    nav.setAttribute("aria-label", "Pagination des articles");
 
     const ul = document.createElement("ul");
-    ul.className = "flex space-x-2";
+    // AMÉLIORATION : Marge et alignement pour les boutons de navigation
+    ul.className = "flex items-center space-x-3";
 
+    // ------------------------------------
+    // 1. Bouton PRÉCÉDENT
+    // ------------------------------------
+    const prevLi = document.createElement("li");
+    const prevA = document.createElement("a");
+    prevA.href = "#";
+    // Désactiver le bouton si on est sur la première page
+    const isPrevDisabled = currentPage === 1;
+
+    prevA.className = `
+        px-4 py-2 rounded-lg font-semibold transition-colors duration-300 flex items-center
+        ${
+          isPrevDisabled
+            ? "text-gray-400 bg-gray-100 cursor-not-allowed"
+            : "text-indigo-600 bg-white border border-gray-300 hover:bg-indigo-50 hover:border-indigo-500"
+        }
+    `;
+    prevA.innerHTML = '<i class="bi bi-arrow-left mr-2"></i> Précédent';
+
+    if (!isPrevDisabled) {
+      prevA.addEventListener("click", (e) => {
+        e.preventDefault();
+        currentPage = currentPage - 1;
+        renderPosts(currentPage);
+      });
+    }
+    prevLi.appendChild(prevA);
+    ul.appendChild(prevLi);
+
+    // ------------------------------------
+    // 2. Numéros de Page
+    // ------------------------------------
     for (let i = 1; i <= totalPages; i++) {
       const li = document.createElement("li");
       const a = document.createElement("a");
       a.href = "#";
       a.textContent = i;
-      a.className = `w-10 h-10 flex items-center justify-center rounded-full font-bold text-gray-600 transition-colors duration-200 ${
-        i === currentPage
-          ? "bg-blue-600 text-white shadow-md"
-          : "bg-white hover:bg-gray-200"
-      }`;
+
+      // AMÉLIORATION : Couleurs et styles pour les numéros
+      a.className = `
+            w-10 h-10 flex items-center justify-center rounded-full text-lg font-extrabold transition-all duration-300
+            ${
+              i === currentPage
+                ? // État ACTIF (couleur principale plus ombre)
+                  "bg-indigo-600 text-white shadow-lg transform scale-105"
+                : // État INACTIF (fond blanc/clair, texte sombre, effet hover)
+                  "bg-white text-gray-700 hover:bg-indigo-100 hover:text-indigo-600 hover:shadow-md"
+            }
+        `;
 
       a.addEventListener("click", (e) => {
         e.preventDefault();
@@ -297,7 +407,38 @@ document.addEventListener("DOMContentLoaded", () => {
       li.appendChild(a);
       ul.appendChild(li);
     }
-    paginationContainer.appendChild(ul);
+
+    // ------------------------------------
+    // 3. Bouton SUIVANT
+    // ------------------------------------
+    const nextLi = document.createElement("li");
+    const nextA = document.createElement("a");
+    nextA.href = "#";
+    // Désactiver le bouton si on est sur la dernière page
+    const isNextDisabled = currentPage === totalPages;
+
+    nextA.className = `
+        px-4 py-2 rounded-lg font-semibold transition-colors duration-300 flex items-center
+        ${
+          isNextDisabled
+            ? "text-gray-400 bg-gray-100 cursor-not-allowed"
+            : "text-indigo-600 bg-white border border-gray-300 hover:bg-indigo-50 hover:border-indigo-500"
+        }
+    `;
+    nextA.innerHTML = `Suivant <i class="bi bi-arrow-right ml-2"></i>`;
+
+    if (!isNextDisabled) {
+      nextA.addEventListener("click", (e) => {
+        e.preventDefault();
+        currentPage = currentPage + 1;
+        renderPosts(currentPage);
+      });
+    }
+    nextLi.appendChild(nextA);
+    ul.appendChild(nextLi);
+
+    nav.appendChild(ul);
+    paginationContainer.appendChild(nav);
   }
 
   // Affiche un article détaillé
@@ -306,120 +447,160 @@ document.addEventListener("DOMContentLoaded", () => {
     const articleContentElement = document.getElementById("article-content");
     const commentsSection = document.getElementById("comments-section");
     const paginationContainer = document.getElementById("pagination-container");
+    const mainContentWrapper = document.getElementById("main-content-wrapper"); // Récupérer le conteneur principal
 
     if (pageTitleElement) pageTitleElement.textContent = post.title;
     if (paginationContainer) paginationContainer.remove();
 
+    // S'assurer que les conteneurs sont prêts pour le nouveau contenu
+    if (mainContentWrapper) {
+      // Optionnel : s'assurer que les sections article et commentaires sont visibles
+      if (!articleContentElement) {
+        mainContentWrapper.innerHTML = `
+                <section id="article-content" class="bg-white p-6 md:p-12 rounded-3xl shadow-2xl hover-scale"></section>
+                <section id="comments-section" class="bg-white p-6 md:p-12 rounded-3xl shadow-2xl"></section>
+             `;
+      }
+    }
+
     if (articleContentElement) {
+      articleContentElement.className =
+        "bg-white p-6 md:p-12 rounded-[2rem] shadow-xl border border-gray-100";
       articleContentElement.innerHTML = `
-                        <div class="post-img mb-6">
-                            <img src="${
-                              post.image
-                            }" alt="Image de l'article : ${
-        post.title
-      }" class="rounded-lg w-full h-auto" />
-                        </div>
-                        <h2 class="title text-3xl font-bold text-gray-800 mb-2">${
-                          post.title
-                        }</h2>
-                        <div class="meta-top flex flex-wrap items-center space-x-4 text-sm text-gray-500 mb-6">
-                            <div class="flex items-center">
-                                <i class="bi bi-person mr-1"></i>
-                                <a href="#" class="hover:underline">${
-                                  post.author
-                                }</a>
-                            </div>
-                            <div class="flex items-center">
-                                <i class="bi bi-clock mr-1"></i>
-                                <a href="#" class="hover:underline"><time datetime="${
-                                  post.date
-                                }">${formatDate(post.date)}</time></a>
-                            </div>
-                            <div class="flex items-center">
-                                <i class="bi bi-chat-dots mr-1"></i>
-                                <a href="#comments-section" class="hover:underline">${
-                                  post.commentsCount
-                                } Commentaires</a>
-                            </div>
-                        </div>
-                        <div class="content text-gray-700 leading-relaxed mb-6">
-                            ${post.content}
-                        </div>
-                        <div class="meta-bottom flex items-center space-x-4 text-sm text-gray-500">
-                            <i class="bi bi-folder"></i>
-                            <ul class="flex space-x-2 list-none p-0 text-gray-600">
-                                <li><a href="#" class="bg-gray-200 px-3 py-1 rounded-full hover:bg-gray-300">${
-                                  post.category
-                                }</a></li>
-                            </ul>
-                            <i class="bi bi-tags"></i>
-                            <ul id="article-tags" class="flex flex-wrap gap-2 list-none p-0 text-gray-600 text-sm">
-                                ${post.tags
-                                  .map(
-                                    (tag) =>
-                                      `<li><a href="#" class="bg-gray-200 px-3 py-1 rounded-full hover:bg-gray-300">${tag}</a></li>`
-                                  )
-                                  .join("")}
-                            </ul>
-                        </div>
-                    `;
+            <div class="post-img mb-10">
+                <img 
+                    src="${post.image}" 
+                    alt="Image de l'article : ${post.title}" 
+                    class="rounded-2xl w-full h-auto max-h-[500px] object-cover shadow-lg" 
+                />
+            </div>
+            
+            <h2 class="title text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
+                ${post.title}
+            </h2>
+            
+            <div class="meta-top flex flex-wrap items-center text-base font-medium text-gray-600 mb-10 border-b pb-4">
+                <div class="flex items-center mr-6">
+                    <i class="bi bi-person-circle mr-2 text-indigo-500 text-xl"></i>
+                    <span class="hover:text-indigo-600 transition-colors">${
+                      post.author
+                    }</span>
+                </div>
+                <span class="text-gray-400">|</span>
+                <div class="flex items-center mx-6">
+                    <i class="bi bi-calendar-event mr-2 text-indigo-500 text-xl"></i>
+                    <time datetime="${
+                      post.date
+                    }" class="italic text-sm">${formatDate(post.date)}</time>
+                </div>
+                <span class="text-gray-400">|</span>
+                <div class="flex items-center ml-6">
+                    <i class="bi bi-chat-dots mr-2 text-indigo-500 text-xl"></i>
+                    <a href="#comments-section" class="hover:text-indigo-600 transition-colors">${
+                      post.commentsCount
+                    } Commentaires</a>
+                </div>
+            </div>
+            
+            <div class="content text-gray-800 text-lg leading-relaxed space-y-6 mb-12">
+                ${post.content}
+            </div>
+            
+            <div class="meta-bottom flex flex-wrap items-center gap-4 border-t pt-6">
+                <span class="text-lg font-bold text-gray-800 flex items-center">
+                    <i class="bi bi-folder-fill mr-2 text-indigo-500"></i> Catégorie:
+                </span>
+                <a href="#" class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-semibold text-sm hover:bg-indigo-200 transition-colors">
+                    ${post.category}
+                </a>
+
+                <span class="text-lg font-bold text-gray-800 ml-4 flex items-center">
+                    <i class="bi bi-tags-fill mr-2 text-indigo-500"></i> Tags:
+                </span>
+                <ul id="article-tags" class="flex flex-wrap gap-3 list-none p-0 text-sm">
+                    ${post.tags
+                      .map(
+                        (tag) =>
+                          `<li><a href="#" class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full hover:bg-gray-300 transition-colors">#${tag}</a></li>`
+                      )
+                      .join("")}
+                </ul>
+            </div>
+        `;
     }
 
     if (commentsSection) {
+      commentsSection.className =
+        "bg-white p-6 md:p-12 rounded-[2rem] shadow-xl border border-gray-100";
       commentsSection.innerHTML = `
-                        <h4 class="text-xl font-bold text-gray-800 mb-6">Commentaires (${
-                          post.comments.length
-                        })</h4>
-                        <div id="comments-list" class="space-y-6">
-                            ${post.comments
-                              .map(
-                                (comment) => `
-                                <div class="comment flex space-x-4">
-                                    <div class="comment-img flex-shrink-0">
-                                        <img src="${
-                                          comment.image
-                                        }" alt="Photo de profil de ${
+            <h4 id="comments-title" class="text-3xl font-extrabold text-gray-900 mb-10 border-b-2 pb-3 border-indigo-200">
+                ${post.comments.length} Commentaires
+            </h4>
+            
+            <div id="comments-list" class="space-y-8">
+                ${post.comments
+                  .map(
+                    (comment) => `
+                        <div class="comment flex space-x-6 border-b border-gray-100 pb-8 last:border-b-0 last:pb-0">
+                            <div class="comment-img flex-shrink-0">
+                                <img 
+                                    src="${comment.image}" 
+                                    alt="Photo de profil de ${comment.author}" 
+                                    class="w-14 h-14 rounded-full object-cover border-2 border-indigo-200 shadow-md" 
+                                />
+                            </div>
+                            <div>
+                                <h5 class="font-black text-lg text-gray-800">${
                                   comment.author
-                                }" class="w-12 h-12 rounded-full" />
-                                    </div>
-                                    <div>
-                                        <h5 class="font-bold text-gray-800">${
-                                          comment.author
-                                        }</h5>
-                                        <time datetime="${
-                                          comment.date
-                                        }" class="text-sm text-gray-500 block mb-2">${formatDate(
-                                  comment.date
-                                )}</time>
-                                        <p class="text-gray-700 leading-relaxed">${
-                                          comment.text
-                                        }</p>
-                                    </div>
-                                </div>
-                            `
-                              )
-                              .join("")}
+                                }</h5>
+                                <time 
+                                    datetime="${comment.date}" 
+                                    class="text-sm text-indigo-500 block mb-3"
+                                >
+                                    ${formatDate(comment.date)}
+                                </time>
+                                <p class="text-gray-700 leading-relaxed">${
+                                  comment.text
+                                }</p>
+                            </div>
                         </div>
-                        
-                        <div class="reply-form mt-8">
-                            <h4 class="text-xl font-bold text-gray-800 mb-2">Laisser un commentaire</h4>
-                            <p class="text-gray-500 text-sm mb-4">Votre adresse e-mail ne sera pas publiée. Les champs obligatoires sont indiqués avec *.</p>
-                            <form id="comment-form" class="space-y-4">
-                                <div class="flex flex-col md:flex-row gap-4">
-                                    <input name="name" type="text" class="form-control flex-1 p-3 border rounded-md focus:ring focus:ring-blue-500" placeholder="Votre nom*" required />
-                                    <input name="email" type="email" class="form-control flex-1 p-3 border rounded-md focus:ring focus:ring-blue-500" placeholder="Votre e-mail*" required />
-                                </div>
-                                <div class="flex flex-col">
-                                    <textarea name="comment" class="form-control w-full p-3 border rounded-md h-28 resize-none focus:ring focus:ring-blue-500" placeholder="Votre commentaire*" required></textarea>
-                                </div>
-                                <button type="submit" class="bg-blue-600 text-white font-semibold py-3 px-6 rounded-full shadow-md hover:bg-blue-700 transition duration-300">Poster le commentaire</button>
-                            </form>
-                            <div id="comment-message" class="mt-4"></div>
-                        </div>
-                    `;
+                    `
+                  )
+                  .join("")}
+            </div>
+            
+            <div class="reply-form mt-12 pt-8 border-t border-gray-100">
+                <h4 class="text-2xl font-bold text-gray-900 mb-2">Laisser un commentaire</h4>
+                <p class="text-gray-500 text-sm mb-6">Votre adresse e-mail ne sera pas publiée. Les champs obligatoires sont indiqués avec *.</p>
+                <form id="comment-form" class="space-y-5">
+                    <div class="flex flex-col md:flex-row gap-5">
+                        <input name="name" type="text" 
+                            class="form-control flex-1 p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors" 
+                            placeholder="Votre nom*" required 
+                        />
+                        <input name="email" type="email" 
+                            class="form-control flex-1 p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors" 
+                            placeholder="Votre e-mail*" required 
+                        />
+                    </div>
+                    <div class="flex flex-col">
+                        <textarea name="comment" 
+                            class="form-control w-full p-4 border border-gray-300 rounded-xl h-36 resize-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors" 
+                            placeholder="Votre commentaire*" required
+                        ></textarea>
+                    </div>
+                    <button type="submit" 
+                        class="bg-indigo-600 text-white font-extrabold py-3 px-8 rounded-full shadow-lg hover:bg-indigo-700 transition duration-300 transform hover:scale-[1.02]"
+                    >
+                        Poster le commentaire
+                    </button>
+                </form>
+                <div id="comment-message" class="mt-4"></div>
+            </div>
+        `;
     }
 
-    // Gérer la soumission du formulaire de commentaire
+    // Gestion de la soumission du formulaire (inchangée mais avec de meilleures classes)
     const commentForm = document.getElementById("comment-form");
     if (commentForm) {
       commentForm.addEventListener("submit", (e) => {
@@ -428,10 +609,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const messageBox = document.getElementById("comment-message");
 
         messageBox.innerHTML = `
-                            <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
-                                <span class="block sm:inline">Merci ${name} ! Votre commentaire a été soumis. Il sera publié après modération.</span>
-                            </div>
-                        `;
+            <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-xl relative shadow-md" role="alert">
+                <span class="block font-medium">✅ Merci ${name} ! Votre commentaire a été soumis. Il sera publié après modération.</span>
+            </div>
+        `;
         e.target.reset();
       });
     }
@@ -469,40 +650,66 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Affiche les catégories
+  // Affiche les tags de la sidebar
   function renderCategories() {
     const categoriesList = document.getElementById("categories-list");
     if (!categoriesList) return;
 
+    // 1. Logique de dénombrement des catégories (inchangée)
     const categories = blogData.posts.reduce((acc, post) => {
       acc[post.category] = (acc[post.category] || 0) + 1;
       return acc;
     }, {});
 
     categoriesList.innerHTML = "";
+    categoriesList.className = "space-y-3"; // Espace entre les éléments
+
+    // Ajout d'une option pour réinitialiser le filtre
+    const liAll = document.createElement("li");
+    liAll.innerHTML = `<a href="#" class="flex justify-between items-center py-2 text-indigo-700 font-bold border-b border-indigo-200 hover:text-indigo-900 transition-colors duration-200">
+        <span class="flex items-center"><i class="bi bi-folder-fill mr-2 text-indigo-500"></i> Toutes les catégories</span> 
+        <span class="text-base font-bold">(${blogData.posts.length})</span>
+    </a>`;
+    liAll.querySelector("a").addEventListener("click", (e) => {
+      e.preventDefault();
+      // Appel de la fonction de filtrage avec une valeur nulle pour tout afficher
+      filterAndRenderPosts("category", null);
+    });
+    categoriesList.appendChild(liAll);
+
+    // 2. Rendu des catégories
     for (const category in categories) {
       const li = document.createElement("li");
-      li.innerHTML = `<a href="#" class="flex justify-between items-center text-gray-600 hover:text-blue-600"><span class="hover:underline">${category}</span> <span class="text-sm text-gray-400">(${categories[category]})</span></a>`;
+
+      // AMÉLIORATION DU DESIGN
+      // Vous pouvez ajouter ici une logique pour déterminer si 'category' est la catégorie active (currentFilter.value === category)
+      const isActive = false;
+
+      li.innerHTML = `
+            <a href="#" class="flex justify-between items-center p-3 rounded-xl transition-all duration-200 ${
+              isActive
+                ? "bg-indigo-600 text-white shadow-md font-bold"
+                : "text-gray-700 bg-gray-50 hover:bg-indigo-100 hover:text-indigo-700"
+            }">
+                <span class="flex items-center">
+                    <i class="bi bi-folder mr-3 ${
+                      isActive ? "text-white" : "text-indigo-500"
+                    }"></i>
+                    ${category}
+                </span> 
+                <span class="text-sm font-semibold ${
+                  isActive ? "text-white" : "text-gray-500"
+                }">(${categories[category]})</span>
+            </a>
+        `;
+
+      // AJOUT DE LA LOGIQUE DE FILTRAGE
+      li.querySelector("a").addEventListener("click", (e) => {
+        e.preventDefault();
+        filterAndRenderPosts("category", category);
+      });
       categoriesList.appendChild(li);
     }
-  }
-
-  // Affiche les tags
-  function renderTags() {
-    const tagsList = document.getElementById("tags-list");
-    if (!tagsList) return;
-
-    const allTags = new Set();
-    blogData.posts.forEach((post) => {
-      post.tags.forEach((tag) => allTags.add(tag));
-    });
-
-    tagsList.innerHTML = "";
-    allTags.forEach((tag) => {
-      const li = document.createElement("li");
-      li.innerHTML = `<a href="#" class="bg-gray-200 px-3 py-1 rounded-full text-sm hover:bg-gray-300 transition-colors duration-200">${tag}</a>`;
-      tagsList.appendChild(li);
-    });
   }
 
   // --- Logique d'initialisation ---
