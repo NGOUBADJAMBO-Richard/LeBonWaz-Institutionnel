@@ -111,99 +111,141 @@
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
 
-        <a class="btn-getstarted" href="contact.html">Devenir Partenaire</a>
+        <a class="btn-getstarted" href="devenir-partenaire.html"
+          >Devenir Partenaire</a
+        >
       </div>
     </header>
     <!-- End Header -->
 
     <!-- Start Main -->
-    <main class="main">
-      <div class="page-title light-background">
-        <div
-          class="container d-lg-flex justify-content-between align-items-center"
-        >
-          <h1 class="mb-2 mb-lg-0">Conditions Générales d'Utilisation (CGU)</h1>
-          <nav class="breadcrumbs">
-            <ol>
-              <li><a href="index.html">Accueil</a></li>
-              <li class="current">CGU</li>
-            </ol>
-          </nav>
+    <main
+      class="main min-h-screen bg-gradient-to-b from-white via-indigo-50/30 to-white"
+    >
+      <!-- En-tête avec gradient doux et fil d’Ariane -->
+      <div
+        class="relative border-b border-gray-100 bg-gradient-to-r from-indigo-50 to-red-50"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div
+            class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4"
+          >
+            <h1
+              class="text-3xl sm:text-4xl font-extrabold tracking-tight text-gray-900"
+            >
+              Conditions Générales d'Utilisation (CGU)
+            </h1>
+            <nav class="text-sm text-gray-600" aria-label="Fil d’Ariane">
+              <ol class="flex items-center gap-2">
+                <li>
+                  <a
+                    href="index.html"
+                    class="font-medium text-indigo-700 hover:text-indigo-900 transition-colors"
+                  >
+                    Accueil
+                  </a>
+                </li>
+                <li aria-hidden="true" class="text-gray-400">/</li>
+                <li class="font-semibold text-gray-700">CGU</li>
+              </ol>
+            </nav>
+          </div>
         </div>
       </div>
 
+      <!-- Contenu -->
       <section id="cgu-section" class="my-12 px-4 md:px-0">
-        <div class="max-w-4xl mx-auto">
+        <div class="max-w-5xl mx-auto">
           <article
             id="cgu-content"
-            class="bg-white p-6 md:p-12 rounded-3xl shadow-2xl space-y-8 font-roboto"
+            class="bg-white/90 backdrop-blur rounded-2xl shadow-xl ring-1 ring-gray-100 hover:shadow-2xl transition-shadow p-6 sm:p-10 space-y-12 font-roboto"
           >
+            <!-- Titre principal -->
             <div
-              class="flex flex-col items-center border-b border-gray-200 pb-6 mb-8"
+              class="flex flex-col items-center gap-2 border-b border-gray-100 pb-6"
             >
-              <h2 class="text-4xl font-extrabold mb-2 text-indigo-700">
+              <h2
+                class="text-3xl sm:text-4xl font-extrabold tracking-tight text-indigo-700 text-center"
+              >
                 Plateforme WAZ’UP – Services LE BON WAZ
               </h2>
-              <p class="text-lg font-medium text-red-600">
+              <p class="text-sm sm:text-base font-medium text-red-600">
                 Version : 20/08/2025
               </p>
             </div>
 
-            <section class="space-y-4">
+            <!-- 1. PRÉAMBULE -->
+            <section class="space-y-4 scroll-mt-24" id="preambule">
               <h2
-                class="text-3xl font-extrabold text-indigo-700 border-b-2 pb-3 border-red-100"
+                class="group flex items-center gap-3 text-2xl sm:text-3xl font-extrabold"
               >
-                1. PRÉAMBULE
+                <span
+                  class="inline-block h-2 w-2 rounded-full bg-gradient-to-r from-indigo-600 to-red-500 group-hover:scale-125 transition-transform"
+                ></span>
+                <span
+                  class="bg-gradient-to-r from-indigo-700 to-red-600 bg-clip-text text-transparent"
+                  >1. PRÉAMBULE</span
+                >
               </h2>
-              <p class="text-gray-700 text-lg leading-relaxed">
+              <div
+                class="h-1 w-16 bg-gradient-to-r from-indigo-600 to-red-500 rounded-full"
+              ></div>
+
+              <p class="text-gray-700 leading-relaxed">
                 Les présentes Conditions Générales d’Utilisation (CGU) régissent
                 l’accès et l’utilisation des services proposés par LE BON WAZ
                 (LBW) via la plateforme WAZ’UP.
               </p>
-              <p class="text-gray-700 text-lg leading-relaxed font-semibold">
+              <p class="text-gray-700 leading-relaxed font-semibold">
                 Ces services incluent :
               </p>
               <ul
-                class="text-gray-700 text-lg leading-relaxed space-y-2 list-disc pl-8"
+                class="text-gray-700 leading-relaxed space-y-2 list-disc pl-6 sm:pl-8 marker:text-indigo-600"
               >
                 <li>Le e-commerce (vente de produits et services).</li>
-
                 <li>La location de véhicules (LBW Mobility).</li>
-
                 <li>
                   Les services de paiement différé ou échelonné (WAZ’PAY).
                 </li>
-
                 <li>Et toute autre solution digitale exploitée par LBW.</li>
               </ul>
               <div
-                class="mt-4 p-4 rounded-lg border-l-4 border-red-500 bg-red-50 font-semibold"
+                class="mt-4 rounded-xl border border-red-100 bg-red-50/60 p-4 sm:p-5"
               >
-                <p class="text-red-700">
+                <p class="text-red-700 font-semibold">
                   En accédant à la plateforme, l’Utilisateur accepte sans
                   réserve les présentes CGU.
                 </p>
               </div>
             </section>
 
-            <hr class="border-gray-100" />
+            <hr class="border-gray-200" />
 
-            <section class="space-y-4">
+            <!-- 2. OBJET -->
+            <section class="space-y-4 scroll-mt-24" id="objet">
               <h2
-                class="text-3xl font-extrabold text-indigo-700 border-b-2 pb-3 border-red-100"
+                class="group flex items-center gap-3 text-2xl sm:text-3xl font-extrabold"
               >
-                2. OBJET
+                <span
+                  class="inline-block h-2 w-2 rounded-full bg-gradient-to-r from-indigo-600 to-red-500"
+                ></span>
+                <span
+                  class="bg-gradient-to-r from-indigo-700 to-red-600 bg-clip-text text-transparent"
+                  >2. OBJET</span
+                >
               </h2>
-              <p class="text-gray-700 text-lg leading-relaxed">
+              <div
+                class="h-1 w-16 bg-gradient-to-r from-indigo-600 to-red-500 rounded-full"
+              ></div>
+
+              <p class="text-gray-700 leading-relaxed">
                 Les CGU ont pour objet de définir:
               </p>
               <ul
-                class="text-gray-700 text-lg leading-relaxed space-y-2 list-disc pl-8"
+                class="text-gray-700 leading-relaxed space-y-2 list-disc pl-6 sm:pl-8 marker:text-indigo-600"
               >
                 <li>Les conditions d’utilisation de la plateforme WAZ’UP.</li>
-
                 <li>Les droits et obligations de l’Utilisateur et de LBW.</li>
-
                 <li>
                   Les modalités de mise en relation entre Clients, Fournisseurs
                   et LBW.
@@ -211,125 +253,165 @@
               </ul>
             </section>
 
-            <hr class="border-gray-100" />
+            <hr class="border-gray-200" />
 
-            <section class="space-y-4">
+            <!-- 3. DÉFINITIONS -->
+            <section class="space-y-4 scroll-mt-24" id="definitions">
               <h2
-                class="text-3xl font-extrabold text-indigo-700 border-b-2 pb-3 border-red-100"
+                class="group flex items-center gap-3 text-2xl sm:text-3xl font-extrabold"
               >
-                3. DÉFINITIONS
+                <span
+                  class="inline-block h-2 w-2 rounded-full bg-gradient-to-r from-indigo-600 to-red-500"
+                ></span>
+                <span
+                  class="bg-gradient-to-r from-indigo-700 to-red-600 bg-clip-text text-transparent"
+                  >3. DÉFINITIONS</span
+                >
               </h2>
-              <dl class="text-gray-700 text-lg leading-relaxed space-y-3">
-                <div class="flex">
-                  <dt class="w-1/3 font-bold text-gray-900">Utilisateur :</dt>
+              <div
+                class="h-1 w-16 bg-gradient-to-r from-indigo-600 to-red-500 rounded-full"
+              ></div>
 
-                  <dd class="w-2/3">
-                    Toute personne physique ou morale utilisant les services de
-                    la plateforme.
-                  </dd>
-                </div>
-                <div class="flex">
-                  <dt class="w-1/3 font-bold text-gray-900">Client :</dt>
+              <dl
+                class="grid grid-cols-1 sm:grid-cols-3 gap-x-6 gap-y-3 text-gray-700 leading-relaxed"
+              >
+                <dt class="font-semibold text-gray-900 sm:col-span-1">
+                  Utilisateur :
+                </dt>
+                <dd class="sm:col-span-2">
+                  Toute personne physique ou morale utilisant les services de la
+                  plateforme.
+                </dd>
 
-                  <dd class="w-2/3">
-                    Toute personne achetant un produit ou service via la
-                    plateforme.
-                  </dd>
-                </div>
-                <div class="flex">
-                  <dt class="w-1/3 font-bold text-gray-900">
-                    Fournisseur/Partenaire :
-                  </dt>
+                <dt class="font-semibold text-gray-900 sm:col-span-1">
+                  Client :
+                </dt>
+                <dd class="sm:col-span-2">
+                  Toute personne achetant un produit ou service via la
+                  plateforme.
+                </dd>
 
-                  <dd class="w-2/3">
-                    Toute personne proposant un produit ou service via la
-                    plateforme.
-                  </dd>
-                </div>
-                <div class="flex">
-                  <dt class="w-1/3 font-bold text-gray-900">LBW :</dt>
+                <dt class="font-semibold text-gray-900 sm:col-span-1">
+                  Fournisseur/Partenaire :
+                </dt>
+                <dd class="sm:col-span-2">
+                  Toute personne proposant un produit ou service via la
+                  plateforme.
+                </dd>
 
-                  <dd class="w-2/3">
-                    Société exploitant la plateforme en qualité d’intermédiaire
-                    commercial.
-                  </dd>
-                </div>
-                <div class="flex">
-                  <dt class="w-1/3 font-bold text-gray-900">WAZ’PAY :</dt>
+                <dt class="font-semibold text-gray-900 sm:col-span-1">LBW :</dt>
+                <dd class="sm:col-span-2">
+                  Société exploitant la plateforme en qualité d’intermédiaire
+                  commercial.
+                </dd>
 
-                  <dd class="w-2/3">
-                    Service de paiement différé ou échelonné mis en place par
-                    LBW.
-                  </dd>
-                </div>
+                <dt class="font-semibold text-gray-900 sm:col-span-1">
+                  WAZ’PAY :
+                </dt>
+                <dd class="sm:col-span-2">
+                  Service de paiement différé ou échelonné mis en place par LBW.
+                </dd>
               </dl>
             </section>
 
-            <hr class="border-gray-100" />
+            <hr class="border-gray-200" />
 
-            <section class="space-y-4">
+            <!-- 4. ACCEPTATION ET MODIFICATION DES CGU -->
+            <section
+              class="space-y-4 scroll-mt-24"
+              id="acceptation-modification"
+            >
               <h2
-                class="text-3xl font-extrabold text-indigo-700 border-b-2 pb-3 border-red-100"
+                class="group flex items-center gap-3 text-2xl sm:text-3xl font-extrabold"
               >
-                4. ACCEPTATION ET MODIFICATION DES CGU
+                <span
+                  class="inline-block h-2 w-2 rounded-full bg-gradient-to-r from-indigo-600 to-red-500"
+                ></span>
+                <span
+                  class="bg-gradient-to-r from-indigo-700 to-red-600 bg-clip-text text-transparent"
+                  >4. ACCEPTATION ET MODIFICATION DES CGU</span
+                >
               </h2>
-              <p class="text-gray-700 text-lg leading-relaxed">
+              <div
+                class="h-1 w-16 bg-gradient-to-r from-indigo-600 to-red-500 rounded-full"
+              ></div>
+
+              <p class="text-gray-700 leading-relaxed">
                 L’utilisation des services entraîne l’acceptation pleine et
                 entière des présentes CGU.
               </p>
-              <p class="text-gray-700 text-lg leading-relaxed italic">
+              <p class="text-gray-700 leading-relaxed italic">
                 LBW se réserve le droit de modifier les CGU à tout moment. Les
                 nouvelles versions sont applicables dès leur mise en ligne.
               </p>
             </section>
 
-            <hr class="border-gray-100" />
+            <hr class="border-gray-200" />
 
-            <section class="space-y-4">
+            <!-- 5. ACCÈS AUX SERVICES -->
+            <section class="space-y-4 scroll-mt-24" id="acces-services">
               <h2
-                class="text-3xl font-extrabold text-indigo-700 border-b-2 pb-3 border-red-100"
+                class="group flex items-center gap-3 text-2xl sm:text-3xl font-extrabold"
               >
-                5. ACCÈS AUX SERVICES
+                <span
+                  class="inline-block h-2 w-2 rounded-full bg-gradient-to-r from-indigo-600 to-red-500"
+                ></span>
+                <span
+                  class="bg-gradient-to-r from-indigo-700 to-red-600 bg-clip-text text-transparent"
+                  >5. ACCÈS AUX SERVICES</span
+                >
               </h2>
-              <p class="text-gray-700 text-lg leading-relaxed">
+              <div
+                class="h-1 w-16 bg-gradient-to-r from-indigo-600 to-red-500 rounded-full"
+              ></div>
+
+              <p class="text-gray-700 leading-relaxed">
                 L’accès aux services requiert:
               </p>
               <ul
-                class="text-gray-700 text-lg leading-relaxed space-y-2 list-disc pl-8"
+                class="text-gray-700 leading-relaxed space-y-2 list-disc pl-6 sm:pl-8 marker:text-indigo-600"
               >
                 <li>La création d’un compte utilisateur.</li>
-
                 <li>
                   La fourniture d’informations exactes, complètes et
                   actualisées.
                 </li>
               </ul>
-              <p class="text-gray-700 text-lg leading-relaxed italic">
+              <p class="text-gray-700 leading-relaxed italic">
                 LBW se réserve le droit de suspendre ou supprimer tout compte en
                 cas de violation des CGU.
               </p>
             </section>
 
-            <hr class="border-gray-100" />
+            <hr class="border-gray-200" />
 
-            <section class="space-y-4">
+            <!-- 6. RÔLE DE LBW (Intermédiaire) -->
+            <section class="space-y-4 scroll-mt-24" id="role-lbw">
               <h2
-                class="text-3xl font-extrabold text-indigo-700 border-b-2 pb-3 border-red-100"
+                class="group flex items-center gap-3 text-2xl sm:text-3xl font-extrabold"
               >
-                6. RÔLE DE LBW (Intermédiaire)
+                <span
+                  class="inline-block h-2 w-2 rounded-full bg-gradient-to-r from-indigo-600 to-red-500"
+                ></span>
+                <span
+                  class="bg-gradient-to-r from-indigo-700 to-red-600 bg-clip-text text-transparent"
+                  >6. RÔLE DE LBW (Intermédiaire)</span
+                >
               </h2>
-              <p class="text-gray-700 text-lg leading-relaxed font-bold">
+              <div
+                class="h-1 w-16 bg-gradient-to-r from-indigo-600 to-red-500 rounded-full"
+              ></div>
+
+              <p class="text-gray-700 leading-relaxed font-semibold">
                 LBW agit exclusivement en tant qu’<span class="text-red-700"
                   >intermédiaire</span
                 >:
               </p>
               <ul
-                class="text-gray-700 text-lg leading-relaxed space-y-2 list-disc pl-8"
+                class="text-gray-700 leading-relaxed space-y-2 list-disc pl-6 sm:pl-8 marker:text-indigo-600"
               >
                 <li>Il met en relation Clients et Fournisseurs.</li>
-
                 <li>Il n’est pas propriétaire des produits proposés.</li>
-
                 <li>
                   Il ne saurait être tenu responsable des défauts, retards ou
                   litiges liés aux produits.
@@ -337,24 +419,34 @@
               </ul>
             </section>
 
-            <hr class="border-gray-100" />
+            <hr class="border-gray-200" />
 
-            <section class="space-y-4">
+            <!-- 7. UTILISATION DE WAZ’PAY -->
+            <section class="space-y-4 scroll-mt-24" id="wazpay">
               <h2
-                class="text-3xl font-extrabold text-indigo-700 border-b-2 pb-3 border-red-100"
+                class="group flex items-center gap-3 text-2xl sm:text-3xl font-extrabold"
               >
-                7. UTILISATION DE WAZ’PAY
+                <span
+                  class="inline-block h-2 w-2 rounded-full bg-gradient-to-r from-indigo-600 to-red-500"
+                ></span>
+                <span
+                  class="bg-gradient-to-r from-indigo-700 to-red-600 bg-clip-text text-transparent"
+                  >7. UTILISATION DE WAZ’PAY</span
+                >
               </h2>
+              <div
+                class="h-1 w-16 bg-gradient-to-r from-indigo-600 to-red-500 rounded-full"
+              ></div>
 
               <h3 class="text-xl font-bold text-gray-900">7.1 Modalités</h3>
-              <p class="text-gray-700 text-lg leading-relaxed">
+              <p class="text-gray-700 leading-relaxed">
                 Le Client peut régler en plusieurs fois selon les conditions
                 prévues dans les Conditions Générales de Vente (CGV).
               </p>
               <div
-                class="mt-4 p-4 rounded-lg border-l-4 border-red-500 bg-red-50 font-semibold italic"
+                class="mt-4 rounded-xl border border-red-100 bg-red-50/60 p-4 sm:p-5"
               >
-                <p class="text-red-700">
+                <p class="text-red-700 font-semibold">
                   Attention : Tout retard de paiement entraîne des pénalités de
                   7 %/mois sur les montants dus.
                 </p>
@@ -363,25 +455,35 @@
               <h3 class="text-xl font-bold text-gray-900 mt-6">
                 7.2 Suspension
               </h3>
-              <p class="text-gray-700 text-lg leading-relaxed">
+              <p class="text-gray-700 leading-relaxed">
                 LBW peut suspendre l’accès à WAZ’PAY en cas de non-paiement
                 répété.
               </p>
             </section>
 
-            <hr class="border-gray-100" />
+            <hr class="border-gray-200" />
 
-            <section class="space-y-4">
+            <!-- 8. RESPONSABILITÉ -->
+            <section class="space-y-4 scroll-mt-24" id="responsabilite">
               <h2
-                class="text-3xl font-extrabold text-indigo-700 border-b-2 pb-3 border-red-100"
+                class="group flex items-center gap-3 text-2xl sm:text-3xl font-extrabold"
               >
-                8. RESPONSABILITÉ
+                <span
+                  class="inline-block h-2 w-2 rounded-full bg-gradient-to-r from-indigo-600 to-red-500"
+                ></span>
+                <span
+                  class="bg-gradient-to-r from-indigo-700 to-red-600 bg-clip-text text-transparent"
+                  >8. RESPONSABILITÉ</span
+                >
               </h2>
+              <div
+                class="h-1 w-16 bg-gradient-to-r from-indigo-600 to-red-500 rounded-full"
+              ></div>
 
               <h3 class="text-xl font-bold text-gray-900">
                 8.1 Responsabilité de LBW
               </h3>
-              <p class="text-gray-700 text-lg leading-relaxed">
+              <p class="text-gray-700 leading-relaxed">
                 LBW ne garantit pas la disponibilité permanente de la plateforme
                 et ne pourra être tenu responsable en cas d’interruption ou de
                 défaillance technique.
@@ -390,68 +492,89 @@
               <h3 class="text-xl font-bold text-gray-900 mt-6">
                 8.2 Responsabilité de l’Utilisateur
               </h3>
-              <p class="text-gray-700 text-lg leading-relaxed">
+              <p class="text-gray-700 leading-relaxed">
                 L’Utilisateur s’engage à:
               </p>
               <ul
-                class="text-gray-700 text-lg leading-relaxed space-y-2 list-disc pl-8"
+                class="text-gray-700 leading-relaxed space-y-2 list-disc pl-6 sm:pl-8 marker:text-indigo-600"
               >
                 <li>Utiliser la plateforme conformément à la loi.</li>
-
                 <li>
-                  Ne pas publier de contenu illégal, trompeur ou nuisible[cite:
-                  47].
+                  Ne pas publier de contenu illégal, trompeur ou nuisible.
                 </li>
-
                 <li>Protéger ses identifiants de connexion.</li>
               </ul>
             </section>
 
-            <hr class="border-gray-100" />
+            <hr class="border-gray-200" />
 
-            <section class="space-y-4">
+            <!-- 9. PROPRIÉTÉ INTELLECTUELLE -->
+            <section
+              class="space-y-4 scroll-mt-24"
+              id="propriete-intellectuelle"
+            >
               <h2
-                class="text-3xl font-extrabold text-indigo-700 border-b-2 pb-3 border-red-100"
+                class="group flex items-center gap-3 text-2xl sm:text-3xl font-extrabold"
               >
-                9. PROPRIÉTÉ INTELLECTUELLE
+                <span
+                  class="inline-block h-2 w-2 rounded-full bg-gradient-to-r from-indigo-600 to-red-500"
+                ></span>
+                <span
+                  class="bg-gradient-to-r from-indigo-700 to-red-600 bg-clip-text text-transparent"
+                  >9. PROPRIÉTÉ INTELLECTUELLE</span
+                >
               </h2>
-              <p class="text-gray-700 text-lg leading-relaxed">
+              <div
+                class="h-1 w-16 bg-gradient-to-r from-indigo-600 to-red-500 rounded-full"
+              ></div>
+
+              <p class="text-gray-700 leading-relaxed">
                 La plateforme, son contenu et ses fonctionnalités restent la
                 propriété exclusive de LBW.
               </p>
-              <p class="text-xl font-bold italic text-red-700 mt-4">
+              <p class="text-lg sm:text-xl font-bold italic text-red-700">
                 Toute reproduction ou utilisation non autorisée est strictement
                 interdite.
               </p>
             </section>
 
-            <hr class="border-gray-100" />
+            <hr class="border-gray-200" />
 
-            <section class="space-y-4">
+            <!-- 10. DONNÉES PERSONNELLES -->
+            <section class="space-y-4 scroll-mt-24" id="donnees-personnelles">
               <h2
-                class="text-3xl font-extrabold text-indigo-700 border-b-2 pb-3 border-red-100"
+                class="group flex items-center gap-3 text-2xl sm:text-3xl font-extrabold"
               >
-                10. DONNÉES PERSONNELLES
+                <span
+                  class="inline-block h-2 w-2 rounded-full bg-gradient-to-r from-indigo-600 to-red-500"
+                ></span>
+                <span
+                  class="bg-gradient-to-r from-indigo-700 to-red-600 bg-clip-text text-transparent"
+                  >10. DONNÉES PERSONNELLES</span
+                >
               </h2>
-              <p class="text-gray-700 text-lg leading-relaxed">
+              <div
+                class="h-1 w-16 bg-gradient-to-r from-indigo-600 to-red-500 rounded-full"
+              ></div>
+
+              <p class="text-gray-700 leading-relaxed">
                 LBW s’engage à respecter la réglementation gabonaise relative à
                 la protection des données personnelles.
               </p>
               <ul
-                class="text-gray-700 text-lg leading-relaxed space-y-2 list-disc pl-8"
+                class="text-gray-700 leading-relaxed space-y-2 list-disc pl-6 sm:pl-8 marker:text-indigo-600"
               >
                 <li>
                   Les informations sont collectées pour la fourniture des
                   services.
                 </li>
-
                 <li>
                   Elles peuvent être partagées avec les Partenaires uniquement
                   dans ce cadre.
                 </li>
               </ul>
               <div
-                class="mt-4 p-4 rounded-lg border-l-4 border-indigo-500 bg-indigo-50"
+                class="mt-4 rounded-xl border border-indigo-100 bg-indigo-50/60 p-4 sm:p-5"
               >
                 <p class="text-indigo-700 font-semibold">
                   L'utilisateur dispose d’un droit d’accès, de rectification et
@@ -461,62 +584,94 @@
               </div>
             </section>
 
-            <hr class="border-gray-100" />
+            <hr class="border-gray-200" />
 
-            <section class="space-y-4">
+            <!-- 11. SUSPENSION ET RÉSILIATION -->
+            <section class="space-y-4 scroll-mt-24" id="suspension-resiliation">
               <h2
-                class="text-3xl font-extrabold text-indigo-700 border-b-2 pb-3 border-red-100"
+                class="group flex items-center gap-3 text-2xl sm:text-3xl font-extrabold"
               >
-                11. SUSPENSION ET RÉSILIATION
+                <span
+                  class="inline-block h-2 w-2 rounded-full bg-gradient-to-r from-indigo-600 to-red-500"
+                ></span>
+                <span
+                  class="bg-gradient-to-r from-indigo-700 to-red-600 bg-clip-text text-transparent"
+                  >11. SUSPENSION ET RÉSILIATION</span
+                >
               </h2>
-              <p class="text-gray-700 text-lg leading-relaxed font-bold">
+              <div
+                class="h-1 w-16 bg-gradient-to-r from-indigo-600 to-red-500 rounded-full"
+              ></div>
+
+              <p class="text-gray-700 leading-relaxed font-semibold">
                 LBW se réserve le droit de suspendre ou supprimer tout compte en
                 cas de:
               </p>
               <ul
-                class="text-gray-700 text-lg leading-relaxed space-y-2 list-disc pl-8"
+                class="text-gray-700 leading-relaxed space-y-2 list-disc pl-6 sm:pl-8 marker:text-indigo-600"
               >
                 <li>Violation des CGU.</li>
-
                 <li>Non-paiement des sommes dues.</li>
-
                 <li>Utilisation frauduleuse ou abusive de la plateforme.</li>
               </ul>
             </section>
 
-            <hr class="border-gray-100" />
+            <hr class="border-gray-200" />
 
-            <section class="space-y-4">
+            <!-- 12. MÉDIATION ET RÉSOLUTION DES LITIGES -->
+            <section class="space-y-4 scroll-mt-24" id="mediation-litiges">
               <h2
-                class="text-3xl font-extrabold text-indigo-700 border-b-2 pb-3 border-red-100"
+                class="group flex items-center gap-3 text-2xl sm:text-3xl font-extrabold"
               >
-                12. MÉDIATION ET RÉSOLUTION DES LITIGES
+                <span
+                  class="inline-block h-2 w-2 rounded-full bg-gradient-to-r from-indigo-600 to-red-500"
+                ></span>
+                <span
+                  class="bg-gradient-to-r from-indigo-700 to-red-600 bg-clip-text text-transparent"
+                  >12. MÉDIATION ET RÉSOLUTION DES LITIGES</span
+                >
               </h2>
-              <p class="text-gray-700 text-lg leading-relaxed">
+              <div
+                class="h-1 w-16 bg-gradient-to-r from-indigo-600 to-red-500 rounded-full"
+              ></div>
+
+              <p class="text-gray-700 leading-relaxed">
                 Tout différend sera résolu en priorité par médiation devant un
                 médiateur agréé à Libreville.
               </p>
-              <p class="text-gray-700 text-lg leading-relaxed font-semibold">
+              <p class="text-gray-700 leading-relaxed font-semibold">
                 À défaut d’accord amiable, la compétence exclusive est attribuée
                 au Tribunal de Commerce de Libreville.
               </p>
             </section>
 
-            <hr class="border-gray-100" />
+            <hr class="border-gray-200" />
 
-            <section class="space-y-4">
+            <!-- 13. LOI APPLICABLE -->
+            <section class="space-y-4 scroll-mt-24" id="loi-applicable">
               <h2
-                class="text-3xl font-extrabold text-indigo-700 border-b-2 pb-3 border-red-100"
+                class="group flex items-center gap-3 text-2xl sm:text-3xl font-extrabold"
               >
-                13. LOI APPLICABLE
+                <span
+                  class="inline-block h-2 w-2 rounded-full bg-gradient-to-r from-indigo-600 to-red-500"
+                ></span>
+                <span
+                  class="bg-gradient-to-r from-indigo-700 to-red-600 bg-clip-text text-transparent"
+                  >13. LOI APPLICABLE</span
+                >
               </h2>
-              <p class="text-gray-700 text-lg leading-relaxed">
+              <div
+                class="h-1 w-16 bg-gradient-to-r from-indigo-600 to-red-500 rounded-full"
+              ></div>
+
+              <p class="text-gray-700 leading-relaxed">
                 Les présentes CGU sont régies par le droit gabonais et le droit
                 OHADA.
               </p>
             </section>
 
-            <div class="pt-6 text-sm text-gray-500 text-right">
+            <!-- Version bas de page -->
+            <div class="pt-6 text-xs sm:text-sm text-gray-500 text-right">
               <p>Version : 20/08/2025</p>
             </div>
           </article>
