@@ -5,6 +5,7 @@ Une plateforme complète de gestion de leads pour les équipes commerciales, con
 ## 🚀 Fonctionnalités
 
 ### Pour les Commerciaux
+- ✅ Inscription autonome via l'interface web
 - ✅ Tableau de bord avec statistiques personnalisées
 - ✅ Gestion complète des leads (création, modification, suivi)
 - ✅ Historique des interactions avec chaque lead

@@ -5,6 +5,7 @@ import { NotificationProvider } from './contexts/NotificationContext';
 import PrivateRoute from './components/auth/PrivateRoute';
 import Notification from './components/common/Notification';
 import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
 import DashboardPage from './pages/DashboardPage';
 import LeadsPage from './pages/LeadsPage';
 import LeadDetailPage from './pages/LeadDetailPage';
@@ -19,6 +20,7 @@ function App() {
             <Notification />
             <Routes>
               <Route path="/login" element={<LoginPage />} />
+              <Route path="/register" element={<RegisterPage />} />
               <Route
                 path="/dashboard"
                 element={

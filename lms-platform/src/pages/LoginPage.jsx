@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navigate } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import LoginForm from '../components/auth/LoginForm';
 
@@ -24,7 +24,19 @@ const LoginPage = () => {
         
         <LoginForm />
         
-        <div className="mt-6 text-center text-sm text-gray-600">
+        <div className="mt-6 text-center">
+          <p className="text-sm text-gray-600">
+            Vous n'avez pas de compte ?{' '}
+            <Link 
+              to="/register" 
+              className="text-primary-600 hover:text-primary-700 font-medium hover:underline"
+            >
+              S'inscrire
+            </Link>
+          </p>
+        </div>
+
+        <div className="mt-4 text-center text-xs text-gray-500">
           <p>Besoin d'aide ? Contactez l'administrateur</p>
         </div>
       </div>
