@@ -1,0 +1,60 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Fonctions helper
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isAdmin() {
+      return isAuthenticated() && 
+             get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+    }
+    
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+    
+    function isAssignedTo(leadData) {
+      return isAuthenticated() && leadData.assignedToUserId == request.auth.uid;
+    }
+    
+    // Collection Users
+    match /users/{userId} {
+      allow read: if isAuthenticated();
+      allow create: if isAdmin();
+      allow update, delete: if isAdmin() || isOwner(userId);
+    }
+    
+    // Collection Leads
+    match /leads/{leadId} {
+      allow read: if isAdmin() || 
+                     (isAuthenticated() && isAssignedTo(resource.data));
+      allow create: if isAuthenticated();
+      allow update: if isAdmin() || 
+                       (isAuthenticated() && isAssignedTo(resource.data));
+      allow delete: if isAdmin();
+    }
+    
+    // Collection Interactions
+    match /interactions/{interactionId} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated();
+      allow update, delete: if false; // Immuable après création
+    }
+    
+    // Collection LeadStatusHistory
+    match /leadStatusHistory/{historyId} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated();
+      allow update, delete: if false; // Immuable après création
+    }
+    
+    // Collection pour les statistiques (optionnel)
+    match /stats/{statId} {
+      allow read: if isAuthenticated();
+      allow write: if isAdmin();
+    }
+  }
+}
