@@ -44,642 +44,662 @@
     <link href="assets/css/custom-design.css" rel="stylesheet" />
   </head>
 
-  <body class="index-page">
-    <header id="header" class="header d-flex align-items-center sticky-top">
-      <div
-        class="container-fluid container-xl position-relative d-flex align-items-center"
-      >
-        <a href="index.html" class="logo d-flex align-items-center me-auto">
-          <h1 class="logo d-flex align-items-center me-auto">
+    <body class="index-page" data-page="home">
+      <header id="header" class="header d-flex align-items-center sticky-top">
+        <div
+          class="container-fluid container-xl position-relative d-flex align-items-center"
+        >
+          <a href="index.html" class="logo d-flex align-items-center me-auto">
+            <span class="visually-hidden">Le Bon Waz</span>
             <img
               src="assets/img/lbw-joyempowered1-logo.png"
-              alt="Le Bon Waz Logo"
+              alt="Le Bon Waz"
             />
-          </h1>
-        </a>
+          </a>
 
-        <nav id="navmenu" class="navmenu">
-          <ul>
-            <li><a href="#hero" class="active">Accueil</a></li>
-            <li class="dropdown">
-              <a href="about.html">
-                <span>À Propos</span>
-                <i class="bi bi-chevron-down toggle-dropdown"></i>
-              </a>
-              <ul>
-                <li><a href="about.html#who-we-are">Qui Sommes-Nous ?</a></li>
-                <li><a href="team.html">Notre Équipe</a></li>
-                <li><a href="testimonials.html">Témoignages</a></li>
-                <li><a href="partners.html">Partenaires & Références</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="services.html">
-                <span>Services</span>
-                <i class="bi bi-chevron-down toggle-dropdown"></i>
-              </a>
-              <ul>
-                <li><a href="services.html#waz-up">WAZ'UP - E-commerce</a></li>
-                <li>
-                  <a href="services.html#lbw-mobility"
-                    >LBW-MOBILITY - Location et Achat de Véhicules</a
+          <nav id="navmenu" class="navmenu">
+            <ul>
+              <li>
+                <a
+                  href="index.html#hero"
+                  data-i18n="nav.home"
+                  data-page-link="home"
+                  >Accueil</a
+                >
+              </li>
+              <li class="dropdown">
+                <a href="about.html" data-page-link="about">
+                  <span data-i18n="nav.about">À propos</span>
+                  <i class="bi bi-chevron-down toggle-dropdown"></i>
+                </a>
+                <ul>
+                  <li>
+                    <a href="about.html#origin-story" data-i18n="nav.origin"
+                      >Notre histoire</a
+                    >
+                  </li>
+                  <li>
+                    <a href="about.html#engagements" data-i18n="nav.commitments"
+                      >Nos engagements</a
+                    >
+                  </li>
+                  <li>
+                    <a href="team.html" data-i18n="nav.team">Notre équipe</a>
+                  </li>
+                  <li>
+                    <a href="testimonials.html" data-i18n="nav.testimonials"
+                      >Témoignages</a
+                    >
+                  </li>
+                  <li>
+                    <a href="partners.html" data-i18n="nav.partners"
+                      >Partenaires & Références</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="services.html" data-page-link="expertise">
+                  <span data-i18n="nav.expertise">Nos expertises</span>
+                  <i class="bi bi-chevron-down toggle-dropdown"></i>
+                </a>
+                <ul>
+                  <li>
+                    <a
+                      href="services.html#waz-up"
+                      data-i18n="nav.expertise.wazup"
+                      >WAZ'UP - E-commerce</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="services.html#lbw-mobility"
+                      data-i18n="nav.expertise.mobility"
+                      >LBW-MOBILITY - Location et Achat de Véhicules</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="services.html#lbw-solar"
+                      data-i18n="nav.expertise.solar"
+                      >LBW-SOLAR - Solutions Énergétiques Solaires</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="services.html#lbw-trade"
+                      data-i18n="nav.expertise.trade"
+                      >LBW-TRADE - Centrale d'Achat</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="services.html#other-services"
+                      data-i18n="nav.expertise.other"
+                      >Autres services</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  href="devis.html"
+                  data-i18n="nav.quote"
+                  data-page-link="quote"
+                  >Devis</a
+                >
+              </li>
+              <li>
+                <a
+                  href="blog.html"
+                  data-i18n="nav.blog"
+                  data-page-link="blog"
+                  >Actualités</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  data-i18n="nav.contact"
+                  data-page-link="contact"
+                  >Contact</a
+                >
+              </li>
+              <li class="d-xl-none">
+              <button
+                type="button"
+                class="theme-toggle w-100 justify-content-center"
+                data-theme-toggle
+              >
+                <i class="bi bi-moon-stars"></i>
+                <span data-theme-label data-i18n="theme.dark"
+                  >Mode sombre</span
+                >
+              </button>
+              </li>
+              <li class="d-xl-none">
+                <div class="language-switcher w-100">
+                  <select
+                    class="language-select w-100"
+                    data-language-switch
+                    aria-label="Changer de langue"
                   >
-                </li>
-                <li>
-                  <a href="services.html#lbw-solar"
-                    >LBW-SOLAR - Solutions Énergétiques Solaires</a
-                  >
-                </li>
-                <li>
-                  <a href="services.html#lbw-trade"
-                    >LBW-TRADE - Centrale d'Achat</a
-                  >
-                </li>
-                <li>
-                  <a href="services.html#other-services">Autres Services</a>
-                </li>
-              </ul>
-            </li>
-            <li><a href="blog.html">Actualités</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-        </nav>
+                    <option value="fr">FR</option>
+                    <option value="en">EN</option>
+                  </select>
+                </div>
+              </li>
+            </ul>
+            <div class="nav-actions d-none d-xl-flex">
+              <div class="language-switcher">
+                <select
+                  class="language-select"
+                  data-language-switch
+                  aria-label="Changer de langue"
+                >
+                  <option value="fr">FR</option>
+                  <option value="en">EN</option>
+                </select>
+              </div>
+              <button type="button" class="theme-toggle" data-theme-toggle>
+                <i class="bi bi-moon-stars"></i>
+                <span data-theme-label data-i18n="theme.dark"
+                  >Mode sombre</span
+                >
+              </button>
+            </div>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+          </nav>
 
-        <a class="btn-getstarted" href="devenir-partenaire.html"
-          >Devenir Partenaire</a
-        >
-      </div>
-    </header>
+          <a
+            class="btn-getstarted"
+            href="devenir-partenaire.html"
+            data-i18n="nav.cta"
+            >Devenir partenaire</a
+          >
+        </div>
+      </header>
 
     <main class="main">
-      <!-- Section hero -->
-      <section id="hero" class="hero section dark-background">
-        <div
-          id="hero-carousel"
-          class="carousel slide carousel-fade"
-          data-bs-ride="carousel"
-          data-bs-interval="5000"
-        >
-          <div class="carousel-item active">
-            <img
-              src="assets/img/hero-carousel/hero-carousel-1.jpg"
-              alt="Solutions digitales, mobilité & logistique au Gabon"
-            />
-            <div
-              class="carousel-container d-flex flex-column justify-content-center align-items-center text-center"
-            >
-              <h2 class="animate__animated animate__fadeInDown">
-                L'Innovation au Service du Quotidien avec
-                <span class="highlight-text">Le Bon Waz</span>
-              </h2>
-              <p class="animate__animated animate__fadeInUp">
-                Simplifier le quotidien des citoyens et des organisations grâce
-                à des solutions pratiques, accessibles et connectées.
-              </p>
+        <!-- Section hero -->
+        <section id="hero" class="hero section">
+          <div class="container">
+            <div class="hero-shell">
+              <div class="row align-items-center g-5">
+                <div class="col-lg-6 hero-content">
+                  <div class="headline" data-i18n="hero.badge">
+                    Efficacité commerce & logistique
+                  </div>
+                  <h1 data-i18n="hero.title">
+                    Libérez la fluidité de vos échanges B2B et B2C au Gabon
+                  </h1>
+                  <p class="lead" data-i18n="hero.subtitle">
+                    LeBonWaz marie le terrain gabonais et la puissance digitale
+                    pour connecter achats, livraison, mobilité et énergie en un
+                    seul écosystème hybride, fiable et traçable.
+                  </p>
+                  <div class="cta-group">
+                    <a
+                      href="services.html"
+                      class="btn-primary-modern"
+                      data-i18n="hero.cta.primary"
+                      >Explorer nos expertises</a
+                    >
+                    <a href="devis.html" class="btn-outline-modern">
+                      <i class="bi bi-card-checklist"></i>
+                      <span data-i18n="hero.cta.secondary"
+                        >Demander un devis</span
+                      >
+                    </a>
+                  </div>
+                  <div class="metrics">
+                    <div class="metric-card">
+                      <strong data-i18n="hero.metric1.value">580+</strong>
+                      <span data-i18n="hero.metric1.label"
+                        >projets et contrats livrés</span
+                      >
+                    </div>
+                    <div class="metric-card">
+                      <strong data-i18n="hero.metric2.value">12</strong>
+                      <span data-i18n="hero.metric2.label"
+                        >secteurs stratégiques accompagnés</span
+                      >
+                    </div>
+                    <div class="metric-card">
+                      <strong data-i18n="hero.metric3.value">24/7</strong>
+                      <span data-i18n="hero.metric3.label"
+                        >pilotage digital & logistique</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 hero-visual">
+                  <div class="blob"></div>
+                  <img
+                    src="assets/img/hero-carousel/hero-carousel-2.jpg"
+                    alt="Opérations hybrides de LeBonWaz"
+                  />
+                  <div class="badge-stack">
+                    <div class="floating-badge">
+                      <i class="bi bi-diagram-3"></i>
+                      <span data-i18n="hero.badge1"
+                        >Plateforme + Opérations terrain</span
+                      >
+                    </div>
+                    <div class="floating-badge">
+                      <i class="bi bi-shield-check"></i>
+                      <span data-i18n="hero.badge2"
+                        >Traçabilité et confiance garanties</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-
-          <div class="carousel-item">
-            <img
-              src="assets/img/hero-carousel/hero-carousel-2.jpg"
-              alt="Services intégrés Le Bon Waz"
-            />
-            <div
-              class="carousel-container d-flex flex-column justify-content-center align-items-center text-center"
-            >
-              <h2 class="animate__animated animate__fadeInDown">
-                Votre Écosystème Intégré de
-                <span class="highlight-text"
-                  >Solutions Digitales et Logistiques</span
-                >
-              </h2>
-              <p class="animate__animated animate__fadeInUp">
-                Découvrez nos 4 piliers majeurs : WAZ'UP (e-commerce),
-                LBW-MOBILITY (mobilité), LBW-DELIVERY (livraison) et LBW-TRADE
-                (commerce international).
-              </p>
-            </div>
-          </div>
-
-          <div class="carousel-item">
-            <img
-              src="assets/img/hero-carousel/hero-carousel-3.jpg"
-              alt="Développement durable et inclusion au Gabon"
-            />
-            <div
-              class="carousel-container d-flex flex-column justify-content-center align-items-center text-center"
-            >
-              <h2 class="animate__animated animate__fadeInDown">
-                Le Digital, un Levier d'Inclusion et de
-                <span class="highlight-text">Performance au Gabon</span>
-              </h2>
-              <p class="animate__animated animate__fadeInUp">
-                Nous concevons et opérons des solutions inclusives pour
-                transformer vos défis en opportunités, tout en promouvant le
-                développement durable.
-              </p>
-            </div>
-          </div>
-
-          <a
-            class="carousel-control-prev"
-            href="#hero-carousel"
-            role="button"
-            data-bs-slide="prev"
-            aria-label="Précédent"
-            title="Précédent"
-          >
-            <span
-              class="carousel-control-prev-icon bi bi-chevron-left"
-              aria-hidden="true"
-            ></span>
-          </a>
-          <a
-            class="carousel-control-next"
-            href="#hero-carousel"
-            role="button"
-            data-bs-slide="next"
-            aria-label="Suivant"
-            title="Suivant"
-          >
-            <span
-              class="carousel-control-next-icon bi bi-chevron-right"
-              aria-hidden="true"
-            ></span>
-          </a>
-
-          <ol class="carousel-indicators"></ol>
-        </div>
-      </section>
-      <!-- End Section hero -->
+        </section>
+        <!-- End Section hero -->
 
       <!-- Section About -->
-      <section id="about" class="about section">
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Qui Sommes-Nous ?</h2>
-          <p>
-            Acteur de l'économie digitale inclusive au service du Gabon et de
-            l'Afrique Centrale
-          </p>
-        </div>
-        <div class="container">
-          <div class="row gy-4">
-            <div
-              class="col-lg-6 content"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <h3>Notre Mission et Notre Vision</h3>
-              <p>
-                LE BON WAZ est une entreprise gabonaise innovante, spécialisée
-                dans la conception et l'opération de solutions digitales,
-                logistiques et de mobilité inclusive. Notre mission est de
-                simplifier le quotidien des citoyens et des organisations, et
-                notre vision est de devenir un acteur référent de l’économie
-                digitale inclusive en Afrique centrale. Nous sommes votre
-                partenaire stratégique pour transformer vos défis en
-                opportunités durables.
-              </p>
-              <ul class="list-unstyled about-features">
-                <li>
-                  <i class="bi bi-check2-circle"></i>
-                  <span>
-                    <strong>Innovation :</strong> Nous créons des solutions
-                    pratiques, accessibles et connectées.
-                  </span>
-                </li>
-                <li>
-                  <i class="bi bi-check2-circle"></i>
-                  <span>
-                    <strong>Fiabilité et Proximité :</strong> Un réseau de
-                    confiance pour des transactions sécurisées et une logistique
-                    fluide.
-                  </span>
-                </li>
-                <li>
-                  <i class="bi bi-check2-circle"></i>
-                  <span>
-                    <strong>Responsabilité :</strong> Nous nous engageons pour
-                    un développement durable et l'intégration des compétences
-                    locales.
-                  </span>
-                </li>
-              </ul>
-            </div>
-
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-              <img
-                src="assets/img/hero-carousel/hero-carousel-3.jpg"
-                class="img-fluid rounded mb-4"
-                alt="L'équipe de LE BON WAZ"
-              />
-              <h3>Un Écosystème de Services Intégrés</h3>
-              <p>
-                Nous opérons autour de quatre piliers majeurs pour répondre aux
-                besoins spécifiques du marché gabonais :
-              </p>
-              <ul class="list-unstyled about-features">
-                <li>
-                  <i class="bi bi-truck"></i>
-                  <span>
-                    <strong>WAZ'UP :</strong> Plateforme e-commerce
-                    multi-vendeurs.
-                  </span>
-                </li>
-                <li>
-                  <i class="bi bi-car-front-fill"></i>
-                  <span>
-                    <strong>LBW-MOBILITY :</strong> Location de véhicules et
-                    solutions de mobilité.
-                  </span>
-                </li>
-                <li>
-                  <i class="bi bi-people"></i>
-                  <span>
-                    <strong>LBW-SOLAR :</strong> Solutions énergétiques solaires
-                    et vertes.
-                  </span>
-                </li>
-                <li>
-                  <i class="bi bi-globe"></i>
-                  <span>
-                    <strong>LBW-TRADE :</strong> Plateforme d'échange commercial
-                    internationale.
-                  </span>
-                </li>
-              </ul>
-              <a href="about.html" class="read-more-btn">
-                Découvrez notre histoire et nos services
-                <i class="bi bi-arrow-right"></i>
-              </a>
+        <section id="about" class="about section">
+          <div class="container section-title" data-aos="fade-up">
+            <h2 data-i18n="about.section.title">Notre ADN</h2>
+            <p data-i18n="about.section.subtitle">
+              LeBonWaz est né sur le terrain gabonais pour relier innovation,
+              proximité humaine et impact durable.
+            </p>
+          </div>
+          <div class="container">
+            <div class="row gy-5 align-items-center">
+              <div
+                class="col-lg-6"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <h3 data-i18n="about.story.heading">
+                  Un écosystème hybride construit par ceux qui vivent les
+                  frictions
+                </h3>
+                <p data-i18n="about.story.paragraph1">
+                  Après des années à naviguer entre chaînes d'approvisionnement
+                  complexes, outils inadaptés et manque de transparence, notre
+                  équipe a conçu LeBonWaz : une plateforme qui relie digital,
+                  opérations logistiques et expertise locale pour fluidifier les
+                  échanges B2B et B2C.
+                </p>
+                <p data-i18n="about.story.paragraph2">
+                  Nous simplifions vos achats, vos déploiements et vos livraisons
+                  grâce à une approche « phygitale » : une technologie intuitive
+                  soutenue par des équipes de terrain, une flotte maîtrisée et un
+                  réseau de partenaires certifiés.
+                </p>
+                <div class="d-flex flex-column gap-3">
+                  <div class="d-flex align-items-start">
+                    <i
+                      class="bi bi-lightning-charge-fill text-primary me-3 fs-3"
+                    ></i>
+                    <div>
+                      <h4 data-i18n="about.story.point1.title">
+                        Vision guidée par l'usage
+                      </h4>
+                      <p class="mb-0" data-i18n="about.story.point1.copy">
+                        Nous transformons la frustration du terrain en solutions
+                        tangibles, centrées sur l'efficacité et la performance.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-start">
+                    <i class="bi bi-globe-americas text-primary me-3 fs-3"></i>
+                    <div>
+                      <h4 data-i18n="about.story.point2.title">
+                        Alliance digital & mobilité
+                      </h4>
+                      <p class="mb-0" data-i18n="about.story.point2.copy">
+                        Marketplace, centrale d'achat, flotte logistique,
+                        énergie solaire : tout fonctionne ensemble et sous votre
+                        contrôle.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-start">
+                    <i class="bi bi-people-fill text-primary me-3 fs-3"></i>
+                    <div>
+                      <h4 data-i18n="about.story.point3.title">
+                        Impact et confiance
+                      </h4>
+                      <p class="mb-0" data-i18n="about.story.point3.copy">
+                        Inclusion des talents locaux, traçabilité renforcée et
+                        accompagnement sur mesure pour chaque partenaire.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-4">
+                  <a
+                    href="about.html"
+                    class="btn-outline-modern"
+                    data-i18n="about.story.link"
+                  >
+                    <i class="bi bi-arrow-right-circle"></i>
+                    Explorer notre histoire complète
+                  </a>
+                </div>
+              </div>
+              <div
+                class="col-lg-6"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <div class="position-relative rounded-4 overflow-hidden shadow-lg">
+                  <img
+                    src="assets/img/services/livraison-logistique-urbaine.jpg"
+                    class="img-fluid"
+                    alt="LeBonWaz en action sur le terrain gabonais"
+                  />
+                </div>
+                <div class="row g-3 mt-4">
+                  <div class="col-md-6">
+                    <div class="metric-card">
+                      <strong data-i18n="about.metric1.value">+6 ans</strong>
+                      <span data-i18n="about.metric1.label"
+                        >à façonner un commerce plus fluide</span
+                      >
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="metric-card">
+                      <strong data-i18n="about.metric2.value">1 écosystème</strong>
+                      <span data-i18n="about.metric2.label"
+                        >digital & terrain pour vos projets</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <p class="mt-4 mb-0 text-muted" data-i18n="about.story.caption">
+                  « Nous avons créé l'outil que nous cherchions depuis des années
+                  : le bon levier pour le bon échange. »
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
       <!-- End Section About -->
 
       <!-- Section Client -->
-      <section id="clients" class="clients section light-background">
-        <div class="container" data-aos="fade-up">
-          <div
-            class="row gy-4 d-flex justify-content-center align-items-center"
-          >
-            <div class="col-xl-2 col-md-3 col-6 client-logo">
-              <img
-                src="assets/img/clients/pnud-logo.png"
-                class="img-fluid"
-                alt="Logo Client 1"
-              />
-            </div>
-            <!-- <div class="col-xl-2 col-md-3 col-6 client-logo">
-              <img
-                src="assets/img/clients/MGN logo.png"
-                class="img-fluid"
-                alt="Logo Client 2"
-              />
-            </div> -->
-            <div class="col-xl-2 col-md-3 col-6 client-logo">
-              <img
-                src="assets/img/clients/Smartsyte.jpeg"
-                class="img-fluid"
-                alt="Logo Client 2"
-              />
-            </div>
-            <div class="col-xl-2 col-md-3 col-6 client-logo">
-              <img
-                src="assets/img/clients/intertek Gabon.jpg"
-                class="img-fluid"
-                alt="Logo Client 2"
-              />
-            </div>
-            <div class="col-xl-2 col-md-3 col-6 client-logo">
-              <img
-                src="assets/img/clients/Ambassade du Japon.jpg"
-                class="img-fluid"
-                alt="Logo Client 2"
-              />
-            </div>
-            <div class="col-xl-2 col-md-3 col-6 client-logo">
-              <img
-                src="assets/img/clients/Assemblée Nationale.png"
-                class="img-fluid"
-                alt="Logo Client 2"
-              />
-            </div>
-            <div class="col-xl-2 col-md-3 col-6 client-logo">
-              <img
-                src="assets/img/clients/SOBEG Gabon.jpg"
-                class="img-fluid"
-                alt="Logo Client 2"
-              />
+        <section id="clients" class="clients section light-background">
+          <div class="container" data-aos="fade-up">
+            <div class="clients-shell">
+              <div class="row gy-4 justify-content-center align-items-center">
+                <div class="col-xl-2 col-md-3 col-6 client-logo">
+                  <img
+                    src="assets/img/clients/pnud-logo.png"
+                    class="img-fluid"
+                    alt="Programme des Nations Unies pour le Développement"
+                  />
+                </div>
+                <div class="col-xl-2 col-md-3 col-6 client-logo">
+                  <img
+                    src="assets/img/clients/Smartsyte.jpeg"
+                    class="img-fluid"
+                    alt="Smartsyte"
+                  />
+                </div>
+                <div class="col-xl-2 col-md-3 col-6 client-logo">
+                  <img
+                    src="assets/img/clients/intertek Gabon.jpg"
+                    class="img-fluid"
+                    alt="Intertek Gabon"
+                  />
+                </div>
+                <div class="col-xl-2 col-md-3 col-6 client-logo">
+                  <img
+                    src="assets/img/clients/Ambassade du Japon.jpg"
+                    class="img-fluid"
+                    alt="Ambassade du Japon"
+                  />
+                </div>
+                <div class="col-xl-2 col-md-3 col-6 client-logo">
+                  <img
+                    src="assets/img/clients/Assemblée Nationale.png"
+                    class="img-fluid"
+                    alt="Assemblée Nationale du Gabon"
+                  />
+                </div>
+                <div class="col-xl-2 col-md-3 col-6 client-logo">
+                  <img
+                    src="assets/img/clients/SOBEG Gabon.jpg"
+                    class="img-fluid"
+                    alt="SOBEG Gabon"
+                  />
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
       <!-- End Section Client -->
 
       <!-- Section Services -->
-      <section id="services" class="services section">
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Nos Piliers de Services</h2>
-          <p>
-            Des solutions intégrées pour le digital, la mobilité et la
-            logistique
-          </p>
-        </div>
-        <div class="container">
-          <div class="row gy-4">
-            <div
-              class="col-md-12 col-lg-6"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <div
-                class="service-item d-flex align-items-center position-relative h-100 p-4 rounded border-1 shadow-sm hover-effect"
+        <section id="services" class="section">
+          <div class="container section-title" data-aos="fade-up">
+            <h2 data-i18n="pillars.title">Nos expertises intégrées</h2>
+            <p data-i18n="pillars.subtitle">
+              Une chaîne de valeur unique qui combine plateforme digitale,
+              sourcing, mobilité et énergie pour sécuriser tous vos projets.
+            </p>
+          </div>
+          <div class="container">
+            <div class="pillars-grid">
+              <article
+                class="pillar-card"
+                data-aos="fade-up"
+                data-aos-delay="100"
               >
-                <img
-                  src="assets/img/services/Appli_Icon.jpeg"
-                  alt="Plateforme e-commerce WAZ'UP"
-                  class="img-fluid rounded me-4"
-                  style="width: 200px; height: 150px; object-fit: cover"
-                />
-                <div>
-                  <h4 class="title">
-                    <a
-                      href="services.html#waz-up"
-                      class="stretched-link text-decoration-none text-dark"
-                      >WAZ'UP : E-commerce & Logistique</a
-                    >
-                  </h4>
-                  <p class="description text-muted mb-0">
-                    Développez votre activité avec notre plateforme e-commerce
-                    multi-vendeurs. Connectez-vous à un large réseau de clients
-                    et gérez vos ventes en toute simplicité.
-                  </p>
+                <div class="icon-wrap">
+                  <i class="bi bi-bag-check-fill"></i>
                 </div>
-              </div>
-            </div>
-            <div
-              class="col-md-12 col-lg-6"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <div
-                class="service-item d-flex align-items-center position-relative h-100 p-4 rounded border-1 shadow-sm hover-effect"
+                <h3 data-i18n="pillars.wazup.title">WAZ'UP — Marketplace intelligente</h3>
+                <p data-i18n="pillars.wazup.copy">
+                  Digitalisez vos ventes et vos achats avec une plateforme
+                  multi-acteurs, sécurisée et connectée à la logistique LeBonWaz,
+                  pour une expérience client sans frictions.
+                </p>
+                <a
+                  href="services.html#waz-up"
+                  data-i18n="pillars.cta"
+                  >Découvrir le pilier</a
+                >
+              </article>
+              <article
+                class="pillar-card"
+                data-aos="fade-up"
+                data-aos-delay="150"
               >
-                <img
-                  src="assets/img/services/lbw-mobility.jpeg"
-                  alt="Solutions de mobilité LBW-MOBILITY"
-                  class="img-fluid rounded me-4"
-                  style="width: 200px; height: 150px; object-fit: cover"
-                />
-                <div>
-                  <h4 class="title">
-                    <a
-                      href="services.html#lbw-mobility"
-                      class="stretched-link text-decoration-none text-dark"
-                      >LBW-MOBILITY : Location et Achat de Véhicules</a
-                    >
-                  </h4>
-                  <p class="description text-muted mb-0">
-                    Profitez d'une flotte de véhicules modernes et fiables pour
-                    vos besoins professionnels ou personnels, avec des options
-                    de location et d'achat flexibles et adaptées à votre usage.
-                  </p>
+                <div class="icon-wrap">
+                  <i class="bi bi-truck-front-fill"></i>
                 </div>
-              </div>
-            </div>
-            <div
-              class="col-md-12 col-lg-6"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <div
-                class="service-item d-flex align-items-center position-relative h-100 p-4 rounded border-1 shadow-sm hover-effect"
+                <h3 data-i18n="pillars.mobility.title">
+                  LBW-MOBILITY — Flottes et mobilité opérationnelle
+                </h3>
+                <p data-i18n="pillars.mobility.copy">
+                  Accédez à des solutions de location, d'achat et de pilotage de
+                  flottes adaptées à vos besoins métiers pour déplacer équipes,
+                  marchandises et matériels.
+                </p>
+                <a
+                  href="services.html#lbw-mobility"
+                  data-i18n="pillars.cta"
+                  >Découvrir le pilier</a
+                >
+              </article>
+              <article
+                class="pillar-card"
+                data-aos="fade-up"
+                data-aos-delay="200"
               >
-                <img
-                  src="assets/img/services/lbw-solar.jpg"
-                  alt="Énergie verte et solutions solaires"
-                  class="img-fluid rounded me-4"
-                  style="width: 200px; height: 150px; object-fit: cover"
-                />
-                <div>
-                  <h4 class="title">
-                    <a
-                      href="#"
-                      class="stretched-link text-decoration-none text-dark"
-                      >LBW-SOLAR : Solutions Énergétiques Solaires</a
-                    >
-                  </h4>
-                  <p class="description text-muted mb-0">
-                    Fourniture et installation de solutions énergétiques
-                    durables (panneaux, lampadaires solaires, etc.) pour réduire
-                    votre empreinte écologique.
-                  </p>
+                <div class="icon-wrap">
+                  <i class="bi bi-sun-fill"></i>
                 </div>
-              </div>
-            </div>
-
-            <div
-              class="col-md-12 col-lg-6"
-              data-aos="fade-up"
-              data-aos-delay="400"
-            >
-              <div
-                class="service-item d-flex align-items-center position-relative h-100 p-4 rounded border-1 shadow-sm hover-effect"
+                <h3 data-i18n="pillars.solar.title">
+                  LBW-SOLAR — Transition énergétique maîtrisée
+                </h3>
+                <p data-i18n="pillars.solar.copy">
+                  Des solutions solaires et hybrides conçues pour sécuriser vos
+                  sites, réduire votre empreinte carbone et garantir la
+                  continuité de service.
+                </p>
+                <a
+                  href="services.html#lbw-solar"
+                  data-i18n="pillars.cta"
+                  >Découvrir le pilier</a
+                >
+              </article>
+              <article
+                class="pillar-card"
+                data-aos="fade-up"
+                data-aos-delay="250"
               >
-                <img
-                  src="assets/img/services/lbw trade.png"
-                  alt="Commerce international LBW-TRADE"
-                  class="img-fluid rounded me-4"
-                  style="width: 200px; height: 150px; object-fit: cover"
-                />
-                <div>
-                  <h4 class="title">
-                    <a
-                      href="services.html#lbw-trade"
-                      class="stretched-link text-decoration-none text-dark"
-                      >LBW-TRADE : Commerce International</a
-                    >
-                  </h4>
-                  <p class="description text-muted mb-0">
-                    Facilitez vos échanges commerciaux internationaux grâce à
-                    notre plateforme dédiée. Nous vous accompagnons dans le
-                    sourcing de produits et l'optimisation de vos importations.
-                  </p>
+                <div class="icon-wrap">
+                  <i class="bi bi-globe2"></i>
                 </div>
-              </div>
+                <h3 data-i18n="pillars.trade.title">
+                  LBW-TRADE — Centrale d'achat & commerce international
+                </h3>
+                <p data-i18n="pillars.trade.copy">
+                  Sourcing, contrôle qualité et import-export : nous sécurisons
+                  vos approvisionnements et raccourcissons vos délais
+                  d'exécution.
+                </p>
+                <a
+                  href="services.html#lbw-trade"
+                  data-i18n="pillars.cta"
+                  >Découvrir le pilier</a
+                >
+              </article>
             </div>
           </div>
-        </div>
-      </section>
-      <section id="other-services" class="services section">
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Autres Services & Expertises</h2>
-          <p>
-            Au-delà de nos piliers, nous offrons une gamme complète de solutions
-            pour répondre à tous vos besoins.
-          </p>
-        </div>
-        <div class="container">
-          <div class="row gy-4">
-            <div
-              class="col-md-12 col-lg-6"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <div
-                class="service-item d-flex align-items-center position-relative h-100 p-4 rounded border-1 shadow-sm hover-effect"
+        </section>
+        <section id="solutions" class="section">
+          <div class="container section-title" data-aos="fade-up">
+            <h2 data-i18n="solutions.title">Solutions transverses</h2>
+            <p data-i18n="solutions.subtitle">
+              Des expertises complémentaires pour accompagner l'ensemble du cycle
+              de vos projets et opérations.
+            </p>
+          </div>
+          <div class="container">
+            <div class="pillars-grid">
+              <article
+                class="pillar-card"
+                data-aos="fade-up"
+                data-aos-delay="100"
               >
-                <img
-                  src="assets/img/services/centrale-achat-approvisionnement.jpg"
-                  alt="Centrale d'achat et d'approvisionnement"
-                  class="img-fluid rounded me-4"
-                  style="width: 200px; height: 150px; object-fit: cover"
-                />
-                <div>
-                  <h4 class="title">
-                    <a
-                      href="services.html#other-services-4"
-                      class="stretched-link text-decoration-none text-dark"
-                      >LBW-EQUIPEMENT : Centrale d'Achat et
-                      d'Approvisionnement</a
-                    >
-                  </h4>
-                  <p class="description text-muted mb-0">
-                    Nous gérons l'approvisionnement de vos projets en vous
-                    garantissant l'accès à des produits et des matériaux de
-                    qualité certifiée.
-                  </p>
+                <div class="icon-wrap">
+                  <i class="bi bi-box-seam"></i>
                 </div>
-              </div>
-            </div>
-            <div
-              class="col-md-12 col-lg-6"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              <div
-                class="service-item d-flex align-items-center position-relative h-100 p-4 rounded border-1 shadow-sm hover-effect"
+                <h3 data-i18n="solutions.procurement.title">
+                  LBW-EQUIPEMENT — Centrale d'approvisionnement
+                </h3>
+                <p data-i18n="solutions.procurement.copy">
+                  Matériels, consommables, solutions techniques : nous gérons vos
+                  achats stratégiques avec un réseau de fournisseurs certifiés et
+                  une traçabilité complète.
+                </p>
+                <a
+                  href="services.html#other-services-4"
+                  data-i18n="solutions.cta"
+                  >Voir le détail</a
+                >
+              </article>
+              <article
+                class="pillar-card"
+                data-aos="fade-up"
+                data-aos-delay="160"
               >
-                <img
-                  src="assets/img/services/lbw delivery.png"
-                  alt="Livraison rapide WAZ'FAST"
-                  class="img-fluid rounded me-4"
-                  style="width: 200px; height: 150px; object-fit: cover"
-                />
-                <div>
-                  <h4 class="title">
-                    <a
-                      href="services.html#other-services"
-                      class="stretched-link text-decoration-none text-dark"
-                      >LBW-DELIVERY : Livraison & Logistique Urbaine</a
-                    >
-                  </h4>
-                  <p class="description text-muted mb-0">
-                    Notre service de livraison vous assure une expédition rapide
-                    et sécurisée de vos commandes. Nous gérons votre logistique
-                    urbaine pour un flux de produits fluide et efficace.
-                  </p>
+                <div class="icon-wrap">
+                  <i class="bi bi-truck"></i>
                 </div>
-              </div>
-            </div>
-            <div
-              class="col-md-12 col-lg-6"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              <div
-                class="service-item d-flex align-items-center position-relative h-100 p-4 rounded border-1 shadow-sm hover-effect"
+                <h3 data-i18n="solutions.delivery.title">
+                  LBW-DELIVERY — Livraison & logistique urbaine
+                </h3>
+                <p data-i18n="solutions.delivery.copy">
+                  Une couverture agile pour distribuer vos produits, assurer vos
+                  tournées et piloter vos commandes avec la même exigence que vos
+                  clients.
+                </p>
+                <a
+                  href="services.html#other-services"
+                  data-i18n="solutions.cta"
+                  >Voir le détail</a
+                >
+              </article>
+              <article
+                class="pillar-card"
+                data-aos="fade-up"
+                data-aos-delay="220"
               >
-                <img
-                  src="assets/img/services/developpement-applications-sur-mesure.webp"
-                  alt="Développement d'applications et de logiciels sur mesure"
-                  class="img-fluid rounded me-4"
-                  style="width: 200px; height: 150px; object-fit: cover"
-                />
-                <div>
-                  <h4 class="title">
-                    <a
-                      href="services.html#other-services-2"
-                      class="stretched-link text-decoration-none text-dark"
-                      >LBW-IT : Développement d'Applications sur Mesure</a
-                    >
-                  </h4>
-                  <p class="description text-muted mb-0">
-                    Nous concevons des applications et des solutions logicielles
-                    adaptées à vos besoins spécifiques pour digitaliser vos
-                    opérations.
-                  </p>
+                <div class="icon-wrap">
+                  <i class="bi bi-code-slash"></i>
                 </div>
-              </div>
-            </div>
-            <div
-              class="col-md-12 col-lg-6"
-              data-aos="fade-up"
-              data-aos-delay="400"
-            >
-              <div
-                class="service-item d-flex align-items-center position-relative h-100 p-4 rounded border-1 shadow-sm hover-effect"
+                <h3 data-i18n="solutions.it.title">
+                  LBW-IT — Développement sur mesure
+                </h3>
+                <p data-i18n="solutions.it.copy">
+                  Conception d'applications, intégration systèmes et outils
+                  métiers pour digitaliser vos processus en phase avec la
+                  réalité terrain.
+                </p>
+                <a
+                  href="services.html#other-services-2"
+                  data-i18n="solutions.cta"
+                  >Voir le détail</a
+                >
+              </article>
+              <article
+                class="pillar-card"
+                data-aos="fade-up"
+                data-aos-delay="280"
               >
-                <img
-                  src="assets/img/services/lbw learning.png"
-                  alt="Formations et accompagnement technique"
-                  class="img-fluid rounded me-4"
-                  style="width: 200px; height: 150px; object-fit: cover"
-                />
-                <div>
-                  <h4 class="title">
-                    <a
-                      href="services.html#other-services-3"
-                      class="stretched-link text-decoration-none text-dark"
-                      >LBW-FORMATIONS : Formations et Accompagnement
-                      Technique</a
-                    >
-                  </h4>
-                  <p class="description text-muted mb-0">
-                    Nous offrons des formations pour la prise en main des outils
-                    digitaux afin de renforcer vos compétences et celles de vos
-                    équipes.
-                  </p>
+                <div class="icon-wrap">
+                  <i class="bi bi-mortarboard-fill"></i>
                 </div>
-              </div>
-            </div>
-
-            <div
-              class="col-md-12 col-lg-6"
-              data-aos="fade-up"
-              data-aos-delay="400"
-            >
-              <div
-                class="service-item d-flex align-items-center position-relative h-100 p-4 rounded border-1 shadow-sm hover-effect"
+                <h3 data-i18n="solutions.learning.title">
+                  LBW-FORMATIONS — Renforcement des compétences
+                </h3>
+                <p data-i18n="solutions.learning.copy">
+                  Programmes d'accompagnement, formations pratiques et coaching
+                  pour accélérer l'adoption de vos solutions digitales et
+                  opérationnelles.
+                </p>
+                <a
+                  href="services.html#other-services-3"
+                  data-i18n="solutions.cta"
+                  >Voir le détail</a
+                >
+              </article>
+              <article
+                class="pillar-card"
+                data-aos="fade-up"
+                data-aos-delay="340"
               >
-                <img
-                  src="assets/img/services/lbw wazgame.png"
-                  alt="Plateforme de jeux de tombola LBW-WAZGAME"
-                  class="img-fluid rounded me-4"
-                  style="width: 200px; height: 150px; object-fit: cover"
-                />
-                <div>
-                  <h4 class="title">
-                    <a
-                      href="services.html#other-services-5"
-                      class="stretched-link text-decoration-none text-dark"
-                      >LBW-WAZGAME : Plateforme de Jeux de Tombola</a
-                    >
-                  </h4>
-                  <p class="description text-muted mb-0">
-                    Participez à nos jeux de tombola en ligne pour tenter de
-                    gagner des prix attractifs tout en soutenant des causes
-                    sociales.
-                  </p>
+                <div class="icon-wrap">
+                  <i class="bi bi-controller"></i>
                 </div>
-              </div>
+                <h3 data-i18n="solutions.wazgame.title">
+                  LBW-WAZGAME — Engagement & activation
+                </h3>
+                <p data-i18n="solutions.wazgame.copy">
+                  Des mécaniques promotionnelles et solidaires pour créer de la
+                  valeur partagée autour de vos communautés et partenaires.
+                </p>
+                <a
+                  href="services.html#other-services-5"
+                  data-i18n="solutions.cta"
+                  >Voir le détail</a
+                >
+              </article>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
       <!-- End Section Services -->
 
       <!-- Section portfolio -->
@@ -772,84 +792,130 @@
     <footer id="footer" class="footer dark-background">
       <div class="container footer-top">
         <div class="row gy-4">
-          <div class="col-lg-4 col-md-6 footer-about">
-            <a href="index.html" class="logo d-flex align-items-center">
-              <span class="sitename">LE BON WAZ</span>
-            </a>
-            <div class="footer-contact pt-3">
-              <p>Rond-Point d'OKALA</p>
-              <p>AKANDA, Gabon</p>
-              <p class="mt-3">
-                <strong>Téléphone:</strong>
-                <span><a href="tel:+24165737122">+241 65 73 71 22</a></span>
-              </p>
-              <p>
-                <strong>Email:</strong>
-                <span>
-                  <a href="mailto:contact@lebonwaz.com">contact@lebonwaz.com</a>
-                </span>
-              </p>
+            <div class="col-lg-4 col-md-6 footer-about">
+              <a href="index.html" class="logo d-flex align-items-center">
+                <span class="sitename">LE BON WAZ</span>
+              </a>
+              <div class="footer-contact pt-3">
+                <p data-i18n="footer.address.line1">Rond-Point d'OKALA</p>
+                <p data-i18n="footer.address.line2">AKANDA, Gabon</p>
+                <p class="mt-3">
+                  <strong data-i18n="footer.phone.label">Téléphone :</strong>
+                  <span
+                    ><a href="tel:+24165737122">+241 65 73 71 22</a></span
+                  >
+                </p>
+                <p>
+                  <strong>Email :</strong>
+                  <span>
+                    <a href="mailto:jecontacte@lebonwaz.com"
+                      >jecontacte@lebonwaz.com</a
+                    >
+                  </span>
+                </p>
+              </div>
+
+              <div class="social-links d-flex mt-4">
+                <a href="#" title="Twitter"><i class="bi bi-twitter-x"></i></a>
+                <a href="#" title="Facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" title="Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              </div>
             </div>
 
-            <div class="social-links d-flex mt-4">
-              <a href="" title="Twitter"><i class="bi bi-twitter-x"></i></a>
-              <a href="" title="Facebook"><i class="bi bi-facebook"></i></a>
-              <a href="" title="Instagram"><i class="bi bi-instagram"></i></a>
-              <a href="" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <div class="col-lg-2 col-md-3 footer-links">
+              <h4 data-i18n="footer.links">Liens utiles</h4>
+              <ul>
+                <li>
+                  <a href="index.html" data-i18n="footer.links.home">Accueil</a>
+                </li>
+                <li>
+                  <a href="about.html" data-i18n="footer.links.about"
+                    >Qui sommes-nous&nbsp;?</a
+                  >
+                </li>
+                <li>
+                  <a href="services.html" data-i18n="footer.links.expertise"
+                    >Nos expertises</a
+                  >
+                </li>
+                <li>
+                  <a href="contact.html" data-i18n="footer.links.contact"
+                    >Nous contacter</a
+                  >
+                </li>
+                <li>
+                  <a href="mention.html" data-i18n="footer.links.mentions"
+                    >Mentions légales</a
+                  >
+                </li>
+                <li>
+                  <a href="condition.html" data-i18n="footer.links.terms"
+                    >Conditions générales d'utilisation</a
+                  >
+                </li>
+              </ul>
             </div>
-          </div>
 
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Liens Utiles</h4>
-            <ul>
-              <li><a href="index.html">Accueil</a></li>
-              <li><a href="about.html">Qui Sommes-Nous ?</a></li>
-              <li><a href="services.html">Nos Services</a></li>
-              <li><a href="contact.html">Nous Contacter</a></li>
-              <li><a href="mention.html">Mentions Légales</a></li>
-              <li>
-                <a href="condition.html">Conditions Générales d'Utilisations</a>
-              </li>
-            </ul>
-          </div>
+            <div class="col-lg-2 col-md-3 footer-links">
+              <h4 data-i18n="footer.expertise">Nos expertises</h4>
+              <ul>
+                <li>
+                  <a href="services.html#waz-up" data-i18n="footer.wazup"
+                    >WAZ'UP</a
+                  >
+                </li>
+                <li>
+                  <a href="services.html#lbw-mobility" data-i18n="footer.mobility"
+                    >LBW-MOBILITY</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="services.html#other-services"
+                    data-i18n="footer.delivery"
+                    >LBW-DELIVERY</a
+                  >
+                </li>
+                <li>
+                  <a href="services.html#lbw-trade" data-i18n="footer.trade"
+                    >LBW-TRADE</a
+                  >
+                </li>
+              </ul>
+            </div>
 
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Nos Piliers de Services</h4>
-            <ul>
-              <li><a href="services.html#waz-up">WAZ'UP</a></li>
-              <li><a href="services.html#lbw-mobility">LBW-MOBILITY</a></li>
-              <li><a href="services.html#other-services">LBW-DELIVERY</a></li>
-              <li><a href="services.html#lbw-trade">LBW-TRADE</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-4 col-md-12 footer-newsletter">
-            <h4>Notre Newsletter</h4>
-            <p>
-              Abonnez-vous à notre newsletter et recevez les dernières nouvelles
-              et offres de LE BON WAZ directement dans votre boîte de réception
-              !
-            </p>
-            <form
-              action="forms/newsletter.php"
-              method="post"
-              class="php-email-form"
-              id="newsletterForm"
-            >
-              <div class="newsletter-form">
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Votre email"
-                /><input type="submit" value="S'abonner" />
-              </div>
-              <div class="loading">Chargement</div>
-              <div class="error-message"></div>
-              <div class="sent-message">
-                Votre demande d'abonnement a été envoyée. Merci !
-              </div>
-            </form>
-          </div>
+            <div class="col-lg-4 col-md-12 footer-newsletter">
+              <h4 data-i18n="footer.newsletter.title">Notre newsletter</h4>
+              <p data-i18n="footer.newsletter.copy">
+                Abonnez-vous pour recevoir nos actualités, opportunités et cas
+                d'usage directement dans votre boîte mail.
+              </p>
+              <form
+                action="forms/newsletter.php"
+                method="post"
+                class="php-email-form"
+                id="newsletterForm"
+              >
+                <div class="newsletter-form">
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Votre email"
+                    data-i18n-placeholder="footer.newsletter.placeholder"
+                  /><input
+                    type="submit"
+                    value="S'abonner"
+                    data-i18n="footer.newsletter.cta"
+                  />
+                </div>
+                <div class="loading" data-i18n="form.loading">Chargement</div>
+                <div class="error-message"></div>
+                <div class="sent-message" data-i18n="footer.newsletter.thanks">
+                  Votre demande d'abonnement a été envoyée. Merci&nbsp;!
+                </div>
+              </form>
+            </div>
         </div>
       </div>
 
@@ -879,6 +945,12 @@
       title="Retour en haut de page"
       ><i class="bi bi-arrow-up-short"></i
     ></a>
+
+      <div
+        class="translator-floating-toast"
+        role="status"
+        aria-live="polite"
+      ></div>
 
     <div id="preloader"></div>
 
