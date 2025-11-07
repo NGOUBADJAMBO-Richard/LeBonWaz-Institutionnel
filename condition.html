@@ -680,107 +680,153 @@
     </main>
     <!-- End Main -->
 
-    <footer id="footer" class="footer dark-background">
-      <div class="container footer-top">
-        <div class="row gy-4">
-          <div class="col-lg-4 col-md-6 footer-about">
-            <a href="index.html" class="logo d-flex align-items-center">
-              <span class="sitename">LE BON WAZ</span>
-            </a>
-            <div class="footer-contact pt-3">
-              <p>Rond-Point d'OKALA</p>
-              <p>AKANDA, Gabon</p>
-              <p class="mt-3">
-                <strong>Téléphone:</strong>
-                <span><a href="tel:+24165737122">+241 65 73 71 22</a></span>
-              </p>
-              <p>
-                <strong>Email:</strong>
-                <span>
-                  <a href="mailto:contact@lebonwaz.com">contact@lebonwaz.com</a>
-                </span>
-              </p>
+        <footer id="footer" class="footer dark-background">
+          <div class="container footer-top">
+            <div class="row gy-4">
+              <div class="col-lg-4 col-md-6 footer-about">
+                <a href="index.html" class="logo d-flex align-items-center">
+                  <span class="sitename">LE BON WAZ</span>
+                </a>
+                <div class="footer-contact pt-3">
+                  <p data-i18n="footer.address.line1">Rond-Point d'OKALA</p>
+                  <p data-i18n="footer.address.line2">AKANDA, Gabon</p>
+                  <p class="mt-3">
+                    <strong data-i18n="footer.phone.label">Téléphone :</strong>
+                    <span
+                      ><a href="tel:+24165737122">+241 65 73 71 22</a></span
+                    >
+                  </p>
+                  <p>
+                    <strong>Email :</strong>
+                    <span>
+                      <a href="mailto:jecontacte@lebonwaz.com"
+                        >jecontacte@lebonwaz.com</a
+                      >
+                    </span>
+                  </p>
+                </div>
+
+                <div class="social-links d-flex mt-4">
+                  <a href="#" title="Twitter"><i class="bi bi-twitter-x"></i></a>
+                  <a href="#" title="Facebook"><i class="bi bi-facebook"></i></a>
+                  <a href="#" title="Instagram"><i class="bi bi-instagram"></i></a>
+                  <a href="#" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+
+              <div class="col-lg-2 col-md-3 footer-links">
+                <h4 data-i18n="footer.links">Liens utiles</h4>
+                <ul>
+                  <li>
+                    <a href="index.html" data-i18n="footer.links.home">Accueil</a>
+                  </li>
+                  <li>
+                    <a href="about.html" data-i18n="footer.links.about"
+                      >Qui sommes-nous&nbsp;?</a
+                    >
+                  </li>
+                  <li>
+                    <a href="services.html" data-i18n="footer.links.expertise"
+                      >Nos expertises</a
+                    >
+                  </li>
+                  <li>
+                    <a href="contact.html" data-i18n="footer.links.contact"
+                      >Nous contacter</a
+                    >
+                  </li>
+                  <li>
+                    <a href="mention.html" data-i18n="footer.links.mentions"
+                      >Mentions légales</a
+                    >
+                  </li>
+                  <li>
+                    <a href="condition.html" data-i18n="footer.links.terms"
+                      >Conditions générales d'utilisation</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-lg-2 col-md-3 footer-links">
+                <h4 data-i18n="footer.expertise">Nos expertises</h4>
+                <ul>
+                  <li>
+                    <a href="services.html#waz-up" data-i18n="footer.wazup"
+                      >WAZ'UP</a
+                    >
+                  </li>
+                  <li>
+                    <a href="services.html#lbw-mobility" data-i18n="footer.mobility"
+                      >LBW-MOBILITY</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="services.html#other-services"
+                      data-i18n="footer.delivery"
+                      >LBW-DELIVERY</a
+                    >
+                  </li>
+                  <li>
+                    <a href="services.html#lbw-trade" data-i18n="footer.trade"
+                      >LBW-TRADE</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-lg-4 col-md-12 footer-newsletter">
+                <h4 data-i18n="footer.newsletter.title">Notre newsletter</h4>
+                <p data-i18n="footer.newsletter.copy">
+                  Abonnez-vous pour recevoir nos actualités, opportunités et cas
+                  d'usage directement dans votre boîte mail.
+                </p>
+                <form
+                  action="forms/newsletter.php"
+                  method="post"
+                  class="php-email-form"
+                  id="newsletterForm"
+                >
+                  <div class="newsletter-form">
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Votre email"
+                      data-i18n-placeholder="footer.newsletter.placeholder"
+                    /><input
+                      type="submit"
+                      value="S'abonner"
+                      data-i18n="footer.newsletter.cta"
+                    />
+                  </div>
+                  <div class="loading" data-i18n="form.loading">Chargement</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message" data-i18n="footer.newsletter.thanks">
+                    Votre demande d'abonnement a été envoyée. Merci&nbsp;!
+                  </div>
+                </form>
+              </div>
             </div>
-
-            <div class="social-links d-flex mt-4">
-              <a href="" title="Twitter"><i class="bi bi-twitter-x"></i></a>
-              <a href="" title="Facebook"><i class="bi bi-facebook"></i></a>
-              <a href="" title="Instagram"><i class="bi bi-instagram"></i></a>
-              <a href="" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
-            </div>
           </div>
 
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Liens Utiles</h4>
-            <ul>
-              <li><a href="index.html">Accueil</a></li>
-              <li><a href="about.html">Qui Sommes-Nous ?</a></li>
-              <li><a href="services.html">Nos Services</a></li>
-              <li><a href="contact.html">Nous Contacter</a></li>
-              <li><a href="mention.html">Mentions Légales</a></li>
-              <li>
-                <a href="condition.html">Conditions Générales d'Utilisations</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Nos Piliers de Services</h4>
-            <ul>
-              <li><a href="services.html#waz-up">WAZ'UP</a></li>
-              <li><a href="services.html#lbw-mobility">LBW-MOBILITY</a></li>
-              <li><a href="services.html#other-services">LBW-DELIVERY</a></li>
-              <li><a href="services.html#lbw-trade">LBW-TRADE</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-4 col-md-12 footer-newsletter">
-            <h4>Notre Newsletter</h4>
+          <div class="container copyright text-center mt-4">
             <p>
-              Abonnez-vous à notre newsletter et recevez les dernières nouvelles
-              et offres de LE BON WAZ directement dans votre boîte de réception
-              !
+              © <span>Copyright</span>
+              <strong class="px-1 sitename">LE BON WAZ</strong>
+              <span>Tous Droits Réservés</span>
             </p>
-            <form
-              action="forms/newsletter.php"
-              method="post"
-              class="php-email-form"
-              id="newsletterForm"
-            >
-              <div class="newsletter-form">
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Votre email"
-                /><input type="submit" value="S'abonner" />
-              </div>
-              <div class="loading">Chargement</div>
-              <div class="error-message"></div>
-              <div class="sent-message">
-                Votre demande d'abonnement a été envoyée. Merci !
-              </div>
-            </form>
+            <div class="credits">
+              Conçu par
+              <a
+                href="https://ngoubadjambo-richard.github.io/Portfolio-Richard/"
+                target="_blank"
+                rel="noopener"
+                >M.G.N A.Richard</a
+              >
+            </div>
           </div>
-        </div>
-      </div>
-
-      <div class="container copyright text-center mt-4">
-        <p>
-          © <span>Copyright</span>
-          <strong class="px-1 sitename">LE BON WAZ</strong>
-          <span>Tous Droits Réservés</span>
-        </p>
-        <div class="credits">
-          Conçu par
-          <a
-            href="https://ngoubadjambo-richard.github.io/Portfolio-Richard/"
-            target="_blank"
-            rel="noopener"
-            >M.G.N A.Richard</a
-          >
-        </div>
-      </div>
-    </footer>
+        </footer>
 
     <!-- Scroll Top -->
     <a
