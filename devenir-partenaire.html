@@ -3,16 +3,23 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>
+    <title
+      data-i18n-fr="Devenir Partenaire - LE BON WAZ | E-commerce, Mobilité, Logistique"
+      data-i18n-en="Become a Partner - LE BON WAZ | E-commerce, Mobility, Logistics"
+    >
       Devenir Partenaire - LE BON WAZ | E-commerce, Mobilité, Logistique
     </title>
     <meta
       name="description"
       content="Rejoignez LE BON WAZ et développez votre activité. Devenez Partenaire pour vendre vos produits (WAZ'UP), proposer vos véhicules (LBW-MOBILITY) ou offrir vos services."
+      data-i18n-fr="Rejoignez LE BON WAZ et développez votre activité. Devenez Partenaire pour vendre vos produits (WAZ'UP), proposer vos véhicules (LBW-MOBILITY) ou offrir vos services."
+      data-i18n-en="Join LE BON WAZ and grow your business. Become a partner to sell your products (WAZ'UP), list your vehicles (LBW-MOBILITY) or offer your services."
     />
     <meta
       name="keywords"
       content="Partenariat, Fournisseur, Vendeur, E-commerce, Marketplace, LBW-MOBILITY, LE BON WAZ, Gabon, opportunité commerciale"
+      data-i18n-fr="Partenariat, Fournisseur, Vendeur, E-commerce, Marketplace, LBW-MOBILITY, LE BON WAZ, Gabon, opportunité commerciale"
+      data-i18n-en="Partnership, Supplier, Merchant, E-commerce, Marketplace, LBW-MOBILITY, LE BON WAZ, Gabon, business opportunity"
     />
 
     <link href="assets/img/lbw-joyempowered1.png" rel="icon" />
@@ -40,74 +47,174 @@
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
     <link href="assets/css/main.css" rel="stylesheet" />
+    <link href="assets/css/custom-design.css" rel="stylesheet" />
   </head>
 
-  <body class="page-partners">
+  <body class="page-partners" data-page="partners-apply">
     <header id="header" class="header d-flex align-items-center sticky-top">
       <div
         class="container-fluid container-xl position-relative d-flex align-items-center"
       >
         <a href="index.html" class="logo d-flex align-items-center me-auto">
-          <h1 class="logo d-flex align-items-center me-auto">
-            <img
-              src="assets/img/lbw-joyempowered1-logo.png"
-              alt="Le Bon Waz Logo"
-            />
-          </h1>
+          <span class="visually-hidden">Le Bon Waz</span>
+          <img src="assets/img/lbw-joyempowered1-logo.png" alt="Le Bon Waz" />
         </a>
 
         <nav id="navmenu" class="navmenu">
           <ul>
-            <li><a href="index.html">Accueil</a></li>
+            <li>
+              <a
+                href="index.html#hero"
+                data-i18n="nav.home"
+                data-page-link="home"
+                >Accueil</a
+              >
+            </li>
             <li class="dropdown">
-              <a href="about.html">
-                <span>À Propos</span>
+              <a href="about.html" data-page-link="about">
+                <span data-i18n="nav.about">À propos</span>
                 <i class="bi bi-chevron-down toggle-dropdown"></i>
               </a>
               <ul>
                 <li>
-                  <a href="about.html#who-we-are">Qui Sommes-Nous ?</a>
+                  <a href="about.html#origin-story" data-i18n="nav.origin"
+                    >Notre histoire</a
+                  >
                 </li>
-                <li><a href="team.html">Notre Équipe</a></li>
-                <li><a href="testimonials.html">Témoignages</a></li>
-                <li><a href="partners.html">Partenaires & Références</a></li>
+                <li>
+                  <a href="about.html#engagements" data-i18n="nav.commitments"
+                    >Nos engagements</a
+                  >
+                </li>
+                <li>
+                  <a href="team.html" data-i18n="nav.team" data-page-link="team"
+                    >Notre équipe</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="testimonials.html"
+                    data-i18n="nav.testimonials"
+                    data-page-link="testimonials"
+                    >Témoignages</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="partners.html"
+                    data-i18n="nav.partners"
+                    data-page-link="partners"
+                    >Partenaires & Références</a
+                  >
+                </li>
               </ul>
             </li>
             <li class="dropdown">
-              <a href="services.html">
-                <span>Services</span>
+              <a href="services.html" data-page-link="expertise">
+                <span data-i18n="nav.expertise">Nos expertises</span>
                 <i class="bi bi-chevron-down toggle-dropdown"></i>
               </a>
               <ul>
-                <li><a href="services.html#waz-up">WAZ'UP - E-commerce</a></li>
                 <li>
-                  <a href="services.html#lbw-mobility"
+                  <a href="services.html#waz-up" data-i18n="nav.expertise.wazup"
+                    >WAZ'UP - E-commerce</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="services.html#lbw-mobility"
+                    data-i18n="nav.expertise.mobility"
                     >LBW-MOBILITY - Location et Achat de Véhicules</a
                   >
                 </li>
                 <li>
-                  <a href="services.html#lbw-solar"
+                  <a
+                    href="services.html#lbw-solar"
+                    data-i18n="nav.expertise.solar"
                     >LBW-SOLAR - Solutions Énergétiques Solaires</a
                   >
                 </li>
                 <li>
-                  <a href="services.html#lbw-trade"
+                  <a
+                    href="services.html#lbw-trade"
+                    data-i18n="nav.expertise.trade"
                     >LBW-TRADE - Centrale d'Achat</a
                   >
                 </li>
                 <li>
-                  <a href="services.html#other-services">Autres Services</a>
+                  <a
+                    href="services.html#other-services"
+                    data-i18n="nav.expertise.other"
+                    >Autres services</a
+                  >
                 </li>
               </ul>
             </li>
-            <li><a href="blog.html">Actualités</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li>
+              <a href="devis.html" data-i18n="nav.quote" data-page-link="quote"
+                >Devis</a
+              >
+            </li>
+            <li>
+              <a href="blog.html" data-i18n="nav.blog" data-page-link="blog"
+                >Actualités</a
+              >
+            </li>
+            <li>
+              <a
+                href="contact.html"
+                data-i18n="nav.contact"
+                data-page-link="contact"
+                >Contact</a
+              >
+            </li>
+            <li class="d-xl-none">
+              <button
+                type="button"
+                class="theme-toggle w-100 justify-content-center"
+                data-theme-toggle
+              >
+                <i class="bi bi-moon-stars"></i>
+                <span data-theme-label data-i18n="theme.dark">Mode sombre</span>
+              </button>
+            </li>
+            <li class="d-xl-none">
+              <div class="language-switcher w-100">
+                <select
+                  class="language-select w-100"
+                  data-language-switch
+                  aria-label="Changer de langue"
+                >
+                  <option value="fr">FR</option>
+                  <option value="en">EN</option>
+                </select>
+              </div>
+            </li>
           </ul>
+          <div class="nav-actions d-none d-xl-flex">
+            <div class="language-switcher">
+              <select
+                class="language-select"
+                data-language-switch
+                aria-label="Changer de langue"
+              >
+                <option value="fr">FR</option>
+                <option value="en">EN</option>
+              </select>
+            </div>
+            <button type="button" class="theme-toggle" data-theme-toggle>
+              <i class="bi bi-moon-stars"></i>
+              <span data-theme-label data-i18n="theme.dark">Mode sombre</span>
+            </button>
+          </div>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
 
-        <a class="btn-getstarted" href="devenir-partenaire.html"
-          >Devenir Partenaire</a
+        <a
+          class="btn-getstarted"
+          href="devenir-partenaire.html"
+          data-i18n="nav.cta"
+          >Devenir partenaire</a
         >
       </div>
     </header>
@@ -117,11 +224,27 @@
         <div
           class="container d-lg-flex justify-content-between align-items-center"
         >
-          <h1 class="mb-2 mb-lg-0">Devenir Partenaire</h1>
+          <h1
+            class="mb-2 mb-lg-0"
+            data-i18n-fr="Devenir Partenaire"
+            data-i18n-en="Become a Partner"
+          >
+            Devenir Partenaire
+          </h1>
           <nav class="breadcrumbs">
             <ol>
-              <li><a href="index.html">Accueil</a></li>
-              <li class="current">Devenir Partenaire</li>
+              <li>
+                <a href="index.html" data-i18n-fr="Accueil" data-i18n-en="Home"
+                  >Accueil</a
+                >
+              </li>
+              <li
+                class="current"
+                data-i18n-fr="Devenir Partenaire"
+                data-i18n-en="Become a Partner"
+              >
+                Devenir Partenaire
+              </li>
             </ol>
           </nav>
         </div>
@@ -141,11 +264,16 @@
             >
               <h1
                 class="display-5 fw-bold text-primary mb-3"
-                style="color: #043671 !important"
+                data-i18n-fr="Rejoignez l'Écosystème LE BON WAZ"
+                data-i18n-en="Join the LE BON WAZ Ecosystem"
               >
                 Rejoignez l'Écosystème LE BON WAZ
               </h1>
-              <p class="lead text-secondary">
+              <p
+                class="lead text-secondary"
+                data-i18n-fr="Élargissez votre marché, augmentez votre visibilité et simplifiez vos transactions en vous associant à un acteur clé des solutions digitales au Gabon."
+                data-i18n-en="Expand your market, boost visibility and simplify transactions by partnering with a leading digital solutions provider in Gabon."
+              >
                 Élargissez votre marché, augmentez votre visibilité et
                 simplifiez vos transactions en vous associant à un acteur clé
                 des solutions digitales au Gabon.
@@ -153,6 +281,8 @@
               <a
                 href="#partner-form-section"
                 class="btn btn-primary btn-lg mt-3 shadow-sm"
+                data-i18n-fr="Postuler maintenant"
+                data-i18n-en="Apply now"
               >
                 Postuler maintenant
               </a>
@@ -183,10 +313,19 @@
               data-aos="fade-up"
               data-aos-delay="400"
             >
-              <h2 class="title mb-5 display-6 fw-bold">
+              <h2
+                class="title mb-5 display-6 fw-bold"
+                data-i18n-fr="Pourquoi devenir Partenaire LE BON WAZ ?"
+                data-i18n-en="Why partner with LE BON WAZ?"
+              >
                 Pourquoi devenir Partenaire LE BON WAZ ?
               </h2>
-              <p class="lead mx-auto text-secondary" style="max-width: 800px">
+              <p
+                class="lead mx-auto text-secondary"
+                style="max-width: 800px"
+                data-i18n-fr="En tant qu'intermédiaire d'affaires, LE BON WAZ (LBW) met à disposition une puissante infrastructure technologique pour vous connecter directement à des milliers de clients au Gabon et au-delà. Notre objectif est de transformer votre offre en opportunités commerciales concrètes."
+                data-i18n-en="As a business facilitator, LE BON WAZ (LBW) provides a powerful technology infrastructure that connects you directly with thousands of clients in Gabon and beyond. Our goal is to turn your offer into tangible business opportunities."
+              >
                 En tant qu'intermédiaire d'affaires, LE BON WAZ (LBW) met à
                 disposition une puissante infrastructure technologique pour vous
                 connecter directement à des milliers de clients au Gabon et
@@ -207,8 +346,18 @@
                   >
                     <i class="bi bi-shop display-5 text-primary mb-3"></i>
                     <div class="card-body p-0">
-                      <h4 class="card-title fw-bold">Marketplace WAZ'UP</h4>
-                      <p class="card-text text-secondary">
+                      <h4
+                        class="card-title fw-bold"
+                        data-i18n-fr="Marketplace WAZ'UP"
+                        data-i18n-en="WAZ'UP Marketplace"
+                      >
+                        Marketplace WAZ'UP
+                      </h4>
+                      <p
+                        class="card-text text-secondary"
+                        data-i18n-fr="Vendez vos produits en ligne sans les contraintes logistiques. Accédez à la première Marketplace gabonaise."
+                        data-i18n-en="Sell online without logistical constraints. Access Gabon's first marketplace."
+                      >
                         Vendez vos produits en ligne sans les contraintes
                         logistiques. Accédez à la première Marketplace
                         gabonaise.
@@ -227,8 +376,18 @@
                   >
                     <i class="bi bi-car-front display-5 text-primary mb-3"></i>
                     <div class="card-body p-0">
-                      <h4 class="card-title fw-bold">LBW-MOBILITY</h4>
-                      <p class="card-text text-secondary">
+                      <h4
+                        class="card-title fw-bold"
+                        data-i18n-fr="LBW-MOBILITY"
+                        data-i18n-en="LBW-MOBILITY"
+                      >
+                        LBW-MOBILITY
+                      </h4>
+                      <p
+                        class="card-text text-secondary"
+                        data-i18n-fr="Augmentez la visibilité de votre flotte de véhicules (vente ou location) auprès d'une clientèle ciblée et vérifiée."
+                        data-i18n-en="Increase the visibility of your vehicle fleet (sales or rentals) with a targeted, verified customer base."
+                      >
                         Augmentez la visibilité de votre flotte de véhicules
                         (vente ou location) auprès d'une clientèle ciblée et
                         vérifiée.
@@ -247,10 +406,18 @@
                   >
                     <i class="bi bi-wallet display-5 text-primary mb-3"></i>
                     <div class="card-body p-0">
-                      <h4 class="card-title fw-bold">
+                      <h4
+                        class="card-title fw-bold"
+                        data-i18n-fr="Facilitation de Paiement"
+                        data-i18n-en="Payment facilitation"
+                      >
                         Facilitation de Paiement
                       </h4>
-                      <p class="card-text text-secondary">
+                      <p
+                        class="card-text text-secondary"
+                        data-i18n-fr="Bénéficiez du service WAZ'PAY pour sécuriser vos transactions et proposer des paiements échelonnés à vos clients."
+                        data-i18n-en="Benefit from WAZ'PAY to secure your transactions and offer staggered payments to your clients."
+                      >
                         Bénéficiez du service WAZ'PAY pour sécuriser vos
                         transactions et proposer des paiements échelonnés à vos
                         clients.
@@ -269,8 +436,18 @@
                   >
                     <i class="bi bi-truck display-5 text-primary mb-3"></i>
                     <div class="card-body p-0">
-                      <h4 class="card-title fw-bold">Logistique & Livraison</h4>
-                      <p class="card-text text-secondary">
+                      <h4
+                        class="card-title fw-bold"
+                        data-i18n-fr="Logistique &amp; Livraison"
+                        data-i18n-en="Logistics &amp; delivery"
+                      >
+                        Logistique &amp; Livraison
+                      </h4>
+                      <p
+                        class="card-text text-secondary"
+                        data-i18n-fr="Déléguez la logistique de livraison (LBW-DELIVERY) et concentrez-vous uniquement sur votre cœur de métier."
+                        data-i18n-en="Delegate delivery logistics to LBW-DELIVERY and stay focused on your core business."
+                      >
                         Déléguez la logistique de livraison (LBW-DELIVERY) et
                         concentrez-vous uniquement sur votre cœur de métier.
                       </p>
@@ -286,10 +463,19 @@
       <section id="obligations" class="obligations section pt-5 pb-5">
         <div class="container">
           <div class="section-title text-center mb-5" data-aos="fade-up">
-            <h2 class="display-6 fw-bold">
+            <h2
+              class="display-6 fw-bold"
+              data-i18n-fr="Cadre et Obligations du Partenariat"
+              data-i18n-en="Partnership Framework and Obligations"
+            >
               Cadre et Obligations du Partenariat
             </h2>
-            <p class="lead text-muted mx-auto" style="max-width: 700px">
+            <p
+              class="lead text-muted mx-auto"
+              style="max-width: 700px"
+              data-i18n-fr="Un engagement mutuel pour un succès durable et une expérience client de qualité."
+              data-i18n-en="A mutual commitment for lasting success and a high-quality customer experience."
+            >
               Un engagement mutuel pour un succès durable et une expérience
               client de qualité.
             </p>
@@ -300,35 +486,64 @@
               <div
                 class="card p-4 h-100 shadow-lg border-0 border-start border-primary border-5 rounded-4"
               >
-                <h3 class="h4 mb-4 text-primary fw-bold pb-2 border-bottom">
+                <h3
+                  class="h4 mb-4 text-primary fw-bold pb-2 border-bottom"
+                  data-i18n-fr="Obligations du Partenaire"
+                  data-i18n-en="Partner obligations"
+                >
                   <i class="bi bi-person-workspace me-2"></i> Obligations du
                   Partenaire
                 </h3>
                 <ul class="list-unstyled list-obligations">
                   <li class="mb-3">
                     <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    Respecter les Conditions Générales d'Utilisation (CGU) de la
-                    plateforme.
+                    <span
+                      data-i18n-fr="Respecter les Conditions Générales d'Utilisation (CGU) de la plateforme."
+                      data-i18n-en="Comply with the platform's Terms of Use."
+                    >
+                      Respecter les Conditions Générales d'Utilisation (CGU) de
+                      la plateforme.
+                    </span>
                   </li>
                   <li class="mb-3">
                     <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    Fournir des informations produits/services exactes,
-                    complètes et mises à jour.
+                    <span
+                      data-i18n-fr="Fournir des informations produits/services exactes, complètes et mises à jour."
+                      data-i18n-en="Provide accurate, complete and up-to-date product or service information."
+                    >
+                      Fournir des informations produits/services exactes,
+                      complètes et mises à jour.
+                    </span>
                   </li>
                   <li class="mb-3">
                     <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    Assurer la disponibilité et la qualité des articles vendus
-                    ou loués.
+                    <span
+                      data-i18n-fr="Assurer la disponibilité et la qualité des articles vendus ou loués."
+                      data-i18n-en="Ensure the availability and quality of items sold or rented."
+                    >
+                      Assurer la disponibilité et la qualité des articles vendus
+                      ou loués.
+                    </span>
                   </li>
                   <li class="mb-3">
                     <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    Payer les commissions et frais de service convenus
-                    contractuellement.
+                    <span
+                      data-i18n-fr="Payer les commissions et frais de service convenus contractuellement."
+                      data-i18n-en="Pay the agreed commissions and service fees."
+                    >
+                      Payer les commissions et frais de service convenus
+                      contractuellement.
+                    </span>
                   </li>
                   <li class="mb-3">
                     <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    Traiter les commandes et requêtes clients dans les délais
-                    impartis.
+                    <span
+                      data-i18n-fr="Traiter les commandes et requêtes clients dans les délais impartis."
+                      data-i18n-en="Process customer orders and requests within the agreed timeframes."
+                    >
+                      Traiter les commandes et requêtes clients dans les délais
+                      impartis.
+                    </span>
                   </li>
                 </ul>
               </div>
@@ -338,33 +553,63 @@
               <div
                 class="card p-4 h-100 shadow-lg border-0 border-start border-info border-5 rounded-4"
               >
-                <h3 class="h4 mb-4 text-info fw-bold pb-2 border-bottom">
+                <h3
+                  class="h4 mb-4 text-info fw-bold pb-2 border-bottom"
+                  data-i18n-fr="Engagements de LE BON WAZ"
+                  data-i18n-en="Commitments from LE BON WAZ"
+                >
                   <i class="bi bi-award-fill me-2"></i> Engagements de LE BON
                   WAZ
                 </h3>
                 <ul class="list-unstyled list-obligations">
                   <li class="mb-3">
                     <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    Fournir une plateforme technique stable et sécurisée
-                    (WAZ'UP, LBW-MOBILITY).
+                    <span
+                      data-i18n-fr="Fournir une plateforme technique stable et sécurisée (WAZ'UP, LBW-MOBILITY)."
+                      data-i18n-en="Provide a stable, secure platform (WAZ'UP, LBW-MOBILITY)."
+                    >
+                      Fournir une plateforme technique stable et sécurisée
+                      (WAZ'UP, LBW-MOBILITY).
+                    </span>
                   </li>
                   <li class="mb-3">
                     <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    Assurer la visibilité de l'offre du Partenaire auprès d'une
-                    large clientèle.
+                    <span
+                      data-i18n-fr="Assurer la visibilité de l'offre du Partenaire auprès d'une large clientèle."
+                      data-i18n-en="Give the partner's offer visibility with a broad client base."
+                    >
+                      Assurer la visibilité de l'offre du Partenaire auprès
+                      d'une large clientèle.
+                    </span>
                   </li>
                   <li class="mb-3">
                     <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    Gérer et sécuriser les transactions via WAZ'PAY.
+                    <span
+                      data-i18n-fr="Gérer et sécuriser les transactions via WAZ'PAY."
+                      data-i18n-en="Manage and secure transactions through WAZ'PAY."
+                    >
+                      Gérer et sécuriser les transactions via WAZ'PAY.
+                    </span>
                   </li>
                   <li class="mb-3">
                     <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    Effectuer les reversements des ventes (moins la commission)
-                    selon les termes définis.
+                    <span
+                      data-i18n-fr="Effectuer les reversements des ventes (moins la commission) selon les termes définis."
+                      data-i18n-en="Make sales payouts (minus commission) according to agreed terms."
+                    >
+                      Effectuer les reversements des ventes (moins la
+                      commission) selon les termes définis.
+                    </span>
                   </li>
                   <li class="mb-3">
                     <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    Offrir un support technique et commercial dédié et réactif.
+                    <span
+                      data-i18n-fr="Offrir un support technique et commercial dédié et réactif."
+                      data-i18n-en="Provide dedicated, responsive technical and commercial support."
+                    >
+                      Offrir un support technique et commercial dédié et
+                      réactif.
+                    </span>
                   </li>
                 </ul>
               </div>
@@ -376,10 +621,19 @@
       <section id="partner-form-section" class="partner-form section py-5">
         <div class="container">
           <div class="section-title text-center mb-5" data-aos="fade-up">
-            <h2 class="display-6 fw-bold text-primary mb-3">
+            <h2
+              class="display-6 fw-bold text-primary mb-3"
+              data-i18n-fr="Devenez Partenaire : Candidature"
+              data-i18n-en="Become a partner: application"
+            >
               Devenez Partenaire : Candidature
             </h2>
-            <p class="lead text-muted mx-auto" style="max-width: 700px">
+            <p
+              class="lead text-muted mx-auto"
+              style="max-width: 700px"
+              data-i18n-fr="Veuillez remplir le formulaire ci-dessous. Notre équipe vous recontactera sous 72 heures ouvrées pour discuter des prochaines étapes de collaboration."
+              data-i18n-en="Please complete the form below. Our team will contact you within 72 business hours to discuss the next steps."
+            >
               Veuillez remplir le formulaire ci-dessous. Notre équipe vous
               recontactera sous 72 heures ouvrées pour discuter des prochaines
               étapes de collaboration.
@@ -804,6 +1058,12 @@
         </div>
       </div>
     </footer>
+
+    <div
+      class="translator-floating-toast"
+      role="status"
+      aria-live="polite"
+    ></div>
 
     <a
       href="#"

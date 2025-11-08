@@ -47,6 +47,20 @@ body[data-theme="dark"] {
   color-scheme: dark;
 }
 
+body[data-theme="dark"] .text-secondary {
+  color: rgba(208, 218, 248, 0.86) !important;
+}
+
+body[data-theme="dark"] .text-muted {
+  color: rgba(190, 202, 236, 0.78) !important;
+}
+
+body[data-theme="dark"] .bg-light {
+  background-color: rgba(17, 26, 46, 0.88) !important;
+  color: var(--default-color) !important;
+  border-color: rgba(255, 255, 255, 0.05) !important;
+}
+
 body {
   background: radial-gradient(
       circle at top left,

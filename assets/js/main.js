@@ -709,6 +709,168 @@
     },
   };
 
+  const pageOverrides = {
+    "partners-apply": [
+      {
+        selector: 'label[for="partnership_type"]',
+        type: "html",
+        fr: 'Type de Partenariat souhaité <span class="text-danger">*</span>',
+        en: 'Desired partnership type <span class="text-danger">*</span>',
+      },
+      {
+        selector: 'select[name="partnership_type"] option',
+        type: "text",
+        fr: [
+          "Sélectionnez l'option principale...",
+          "Vendeur sur la Marketplace WAZ'UP (E-commerce)",
+          "Fournisseur LBW-MOBILITY (Vente ou Location de Véhicules)",
+          "Prestataire de Services (Ex: BTP, Énergie, Autres)",
+          "Autre type de collaboration",
+        ],
+        en: [
+          "Select the primary option...",
+          "WAZ'UP marketplace vendor (E-commerce)",
+          "LBW-MOBILITY supplier (vehicle sales or rentals)",
+          "Service provider (e.g. construction, energy, other)",
+          "Other collaboration type",
+        ],
+      },
+      {
+        selector: 'label[for="company"]',
+        type: "html",
+        fr: 'Nom de l\'Entreprise / Raison Sociale <span class="text-danger">*</span>',
+        en: 'Company name / Legal name <span class="text-danger">*</span>',
+      },
+      {
+        selector: "#company",
+        type: "attr",
+        attr: "placeholder",
+        fr: "Nom de l'Entreprise / Raison Sociale",
+        en: "Company name / Legal name",
+      },
+      {
+        selector: 'label[for="representative_name"]',
+        type: "html",
+        fr: 'Nom et Prénom du Représentant <span class="text-danger">*</span>',
+        en: 'Representative\'s first and last name <span class="text-danger">*</span>',
+      },
+      {
+        selector: "#representative_name",
+        type: "attr",
+        attr: "placeholder",
+        fr: "Nom et Prénom du Représentant",
+        en: "Representative's name",
+      },
+      {
+        selector: 'label[for="email"]',
+        type: "html",
+        fr: 'Adresse Email Professionnelle <span class="text-danger">*</span>',
+        en: 'Business email address <span class="text-danger">*</span>',
+      },
+      {
+        selector: "#email",
+        type: "attr",
+        attr: "placeholder",
+        fr: "Adresse Email Professionnelle",
+        en: "Business email address",
+      },
+      {
+        selector: 'label[for="phone"]',
+        type: "html",
+        fr: 'Numéro de Téléphone <span class="text-danger">*</span>',
+        en: 'Phone number <span class="text-danger">*</span>',
+      },
+      {
+        selector: "#phone",
+        type: "attr",
+        attr: "placeholder",
+        fr: "Numéro de Téléphone (Ex: +241 6x xx xx xx)",
+        en: "Phone number (e.g. +241 6x xx xx xx)",
+      },
+      {
+        selector: 'label[for="nif_rccm"]',
+        type: "text",
+        fr: "NIF ou Numéro RCCM (Optionnel)",
+        en: "Tax ID or RCCM number (optional)",
+      },
+      {
+        selector: "#nif_rccm",
+        type: "attr",
+        attr: "placeholder",
+        fr: "NIF ou Numéro RCCM (Société)",
+        en: "Tax ID or RCCM number (Company)",
+      },
+      {
+        selector: 'label[for="city_country"]',
+        type: "html",
+        fr: 'Ville et Pays d\'Opération <span class="text-danger">*</span>',
+        en: 'City and country of operation <span class="text-danger">*</span>',
+      },
+      {
+        selector: "#city_country",
+        type: "attr",
+        attr: "placeholder",
+        fr: "Ville et Pays d'Opération (Ex: Libreville, Gabon)",
+        en: "City and country of operation (e.g. Libreville, Gabon)",
+      },
+      {
+        selector: 'label[for="offer_description"]',
+        type: "html",
+        fr: 'Décrivez votre Offre (Produits/Services) <span class="text-danger">*</span>',
+        en: 'Describe your offer (products/services) <span class="text-danger">*</span>',
+      },
+      {
+        selector: "#offer_description",
+        type: "attr",
+        attr: "placeholder",
+        fr: "Décrivez en quelques lignes les produits, véhicules ou services que vous souhaitez proposer via notre plateforme.",
+        en: "Describe in a few lines the products, vehicles or services you wish to offer via our platform.",
+      },
+      {
+        selector: 'label[for="cgu_accept"]',
+        type: "html",
+        fr: 'J\'ai lu et j\'accepte les <a href="condition.html" target="_blank" class="text-decoration-underline text-primary">Conditions Générales d\'Utilisation (CGU)</a> et les termes du partenariat LE BON WAZ.<span class="text-danger">*</span>',
+        en: 'I have read and accept the <a href="condition.html" target="_blank" class="text-decoration-underline text-primary">Terms of Use</a> and the LE BON WAZ partnership terms.<span class="text-danger">*</span>',
+      },
+      {
+        selector: "#partner-form-section .loading",
+        type: "text",
+        fr: "Envoi en cours...",
+        en: "Sending...",
+      },
+      {
+        selector: "#partner-form-section .sent-message",
+        type: "text",
+        fr: "Votre candidature a été envoyée avec succès. Merci !",
+        en: "Your application has been sent successfully. Thank you!",
+      },
+      {
+        selector: '#partner-form-section button[type="submit"]',
+        type: "text",
+        fr: "Envoyer ma Candidature",
+        en: "Submit my application",
+      },
+      {
+        selector: "#cta-partners h2",
+        type: "html",
+        fr: '<i class="bi bi-question-circle-fill me-3"></i> Vous avez des questions spécifiques ?',
+        en: '<i class="bi bi-question-circle-fill me-3"></i> Do you have specific questions?',
+      },
+      {
+        selector: "#cta-partners p",
+        type: "text",
+        fr: "Contactez directement notre service des Partenariats pour une réponse rapide et une discussion personnalisée avant de soumettre officiellement votre candidature.",
+        en: "Reach out directly to our Partnerships team for a quick response and a tailored discussion before officially submitting your application.",
+      },
+      {
+        selector: "#cta-partners .cta-btn-custom",
+        type: "text",
+        fr: "Contacter notre équipe Partenariats",
+        en: "Contact our partnerships team",
+      },
+    ],
+  };
+
   const themeButtons = document.querySelectorAll("[data-theme-toggle]");
   const languageSelects = document.querySelectorAll("[data-language-switch]");
   const themeLabelSpans = document.querySelectorAll("[data-theme-label]");
@@ -802,8 +964,75 @@
     });
   }
 
+  function resolveInlineTranslation(element, language, type, key) {
+    let translation =
+      key && translations[language] ? translations[language][key] : undefined;
+
+    if (translation !== undefined) {
+      return translation;
+    }
+
+    const datasetKey =
+      type === "placeholder"
+        ? language === "en"
+          ? "i18nPlaceholderEn"
+          : "i18nPlaceholderFr"
+        : language === "en"
+        ? "i18nEn"
+        : "i18nFr";
+
+    return element.dataset?.[datasetKey];
+  }
+
+  function applyPageOverrides(language) {
+    const pageKey = document.body.dataset.page;
+    if (!pageKey) return;
+    const overrides = pageOverrides[pageKey];
+    if (!overrides) return;
+
+    overrides.forEach((override) => {
+      const elements = document.querySelectorAll(override.selector);
+      if (!elements.length) return;
+
+      elements.forEach((element, index) => {
+        if (override.type === "attr" && override.attr) {
+          const datasetKey =
+            "i18nOriginalAttr" +
+            override.attr.charAt(0).toUpperCase() +
+            override.attr.slice(1);
+          if (!(datasetKey in element.dataset)) {
+            element.dataset[datasetKey] =
+              element.getAttribute(override.attr) ?? "";
+          }
+          const values = language === "en" ? override.en : override.fr;
+          const value = Array.isArray(values) ? values[index] : values;
+          const fallback = element.dataset[datasetKey];
+          element.setAttribute(override.attr, value ?? fallback);
+        } else if (override.type === "text") {
+          if (!("i18nOriginalText" in element.dataset)) {
+            element.dataset.i18nOriginalText =
+              element.textContent ?? element.innerText ?? "";
+          }
+          const values = language === "en" ? override.en : override.fr;
+          const value = Array.isArray(values) ? values[index] : values;
+          const fallback = element.dataset.i18nOriginalText;
+          element.textContent = value ?? fallback;
+        } else if (override.type === "html") {
+          if (!("i18nOriginalHtml" in element.dataset)) {
+            element.dataset.i18nOriginalHtml = element.innerHTML;
+          }
+          const values = language === "en" ? override.en : override.fr;
+          const value = Array.isArray(values) ? values[index] : values;
+          const fallback = element.dataset.i18nOriginalHtml;
+          element.innerHTML = value ?? fallback;
+        }
+      });
+    });
+  }
+
   function applyTranslations(language) {
-    if (!translations[language]) return;
+    if (!translations[language] && language !== "fr" && language !== "en")
+      return;
     currentLanguage = language;
     document.documentElement.lang = language;
     localStorage.setItem(STORAGE_KEYS.language, language);
@@ -812,33 +1041,54 @@
       select.value = language;
     });
 
-    document.querySelectorAll("[data-i18n]").forEach((element) => {
-      const key = element.dataset.i18n;
-      const translation = translations[language][key];
-      if (translation === undefined) return;
+    document
+      .querySelectorAll("[data-i18n], [data-i18n-en], [data-i18n-fr]")
+      .forEach((element) => {
+        const key = element.dataset.i18n;
+        const translation = resolveInlineTranslation(
+          element,
+          language,
+          "text",
+          key
+        );
+        if (translation === undefined) return;
 
-      if (element.tagName === "META") {
-        element.setAttribute("content", translation);
-      } else if (element.tagName === "TITLE") {
-        element.textContent = translation;
-      } else if (
-        element.tagName === "INPUT" &&
-        ["submit", "button"].includes(element.type)
-      ) {
-        element.value = translation;
-      } else {
-        element.innerHTML = translation;
-      }
-    });
+        if (element.tagName === "META") {
+          element.setAttribute("content", translation);
+        } else if (element.tagName === "TITLE") {
+          element.textContent = translation;
+        } else if (
+          element.tagName === "INPUT" &&
+          ["submit", "button"].includes(element.type)
+        ) {
+          element.value = translation;
+        } else {
+          element.innerHTML = translation;
+        }
+      });
 
-    document.querySelectorAll("[data-i18n-placeholder]").forEach((element) => {
-      const key = element.dataset.i18nPlaceholder;
-      const translation = translations[language][key];
-      if (translation === undefined) return;
-      element.setAttribute("placeholder", translation);
-    });
+    document
+      .querySelectorAll(
+        "[data-i18n-placeholder], [data-i18n-placeholder-en], [data-i18n-placeholder-fr]"
+      )
+      .forEach((element) => {
+        const key = element.dataset.i18nPlaceholder;
+        const translation = resolveInlineTranslation(
+          element,
+          language,
+          "placeholder",
+          key
+        );
+        if (translation === undefined) return;
+        element.setAttribute("placeholder", translation);
+      });
+
+    applyPageOverrides(language);
 
     updateThemeToggleLabel(currentTheme);
+    document.dispatchEvent(
+      new CustomEvent("lbw:language-change", { detail: { language } })
+    );
   }
 
   function showLanguageToast(message) {
