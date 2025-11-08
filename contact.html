@@ -3,15 +3,24 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Contactez-nous - Le Bon Waz</title>
-    <meta
-      name="description"
-      content="Contactez Le Bon Waz pour toute question, collaboration ou support. Nous offrons des solutions digitales, logistiques et de mobilité au Gabon. Trouvez nos coordonnées, téléphone, email et site web."
-    />
-    <meta
-      name="keywords"
-      content="Le Bon Waz, contact, contact Gabon, téléphone, email, support, collaboration, logistique, solutions digitales, mobilité, services, Libreville, +241"
-    />
+      <title
+        data-i18n-fr="Contactez-nous - Le Bon Waz"
+        data-i18n-en="Contact Us - Le Bon Waz"
+      >
+        Contactez-nous - Le Bon Waz
+      </title>
+      <meta
+        name="description"
+        content="Contactez Le Bon Waz pour toute question, collaboration ou support. Nous offrons des solutions digitales, logistiques et de mobilité au Gabon. Trouvez nos coordonnées, téléphone, email et site web."
+        data-i18n-fr="Contactez Le Bon Waz pour toute question, collaboration ou support. Nous offrons des solutions digitales, logistiques et de mobilité au Gabon. Trouvez nos coordonnées, téléphone, email et site web."
+        data-i18n-en="Reach out to Le Bon Waz for questions, collaborations or support. We deliver digital, logistics and mobility solutions across Gabon. Find our phone, email and location details."
+      />
+      <meta
+        name="keywords"
+        content="Le Bon Waz, contact, contact Gabon, téléphone, email, support, collaboration, logistique, solutions digitales, mobilité, services, Libreville, +241"
+        data-i18n-fr="Le Bon Waz, contact, contact Gabon, téléphone, email, support, collaboration, logistique, solutions digitales, mobilité, services, Libreville, +241"
+        data-i18n-en="Le Bon Waz, contact, Gabon contact, phone, email, support, collaboration, logistics, digital solutions, mobility, services, Libreville, +241"
+      />
 
     <link href="assets/img/lbw-joyempowered1.png" rel="icon" />
     <link href="assets/img/lbw-joyempowered1.png" rel="apple-touch-icon" />
@@ -42,72 +51,174 @@
     <link href="assets/css/custom-design.css" rel="stylesheet" />
   </head>
 
-  <body class="about-page">
+  <body class="about-page contact-page" data-page="contact">
     <header id="header" class="header d-flex align-items-center sticky-top">
       <div
         class="container-fluid container-xl position-relative d-flex align-items-center"
       >
         <a href="index.html" class="logo d-flex align-items-center me-auto">
-          <h1 class="logo d-flex align-items-center me-auto">
-            <img
-              src="assets/img/lbw-joyempowered1-logo.png"
-              alt="Le Bon Waz Logo"
-            />
-          </h1>
+          <span class="visually-hidden">Le Bon Waz</span>
+          <img src="assets/img/lbw-joyempowered1-logo.png" alt="Le Bon Waz" />
         </a>
 
         <nav id="navmenu" class="navmenu">
           <ul>
-            <li><a href="index.html">Accueil</a></li>
+            <li>
+              <a
+                href="index.html#hero"
+                data-i18n="nav.home"
+                data-page-link="home"
+                >Accueil</a
+              >
+            </li>
             <li class="dropdown">
-              <a href="about.html">
-                <span>À Propos</span>
+              <a href="about.html" data-page-link="about">
+                <span data-i18n="nav.about">À propos</span>
                 <i class="bi bi-chevron-down toggle-dropdown"></i>
               </a>
               <ul>
                 <li>
-                  <a href="about.html#who-we-are">Qui Sommes-Nous ?</a>
+                  <a href="about.html#origin-story" data-i18n="nav.origin"
+                    >Notre histoire</a
+                  >
                 </li>
-                <li><a href="team.html">Notre Équipe</a></li>
-                <li><a href="testimonials.html">Témoignages</a></li>
-                <li><a href="partners.html">Partenaires & Références</a></li>
+                <li>
+                  <a href="about.html#engagements" data-i18n="nav.commitments"
+                    >Nos engagements</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="team.html"
+                    data-i18n="nav.team"
+                    data-page-link="team"
+                    >Notre équipe</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="testimonials.html"
+                    data-i18n="nav.testimonials"
+                    data-page-link="testimonials"
+                    >Témoignages</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="partners.html"
+                    data-i18n="nav.partners"
+                    data-page-link="partners"
+                    >Partenaires & Références</a
+                  >
+                </li>
               </ul>
             </li>
             <li class="dropdown">
-              <a href="services.html">
-                <span>Services</span>
+              <a href="services.html" data-page-link="expertise">
+                <span data-i18n="nav.expertise">Nos expertises</span>
                 <i class="bi bi-chevron-down toggle-dropdown"></i>
               </a>
               <ul>
-                <li><a href="services.html#waz-up">WAZ'UP - E-commerce</a></li>
                 <li>
-                  <a href="services.html#lbw-mobility"
+                  <a href="services.html#waz-up" data-i18n="nav.expertise.wazup"
+                    >WAZ'UP - E-commerce</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="services.html#lbw-mobility"
+                    data-i18n="nav.expertise.mobility"
                     >LBW-MOBILITY - Location et Achat de Véhicules</a
                   >
                 </li>
                 <li>
-                  <a href="services.html#lbw-solar"
+                  <a
+                    href="services.html#lbw-solar"
+                    data-i18n="nav.expertise.solar"
                     >LBW-SOLAR - Solutions Énergétiques Solaires</a
                   >
                 </li>
                 <li>
-                  <a href="services.html#lbw-trade"
+                  <a
+                    href="services.html#lbw-trade"
+                    data-i18n="nav.expertise.trade"
                     >LBW-TRADE - Centrale d'Achat</a
                   >
                 </li>
                 <li>
-                  <a href="services.html#other-services">Autres Services</a>
+                  <a
+                    href="services.html#other-services"
+                    data-i18n="nav.expertise.other"
+                    >Autres services</a
+                  >
                 </li>
               </ul>
             </li>
-            <li><a href="blog.html">Actualités</a></li>
-            <li><a href="contact.html" class="active">Contact</a></li>
+            <li>
+              <a href="devis.html" data-i18n="nav.quote" data-page-link="quote"
+                >Devis</a
+              >
+            </li>
+            <li>
+              <a href="blog.html" data-i18n="nav.blog" data-page-link="blog"
+                >Actualités</a
+              >
+            </li>
+            <li>
+              <a
+                href="contact.html"
+                data-i18n="nav.contact"
+                data-page-link="contact"
+                >Contact</a
+              >
+            </li>
+            <li class="d-xl-none">
+              <button
+                type="button"
+                class="theme-toggle w-100 justify-content-center"
+                data-theme-toggle
+              >
+                <i class="bi bi-moon-stars"></i>
+                <span data-theme-label data-i18n="theme.dark">Mode sombre</span>
+              </button>
+            </li>
+            <li class="d-xl-none">
+              <div class="language-switcher w-100">
+                <select
+                  class="language-select w-100"
+                  data-language-switch
+                  aria-label="Changer de langue"
+                >
+                  <option value="fr">FR</option>
+                  <option value="en">EN</option>
+                </select>
+              </div>
+            </li>
           </ul>
+          <div class="nav-actions d-none d-xl-flex">
+            <div class="language-switcher">
+              <select
+                class="language-select"
+                data-language-switch
+                aria-label="Changer de langue"
+              >
+                <option value="fr">FR</option>
+                <option value="en">EN</option>
+              </select>
+            </div>
+            <button type="button" class="theme-toggle" data-theme-toggle>
+              <i class="bi bi-moon-stars"></i>
+              <span data-theme-label data-i18n="theme.dark">Mode sombre</span>
+            </button>
+          </div>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
 
-        <a class="btn-getstarted" href="devenir-partenaire.html"
-          >Devenir Partenaire</a
+        <a
+          class="btn-getstarted"
+          href="devenir-partenaire.html"
+          data-i18n="nav.cta"
+          >Devenir partenaire</a
         >
       </div>
     </header>
@@ -115,14 +226,33 @@
 
     <main class="main">
       <div class="page-title light-background">
-        <div
-          class="container d-lg-flex justify-content-between align-items-center"
-        >
-          <h1 class="mb-2 mb-lg-0">Contactez-nous</h1>
+          <div
+            class="container d-lg-flex justify-content-between align-items-center"
+          >
+            <h1
+              class="mb-2 mb-lg-0"
+              data-i18n-fr="Contactez-nous"
+              data-i18n-en="Contact Us"
+            >
+              Contactez-nous
+            </h1>
           <nav class="breadcrumbs">
             <ol>
-              <li><a href="index.html">Accueil</a></li>
-              <li class="current">Contact</li>
+                <li>
+                  <a
+                    href="index.html"
+                    data-i18n-fr="Accueil"
+                    data-i18n-en="Home"
+                    >Accueil</a
+                  >
+                </li>
+                <li
+                  class="current"
+                  data-i18n-fr="Contact"
+                  data-i18n-en="Contact"
+                >
+                  Contact
+                </li>
             </ol>
           </nav>
         </div>
@@ -149,76 +279,108 @@
           <div class="row gy-4 justify-content-center">
             <div class="col-lg-10">
               <div class="row gy-4">
-                <div class="col-lg-6 col-md-6">
-                  <div
-                    class="info-item d-flex p-4 bg-light rounded shadow-sm h-100"
-                    data-aos="fade-up"
-                    data-aos-delay="300"
-                  >
-                    <i
-                      class="bi bi-geo-alt flex-shrink-0 me-3 fs-3 text-primary"
-                    ></i>
-                    <div>
-                      <h3>Adresse</h3>
-                      <p class="mb-0">Rond-Point d'OKALA, AKANDA, Gabon</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-lg-6 col-md-6">
-                  <div
-                    class="info-item d-flex p-4 bg-light rounded shadow-sm h-100"
-                    data-aos="fade-up"
-                    data-aos-delay="400"
-                  >
-                    <i
-                      class="bi bi-telephone flex-shrink-0 me-3 fs-3 text-primary"
-                    ></i>
-                    <div>
-                      <h3>Appelez-nous</h3>
-                      <p class="mb-0">
-                        <a href="tel:+24165737122">+241 65 73 71 22</a>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-lg-6 col-md-6">
-                  <div
-                    class="info-item d-flex p-4 bg-light rounded shadow-sm h-100"
-                    data-aos="fade-up"
-                    data-aos-delay="500"
-                  >
-                    <i
-                      class="bi bi-envelope flex-shrink-0 me-3 fs-3 text-primary"
-                    ></i>
-                    <div>
-                      <h3>Envoyez-nous un Email</h3>
-                      <p class="mb-0">
-                        <a href="mailto:jecontacte@lebonwaz.com"
-                          >jecontacte@lebonwaz.com</a
+                  <div class="col-lg-6 col-md-6">
+                    <div
+                      class="info-item d-flex p-4 bg-light rounded shadow-sm h-100"
+                      data-aos="fade-up"
+                      data-aos-delay="300"
+                    >
+                      <i
+                        class="bi bi-geo-alt flex-shrink-0 me-3 fs-3 text-primary"
+                      ></i>
+                      <div>
+                        <h3 data-i18n-fr="Adresse" data-i18n-en="Address">
+                          Adresse
+                        </h3>
+                        <p
+                          class="mb-0"
+                          data-i18n-fr="Rond-Point d'OKALA, AKANDA, Gabon"
+                          data-i18n-en="Okala Roundabout, Akanda, Gabon"
                         >
-                      </p>
+                          Rond-Point d'OKALA, AKANDA, Gabon
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="col-lg-6 col-md-6">
-                  <div
-                    class="info-item d-flex p-4 bg-light rounded shadow-sm h-100"
-                    data-aos="fade-up"
-                    data-aos-delay="600"
-                  >
-                    <i
-                      class="bi bi-clock flex-shrink-0 me-3 fs-3 text-primary"
-                    ></i>
-                    <div>
-                      <h3>Heures d'Ouverture</h3>
-                      <p class="mb-1">Du Lundi au Vendredi: 9h00 - 17h00</p>
-                      <p class="mb-0">Samedi: 9h00 - 13h00</p>
+                  <div class="col-lg-6 col-md-6">
+                    <div
+                      class="info-item d-flex p-4 bg-light rounded shadow-sm h-100"
+                      data-aos="fade-up"
+                      data-aos-delay="400"
+                    >
+                      <i
+                        class="bi bi-telephone flex-shrink-0 me-3 fs-3 text-primary"
+                      ></i>
+                      <div>
+                        <h3 data-i18n-fr="Appelez-nous" data-i18n-en="Call us">
+                          Appelez-nous
+                        </h3>
+                        <p class="mb-0">
+                          <a href="tel:+24165737122">+241 65 73 71 22</a>
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
+
+                  <div class="col-lg-6 col-md-6">
+                    <div
+                      class="info-item d-flex p-4 bg-light rounded shadow-sm h-100"
+                      data-aos="fade-up"
+                      data-aos-delay="500"
+                    >
+                      <i
+                        class="bi bi-envelope flex-shrink-0 me-3 fs-3 text-primary"
+                      ></i>
+                      <div>
+                        <h3
+                          data-i18n-fr="Envoyez-nous un email"
+                          data-i18n-en="Email us"
+                        >
+                          Envoyez-nous un email
+                        </h3>
+                        <p class="mb-0">
+                          <a href="mailto:jecontacte@lebonwaz.com"
+                            >jecontacte@lebonwaz.com</a
+                          >
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-6 col-md-6">
+                    <div
+                      class="info-item d-flex p-4 bg-light rounded shadow-sm h-100"
+                      data-aos="fade-up"
+                      data-aos-delay="600"
+                    >
+                      <i
+                        class="bi bi-clock flex-shrink-0 me-3 fs-3 text-primary"
+                      ></i>
+                      <div>
+                        <h3
+                          data-i18n-fr="Heures d'ouverture"
+                          data-i18n-en="Opening hours"
+                        >
+                          Heures d'ouverture
+                        </h3>
+                        <p
+                          class="mb-1"
+                          data-i18n-fr="Du lundi au vendredi : 9h00 - 17h00"
+                          data-i18n-en="Monday to Friday: 9:00 am – 5:00 pm"
+                        >
+                          Du Lundi au Vendredi: 9h00 - 17h00
+                        </p>
+                        <p
+                          class="mb-0"
+                          data-i18n-fr="Samedi : 9h00 - 13h00"
+                          data-i18n-en="Saturday: 9:00 am – 1:00 pm"
+                        >
+                          Samedi: 9h00 - 13h00
+                        </p>
+                      </div>
+                    </div>
+                  </div>
               </div>
             </div>
           </div>
@@ -372,6 +534,12 @@
         </div>
       </div>
     </footer>
+
+    <div
+      class="translator-floating-toast"
+      role="status"
+      aria-live="polite"
+    ></div>
 
     <!-- Scroll Top -->
     <a

@@ -3,15 +3,24 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>L'Equipe - Le Bon Waz</title>
-    <meta
-      name="description"
-      content="LE BON WAZ est une entreprise gabonaise innovante qui conçoit et opère des solutions digitales, logistiques et de mobilité inclusive. Découvrez notre équipe."
-    />
-    <meta
-      name="keywords"
-      content="Le Bon Waz, marketplace, centrale d'achat, approvisionnement, distribution, commerce en ligne, fournisseurs, clients, produits, services"
-    />
+      <title
+        data-i18n-fr="L'Équipe - Le Bon Waz"
+        data-i18n-en="Our Team - Le Bon Waz"
+      >
+        L'Équipe - Le Bon Waz
+      </title>
+      <meta
+        name="description"
+        content="LE BON WAZ est une entreprise gabonaise innovante qui conçoit et opère des solutions digitales, logistiques et de mobilité inclusive. Découvrez notre équipe."
+        data-i18n-fr="LE BON WAZ est une entreprise gabonaise innovante qui conçoit et opère des solutions digitales, logistiques et de mobilité inclusive. Découvrez notre équipe."
+        data-i18n-en="LE BON WAZ is an innovative Gabonese company delivering inclusive digital, logistics and mobility solutions. Meet the people driving our mission."
+      />
+      <meta
+        name="keywords"
+        content="Le Bon Waz, marketplace, centrale d'achat, approvisionnement, distribution, commerce en ligne, fournisseurs, clients, produits, services"
+        data-i18n-fr="Le Bon Waz, marketplace, centrale d'achat, approvisionnement, distribution, commerce en ligne, fournisseurs, clients, produits, services"
+        data-i18n-en="Le Bon Waz, marketplace, sourcing hub, procurement, logistics, e-commerce, suppliers, customers, products, services"
+      />
 
     <link href="assets/img/lbw-joyempowered1.png" rel="icon" />
     <link href="assets/img/lbw-joyempowered1.png" rel="apple-touch-icon" />
@@ -42,82 +51,207 @@
     <link href="assets/css/custom-design.css" rel="stylesheet" />
   </head>
 
-  <body class="about-page">
-    <header id="header" class="header d-flex align-items-center sticky-top">
-      <div
-        class="container-fluid container-xl position-relative d-flex align-items-center"
-      >
-        <a href="index.html" class="logo d-flex align-items-center me-auto">
-          <h1 class="logo d-flex align-items-center me-auto">
-            <img
-              src="assets/img/lbw-joyempowered1-logo.png"
-              alt="Le Bon Waz Logo"
-            />
-          </h1>
-        </a>
+    <body class="about-page team-page" data-page="team">
+      <header id="header" class="header d-flex align-items-center sticky-top">
+        <div
+          class="container-fluid container-xl position-relative d-flex align-items-center"
+        >
+          <a href="index.html" class="logo d-flex align-items-center me-auto">
+            <span class="visually-hidden">Le Bon Waz</span>
+            <img src="assets/img/lbw-joyempowered1-logo.png" alt="Le Bon Waz" />
+          </a>
 
-        <nav id="navmenu" class="navmenu">
-          <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li class="dropdown">
-              <a href="about.html"  class="active">
-                <span>À Propos</span>
-                <i class="bi bi-chevron-down toggle-dropdown"></i>
-              </a>
-              <ul>
-                <li><a href="about.html#who-we-are">Qui Sommes-Nous ?</a></li>
-                <li><a href="team.html"  class="active">Notre Équipe</a></li>
-                <li><a href="testimonials.html">Témoignages</a></li>
-                <li><a href="partners.html">Partenaires & Références</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="services.html">
-                <span>Services</span>
-                <i class="bi bi-chevron-down toggle-dropdown"></i>
-              </a>
-              <ul>
-                <li><a href="services.html#waz-up">WAZ'UP - E-commerce</a></li>
-                <li>
-                  <a href="services.html#lbw-mobility"
-                    >LBW-MOBILITY - Location et Achat de Véhicules</a
+          <nav id="navmenu" class="navmenu">
+            <ul>
+              <li>
+                <a
+                  href="index.html#hero"
+                  data-i18n="nav.home"
+                  data-page-link="home"
+                  >Accueil</a
+                >
+              </li>
+              <li class="dropdown">
+                <a href="about.html" data-page-link="about">
+                  <span data-i18n="nav.about">À propos</span>
+                  <i class="bi bi-chevron-down toggle-dropdown"></i>
+                </a>
+                <ul>
+                  <li>
+                    <a href="about.html#origin-story" data-i18n="nav.origin"
+                      >Notre histoire</a
+                    >
+                  </li>
+                  <li>
+                    <a href="about.html#engagements" data-i18n="nav.commitments"
+                      >Nos engagements</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="team.html"
+                      data-i18n="nav.team"
+                      data-page-link="team"
+                      >Notre équipe</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="testimonials.html"
+                      data-i18n="nav.testimonials"
+                      data-page-link="testimonials"
+                      >Témoignages</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="partners.html"
+                      data-i18n="nav.partners"
+                      data-page-link="partners"
+                      >Partenaires & Références</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="services.html" data-page-link="expertise">
+                  <span data-i18n="nav.expertise">Nos expertises</span>
+                  <i class="bi bi-chevron-down toggle-dropdown"></i>
+                </a>
+                <ul>
+                  <li>
+                    <a href="services.html#waz-up" data-i18n="nav.expertise.wazup"
+                      >WAZ'UP - E-commerce</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="services.html#lbw-mobility"
+                      data-i18n="nav.expertise.mobility"
+                      >LBW-MOBILITY - Location et Achat de Véhicules</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="services.html#lbw-solar"
+                      data-i18n="nav.expertise.solar"
+                      >LBW-SOLAR - Solutions Énergétiques Solaires</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="services.html#lbw-trade"
+                      data-i18n="nav.expertise.trade"
+                      >LBW-TRADE - Centrale d'Achat</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="services.html#other-services"
+                      data-i18n="nav.expertise.other"
+                      >Autres services</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="devis.html" data-i18n="nav.quote" data-page-link="quote"
+                  >Devis</a
+                >
+              </li>
+              <li>
+                <a href="blog.html" data-i18n="nav.blog" data-page-link="blog"
+                  >Actualités</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  data-i18n="nav.contact"
+                  data-page-link="contact"
+                  >Contact</a
+                >
+              </li>
+              <li class="d-xl-none">
+                <button
+                  type="button"
+                  class="theme-toggle w-100 justify-content-center"
+                  data-theme-toggle
+                >
+                  <i class="bi bi-moon-stars"></i>
+                  <span data-theme-label data-i18n="theme.dark">Mode sombre</span>
+                </button>
+              </li>
+              <li class="d-xl-none">
+                <div class="language-switcher w-100">
+                  <select
+                    class="language-select w-100"
+                    data-language-switch
+                    aria-label="Changer de langue"
                   >
-                </li>
-                <li>
-                  <a href="services.html#lbw-solar"
-                    >LBW-SOLAR - Solutions Énergétiques Solaires</a
-                  >
-                </li>
-                <li>
-                  <a href="services.html#lbw-trade"
-                    >LBW-TRADE - Centrale d'Achat</a
-                  >
-                </li>
-                <li>
-                  <a href="services.html#other-services">Autres Services</a>
-                </li>
-              </ul>
-            </li>
-            <li><a href="blog.html">Actualités</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-        </nav>
+                    <option value="fr">FR</option>
+                    <option value="en">EN</option>
+                  </select>
+                </div>
+              </li>
+            </ul>
+            <div class="nav-actions d-none d-xl-flex">
+              <div class="language-switcher">
+                <select
+                  class="language-select"
+                  data-language-switch
+                  aria-label="Changer de langue"
+                >
+                  <option value="fr">FR</option>
+                  <option value="en">EN</option>
+                </select>
+              </div>
+              <button type="button" class="theme-toggle" data-theme-toggle>
+                <i class="bi bi-moon-stars"></i>
+                <span data-theme-label data-i18n="theme.dark">Mode sombre</span>
+              </button>
+            </div>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+          </nav>
 
-        <a class="btn-getstarted" href="devenir-partenaire.html">Devenir Partenaire</a>
-      </div>
-    </header>
+          <a
+            class="btn-getstarted"
+            href="devenir-partenaire.html"
+            data-i18n="nav.cta"
+            >Devenir partenaire</a
+          >
+        </div>
+      </header>
 
     <main class="main">
       <div class="page-title light-background">
         <div
           class="container d-lg-flex justify-content-between align-items-center"
         >
-          <h1 class="mb-2 mb-lg-0">Notre Équipe</h1>
+            <h1
+              class="mb-2 mb-lg-0"
+              data-i18n-fr="Notre Équipe"
+              data-i18n-en="Our Team"
+            >
+              Notre Équipe
+            </h1>
           <nav class="breadcrumbs">
             <ol>
-              <li><a href="index.html">Accueil</a></li>
-              <li class="current">Équipe</li>
+                <li>
+                  <a
+                    href="index.html"
+                    data-i18n-fr="Accueil"
+                    data-i18n-en="Home"
+                    >Accueil</a
+                  >
+                </li>
+                <li
+                  class="current"
+                  data-i18n-fr="Équipe"
+                  data-i18n-en="Team"
+                >
+                  Équipe
+                </li>
             </ol>
           </nav>
         </div>
@@ -128,8 +262,16 @@
         <div class="container">
           <div class="container py-4" data-aos="fade-up">
             <div class="section-header">
-              <h2>Rencontrez Notre Équipe</h2>
-              <p>
+              <h2
+                data-i18n-fr="Rencontrez Notre Équipe"
+                data-i18n-en="Meet Our Team"
+              >
+                Rencontrez Notre Équipe
+              </h2>
+              <p
+                data-i18n-fr="Derrière Le Bon Waz se trouve une équipe dévouée de professionnels passionnés par l'innovation et le service client. Découvrez les visages et les histoires de ceux qui rendent tout cela possible."
+                data-i18n-en="Behind Le Bon Waz is a dedicated team of professionals passionate about innovation and customer service. Meet the people and stories that make it all possible."
+              >
                 Derrière Le Bon Waz se trouve une équipe dévouée de
                 professionnels passionnés par l'innovation et le service client.
                 Découvrez les visages et les histoires de ceux qui rendent tout
@@ -151,11 +293,20 @@
                 </div>
                 <div class="member-info">
                   <h4>J. Yeno</h4>
-                  <span>C.E.O & Founder</span>
-                  <p class="text-muted fst-italic">
-                    Visionnaire et leader, il pilote la stratégie globale de Le
-                    Bon Waz, assurant l'innovation et la croissance de
-                    l'entreprise.
+                    <span
+                      data-i18n-fr="C.E.O &amp; Fondateur"
+                      data-i18n-en="C.E.O &amp; Founder"
+                    >
+                      C.E.O &amp; Founder
+                    </span>
+                    <p
+                      class="text-muted fst-italic"
+                      data-i18n-fr="Visionnaire et leader, il pilote la stratégie globale de Le Bon Waz, assurant l'innovation et la croissance de l'entreprise."
+                      data-i18n-en="A visionary leader, he steers Le Bon Waz's overall strategy, driving innovation and the company's growth."
+                    >
+                      Visionnaire et leader, il pilote la stratégie globale de Le
+                      Bon Waz, assurant l'innovation et la croissance de
+                      l'entreprise.
                   </p>
                   <div class="social mt-2">
                     <a href="#" target="_blank" aria-label="Twitter de J. YENO"
@@ -194,11 +345,20 @@
                 </div>
                 <div class="member-info">
                   <h4>Idy-Charlie Djoubissie</h4>
-                  <span>Sales and Marketing Executive</span>
-                  <p class="text-muted fst-italic">
-                    Experte en développement de marché, Idy-Charlie assure que
-                    nos solutions répondent parfaitement aux besoins de nos
-                    clients et partenaires.
+                    <span
+                      data-i18n-fr="Directrice commerciale &amp; marketing"
+                      data-i18n-en="Sales and Marketing Executive"
+                    >
+                      Sales and Marketing Executive
+                    </span>
+                    <p
+                      class="text-muted fst-italic"
+                      data-i18n-fr="Experte en développement de marché, Idy-Charlie assure que nos solutions répondent parfaitement aux besoins de nos clients et partenaires."
+                      data-i18n-en="A market development expert, Idy-Charlie ensures our solutions align perfectly with the needs of our clients and partners."
+                    >
+                      Experte en développement de marché, Idy-Charlie assure que
+                      nos solutions répondent parfaitement aux besoins de nos
+                      clients et partenaires.
                   </p>
                   <div class="social mt-2">
                     <a
@@ -243,11 +403,20 @@
                 </div>
                 <div class="member-info">
                   <h4>Richard Ngoubadjambo</h4>
-                  <span>IT Executive</span>
-                  <p class="text-muted fst-italic">
-                    Richard dirige notre équipe technique, garantissant une
-                    plateforme robuste, sécurisée et à la pointe de la
-                    technologie pour une expérience utilisateur optimale.
+                    <span
+                      data-i18n-fr="Directeur IT"
+                      data-i18n-en="IT Executive"
+                    >
+                      IT Executive
+                    </span>
+                    <p
+                      class="text-muted fst-italic"
+                      data-i18n-fr="Richard dirige notre équipe technique, garantissant une plateforme robuste, sécurisée et à la pointe de la technologie pour une expérience utilisateur optimale."
+                      data-i18n-en="Richard leads our technical team, ensuring a robust, secure and cutting-edge platform that delivers an optimal user experience."
+                    >
+                      Richard dirige notre équipe technique, garantissant une
+                      plateforme robuste, sécurisée et à la pointe de la
+                      technologie pour une expérience utilisateur optimale.
                   </p>
                   <div class="social mt-2">
                     <a
@@ -292,11 +461,20 @@
                 </div>
                 <div class="member-info">
                   <h4>Laure O. Gondjout</h4>
-                  <span>Financial and Administrative Executive</span>
-                  <p class="text-muted fst-italic">
-                    Laure gère les aspects financiers et administratifs de
-                    l'entreprise, assurant une gestion saine et transparente
-                    pour soutenir notre croissance.
+                    <span
+                      data-i18n-fr="Directrice financière &amp; administrative"
+                      data-i18n-en="Financial and Administrative Executive"
+                    >
+                      Financial and Administrative Executive
+                    </span>
+                    <p
+                      class="text-muted fst-italic"
+                      data-i18n-fr="Laure gère les aspects financiers et administratifs de l'entreprise, assurant une gestion saine et transparente pour soutenir notre croissance."
+                      data-i18n-en="Laure oversees the company’s finance and administration, ensuring sound, transparent management that supports our growth."
+                    >
+                      Laure gère les aspects financiers et administratifs de
+                      l'entreprise, assurant une gestion saine et transparente
+                      pour soutenir notre croissance.
                   </p>
                   <div class="social mt-2">
                     <a
@@ -341,11 +519,20 @@
                 </div>
                 <div class="member-info">
                   <h4>Wynnie Jesnelle NDONG ELOGO</h4>
-                  <span>Commerciale</span>
-                  <p class="text-muted fst-italic">
-                    Wynnie est en charge du développement commercial, établissant
-                    des relations solides avec nos clients et partenaires pour
-                    étendre notre réseau.
+                    <span
+                      data-i18n-fr="Commerciale"
+                      data-i18n-en="Sales Representative"
+                    >
+                      Commerciale
+                    </span>
+                    <p
+                      class="text-muted fst-italic"
+                      data-i18n-fr="Wynnie est en charge du développement commercial, établissant des relations solides avec nos clients et partenaires pour étendre notre réseau."
+                      data-i18n-en="Wynnie drives commercial development, building strong relationships with clients and partners to expand our network."
+                    >
+                      Wynnie est en charge du développement commercial, établissant
+                      des relations solides avec nos clients et partenaires pour
+                      étendre notre réseau.
                   </p>
                   <div class="social mt-2">
                     <a
@@ -390,11 +577,20 @@
                 </div>
                 <div class="member-info">
                   <h4>Oyane-Bondje Jovie</h4>
-                  <span>Commerciale</span>
-                  <p class="text-muted fst-italic">
-                    Jovie est en charge du développement commercial, établissant
-                    des relations solides avec nos clients et partenaires pour
-                    étendre notre réseau.
+                    <span
+                      data-i18n-fr="Commerciale"
+                      data-i18n-en="Sales Representative"
+                    >
+                      Commerciale
+                    </span>
+                    <p
+                      class="text-muted fst-italic"
+                      data-i18n-fr="Jovie est en charge du développement commercial, établissant des relations solides avec nos clients et partenaires pour étendre notre réseau."
+                      data-i18n-en="Jovie leads commercial development, cultivating strong relationships with our clients and partners to grow our reach."
+                    >
+                      Jovie est en charge du développement commercial, établissant
+                      des relations solides avec nos clients et partenaires pour
+                      étendre notre réseau.
                   </p>
                   <div class="social mt-2">
                     <a
@@ -579,6 +775,12 @@
             </div>
           </div>
         </footer>
+
+      <div
+        class="translator-floating-toast"
+        role="status"
+        aria-live="polite"
+      ></div>
 
     <!-- Scroll Top -->
     <a
