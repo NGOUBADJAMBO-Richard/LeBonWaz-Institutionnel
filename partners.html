@@ -3,15 +3,24 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Partenaires - Le Bon Waz</title>
-    <meta
-      name="description"
-      content="Rejoignez les nombreux partenaires, y compris des administrations, des ONG et des entreprises locales et internationales, qui font confiance à Le Bon Waz pour leurs solutions digitales, logistiques et de mobilité."
-    />
-    <meta
-      name="keywords"
-      content="Le Bon Waz, marketplace, centrale d'achat, approvisionnement, distribution, commerce en ligne, fournisseurs, clients, produits, services"
-    />
+      <title
+        data-i18n-fr="Partenaires - Le Bon Waz"
+        data-i18n-en="Partners - Le Bon Waz"
+      >
+        Partenaires - Le Bon Waz
+      </title>
+      <meta
+        name="description"
+        content="Rejoignez les nombreux partenaires, y compris des administrations, des ONG et des entreprises locales et internationales, qui font confiance à Le Bon Waz pour leurs solutions digitales, logistiques et de mobilité."
+        data-i18n-fr="Rejoignez les nombreux partenaires, y compris des administrations, des ONG et des entreprises locales et internationales, qui font confiance à Le Bon Waz pour leurs solutions digitales, logistiques et de mobilité."
+        data-i18n-en="Join the many partners—administrations, NGOs, and local or international companies—who trust Le Bon Waz for their digital, logistics and mobility solutions."
+      />
+      <meta
+        name="keywords"
+        content="Le Bon Waz, marketplace, centrale d'achat, approvisionnement, distribution, commerce en ligne, fournisseurs, clients, produits, services"
+        data-i18n-fr="Le Bon Waz, marketplace, centrale d'achat, approvisionnement, distribution, commerce en ligne, fournisseurs, clients, produits, services"
+        data-i18n-en="Le Bon Waz, marketplace, sourcing hub, procurement, logistics, e-commerce, suppliers, customers, products, services"
+      />
 
     <link href="assets/img/lbw-joyempowered1.png" rel="icon" />
     <link href="assets/img/lbw-joyempowered1.png" rel="apple-touch-icon" />
@@ -42,90 +51,207 @@
     <link href="assets/css/custom-design.css" rel="stylesheet" />
   </head>
 
-  <body class="about-page">
+  <body class="about-page partners-page" data-page="partners">
     <header id="header" class="header d-flex align-items-center sticky-top">
       <div
         class="container-fluid container-xl position-relative d-flex align-items-center"
       >
         <a href="index.html" class="logo d-flex align-items-center me-auto">
-          <h1 class="logo d-flex align-items-center me-auto">
-            <img
-              src="assets/img/lbw-joyempowered1-logo.png"
-              alt="Le Bon Waz Logo"
-            />
-          </h1>
+          <span class="visually-hidden">Le Bon Waz</span>
+          <img src="assets/img/lbw-joyempowered1-logo.png" alt="Le Bon Waz" />
         </a>
 
         <nav id="navmenu" class="navmenu">
           <ul>
-            <li><a href="index.html">Accueil</a></li>
+            <li>
+              <a
+                href="index.html#hero"
+                data-i18n="nav.home"
+                data-page-link="home"
+                >Accueil</a
+              >
+            </li>
             <li class="dropdown">
-              <a href="about.html" class="active">
-                <span>À Propos</span>
+              <a href="about.html" data-page-link="about">
+                <span data-i18n="nav.about">À propos</span>
                 <i class="bi bi-chevron-down toggle-dropdown"></i>
               </a>
               <ul>
                 <li>
-                  <a href="about.html#who-we-are">Qui Sommes-Nous ?</a>
+                  <a href="about.html#origin-story" data-i18n="nav.origin"
+                    >Notre histoire</a
+                  >
                 </li>
-                <li><a href="team.html">Notre Équipe</a></li>
-                <li><a href="testimonials.html">Témoignages</a></li>
                 <li>
-                  <a href="partners.html" class="active"
+                  <a href="about.html#engagements" data-i18n="nav.commitments"
+                    >Nos engagements</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="team.html"
+                    data-i18n="nav.team"
+                    data-page-link="team"
+                    >Notre équipe</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="testimonials.html"
+                    data-i18n="nav.testimonials"
+                    data-page-link="testimonials"
+                    >Témoignages</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="partners.html"
+                    data-i18n="nav.partners"
+                    data-page-link="partners"
                     >Partenaires & Références</a
                   >
                 </li>
               </ul>
             </li>
             <li class="dropdown">
-              <a href="services.html">
-                <span>Services</span>
+              <a href="services.html" data-page-link="expertise">
+                <span data-i18n="nav.expertise">Nos expertises</span>
                 <i class="bi bi-chevron-down toggle-dropdown"></i>
               </a>
               <ul>
-                <li><a href="services.html#waz-up">WAZ'UP - E-commerce</a></li>
                 <li>
-                  <a href="services.html#lbw-mobility"
+                  <a href="services.html#waz-up" data-i18n="nav.expertise.wazup"
+                    >WAZ'UP - E-commerce</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="services.html#lbw-mobility"
+                    data-i18n="nav.expertise.mobility"
                     >LBW-MOBILITY - Location et Achat de Véhicules</a
                   >
                 </li>
                 <li>
-                  <a href="services.html#lbw-solar"
+                  <a
+                    href="services.html#lbw-solar"
+                    data-i18n="nav.expertise.solar"
                     >LBW-SOLAR - Solutions Énergétiques Solaires</a
                   >
                 </li>
                 <li>
-                  <a href="services.html#lbw-trade"
+                  <a
+                    href="services.html#lbw-trade"
+                    data-i18n="nav.expertise.trade"
                     >LBW-TRADE - Centrale d'Achat</a
                   >
                 </li>
                 <li>
-                  <a href="services.html#other-services">Autres Services</a>
+                  <a
+                    href="services.html#other-services"
+                    data-i18n="nav.expertise.other"
+                    >Autres services</a
+                  >
                 </li>
               </ul>
             </li>
-            <li><a href="blog.html">Actualités</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li>
+              <a href="devis.html" data-i18n="nav.quote" data-page-link="quote"
+                >Devis</a
+              >
+            </li>
+            <li>
+              <a href="blog.html" data-i18n="nav.blog" data-page-link="blog"
+                >Actualités</a
+              >
+            </li>
+            <li>
+              <a
+                href="contact.html"
+                data-i18n="nav.contact"
+                data-page-link="contact"
+                >Contact</a
+              >
+            </li>
+            <li class="d-xl-none">
+              <button
+                type="button"
+                class="theme-toggle w-100 justify-content-center"
+                data-theme-toggle
+              >
+                <i class="bi bi-moon-stars"></i>
+                <span data-theme-label data-i18n="theme.dark">Mode sombre</span>
+              </button>
+            </li>
+            <li class="d-xl-none">
+              <div class="language-switcher w-100">
+                <select
+                  class="language-select w-100"
+                  data-language-switch
+                  aria-label="Changer de langue"
+                >
+                  <option value="fr">FR</option>
+                  <option value="en">EN</option>
+                </select>
+              </div>
+            </li>
           </ul>
+          <div class="nav-actions d-none d-xl-flex">
+            <div class="language-switcher">
+              <select
+                class="language-select"
+                data-language-switch
+                aria-label="Changer de langue"
+              >
+                <option value="fr">FR</option>
+                <option value="en">EN</option>
+              </select>
+            </div>
+            <button type="button" class="theme-toggle" data-theme-toggle>
+              <i class="bi bi-moon-stars"></i>
+              <span data-theme-label data-i18n="theme.dark">Mode sombre</span>
+            </button>
+          </div>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
 
-        <a class="btn-getstarted" href="devenir-partenaire.html"
-          >Devenir Partenaire</a
+        <a
+          class="btn-getstarted"
+          href="devenir-partenaire.html"
+          data-i18n="nav.cta"
+          >Devenir partenaire</a
         >
       </div>
     </header>
 
     <main class="main">
       <div class="page-title light-background">
-        <div
-          class="container d-lg-flex justify-content-between align-items-center"
-        >
-          <h1 class="mb-2 mb-lg-0">Partenaires</h1>
+          <div
+            class="container d-lg-flex justify-content-between align-items-center"
+          >
+            <h1
+              class="mb-2 mb-lg-0"
+              data-i18n-fr="Partenaires"
+              data-i18n-en="Partners"
+            >
+              Partenaires
+            </h1>
           <nav class="breadcrumbs">
             <ol>
-              <li><a href="index.html">Accueil</a></li>
-              <li class="current">Partenaires</li>
+                <li>
+                  <a
+                    href="index.html"
+                    data-i18n-fr="Accueil"
+                    data-i18n-en="Home"
+                    >Accueil</a
+                  >
+                </li>
+                <li
+                  class="current"
+                  data-i18n-fr="Partenaires"
+                  data-i18n-en="Partners"
+                >
+                  Partenaires
+                </li>
             </ol>
           </nav>
         </div>
@@ -133,17 +259,25 @@
 
       <!-- ======= Partenaires Section ======= -->
       <section id="partners mt-0" class="partners section">
-        <div class="container py-4" data-aos="fade-up">
-          <div class="section-header">
-            <h2>Nos Partenaires</h2>
-            <p>
-              Le Bon Waz est fier de collaborer avec un large éventail de
-              partenaires, y compris des administrations, des ONG et des
-              entreprises locales et internationales. Ensemble, nous bâtissons
-              des solutions durables et innovantes.
-            </p>
+          <div class="container py-4" data-aos="fade-up">
+            <div class="section-header">
+              <h2
+                data-i18n-fr="Nos Partenaires"
+                data-i18n-en="Our Partners"
+              >
+                Nos Partenaires
+              </h2>
+              <p
+                data-i18n-fr="Le Bon Waz est fier de collaborer avec un large éventail de partenaires, y compris des administrations, des ONG et des entreprises locales et internationales. Ensemble, nous bâtissons des solutions durables et innovantes."
+                data-i18n-en="Le Bon Waz proudly collaborates with a wide range of partners—administrations, NGOs, and local or international companies. Together, we build sustainable and innovative solutions."
+              >
+                Le Bon Waz est fier de collaborer avec un large éventail de
+                partenaires, y compris des administrations, des ONG et des
+                entreprises locales et internationales. Ensemble, nous bâtissons
+                des solutions durables et innovantes.
+              </p>
+            </div>
           </div>
-        </div>
         <section id="clients" class="clients section light-background">
           <div class="container" data-aos="fade-up">
             <div
@@ -204,18 +338,23 @@
         <div class="container mt-4" data-aos="fade-up" data-aos-delay="100">
           <div class="row gy-4 text-center">
             <div class="col-lg-12">
-              <p>
-                Nous sommes ouverts aux collaborations avec de nouveaux
-                partenaires.
-                <br />
-                Si vous souhaitez travailler avec nous, n'hésitez pas à nous
-                contacter.
-              </p>
-              <div class="mt-4">
-                <a href="devenir-partenaire.html" class="btn btn-primary"
-                  >Devenir Partenaire</a
+                <p
+                  data-i18n-fr="Nous sommes ouverts aux collaborations avec de nouveaux partenaires. Si vous souhaitez travailler avec nous, n'hésitez pas à nous contacter."
+                  data-i18n-en="We are open to collaborating with new partners. If you would like to work with us, feel free to get in touch."
                 >
-              </div>
+                  Nous sommes ouverts aux collaborations avec de nouveaux
+                  partenaires. Si vous souhaitez travailler avec nous, n'hésitez
+                  pas à nous contacter.
+                </p>
+                <div class="mt-4">
+                  <a
+                    href="devenir-partenaire.html"
+                    class="btn btn-primary"
+                    data-i18n-fr="Devenir Partenaire"
+                    data-i18n-en="Become a Partner"
+                    >Devenir Partenaire</a
+                  >
+                </div>
             </div>
           </div>
         </div>
@@ -368,6 +507,12 @@
         </div>
       </div>
     </footer>
+
+      <div
+        class="translator-floating-toast"
+        role="status"
+        aria-live="polite"
+      ></div>
 
     <!-- Scroll Top -->
     <a
