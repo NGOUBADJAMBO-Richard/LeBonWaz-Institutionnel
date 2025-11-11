@@ -1005,6 +1005,18 @@ body[data-theme="dark"] .quote-form textarea:focus {
 @media (max-width: 992px) {
   .header {
     padding-block: 12px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1050;
+  }
+
+  #navmenu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    z-index: 1040;
   }
 
   .hero .hero-shell {
@@ -1030,6 +1042,10 @@ body[data-theme="dark"] .quote-form textarea:focus {
 
   .commitments-grid {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .main {
+    padding-top: 60px;
   }
 }
 
