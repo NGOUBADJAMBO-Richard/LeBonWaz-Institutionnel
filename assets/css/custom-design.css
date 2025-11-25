@@ -555,6 +555,7 @@ body[data-theme="dark"] .floating-badge {
   gap: 18px;
   transition: transform var(--transition-base),
     box-shadow var(--transition-base);
+  cursor: pointer;
 }
 
 .pillar-card::before {
@@ -609,6 +610,35 @@ body[data-theme="dark"] .floating-badge {
   align-items: center;
   gap: 10px;
   color: var(--accent-color);
+}
+
+/* Ensure anchors inside the card remain interactive while the card is clickable */
+.pillar-card a {
+  pointer-events: auto;
+}
+
+/* Mobile-specific tweaks to improve layout and avoid overflow */
+@media (max-width: 767px) {
+  .pillars-grid {
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .pillar-card {
+    padding: 16px;
+  }
+
+  /* Hide decorative badges on small screens to avoid overlap */
+  .badge-stack {
+    display: none;
+  }
+
+  /* Make hero visual scale nicely on narrow viewports */
+  .hero .hero-visual img {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+  }
 }
 
 body[data-theme="dark"] .pillar-card,

@@ -272,10 +272,10 @@
               </div>
               <div class="col-lg-6 hero-visual">
                 <div class="blob"></div>
-                <img
+                <!-- <img
                   src="assets/img/hero-carousel/hero-carousel-2.jpg"
                   alt="Opérations hybrides de LeBonWaz"
-                />
+                /> -->
                 <div class="badge-stack">
                   <div class="floating-badge">
                     <i class="bi bi-diagram-3"></i>
@@ -382,7 +382,7 @@
                 class="position-relative rounded-4 overflow-hidden shadow-lg"
               >
                 <img
-                  src="assets/img/services/livraison-logistique-urbaine.jpg"
+                  src="assets/img/about-portrait.jpg"
                   class="img-fluid"
                   alt="LeBonWaz en action sur le terrain gabonais"
                 />
@@ -850,6 +850,28 @@
     <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
     <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+      // Rend chaque carte de la grille 'pillars-grid' cliquable
+      // en redirigeant vers le premier lien interne (ex: services.html#...)
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".pillar-card").forEach(function (card) {
+          // set accessible role and pointer style (redundant with CSS but safe)
+          card.setAttribute("role", "link");
+          card.style.cursor = "pointer";
+
+          card.addEventListener("click", function (e) {
+            // If the user clicked on an actual link or interactive element, do nothing
+            if (e.target.closest("a") || e.target.closest("button")) return;
+
+            var a = card.querySelector("a[href]");
+            if (a && a.getAttribute("href")) {
+              window.location.href = a.getAttribute("href");
+            }
+          });
+        });
+      });
+    </script>
 
     <script src="assets/js/main.js"></script>
   </body>
