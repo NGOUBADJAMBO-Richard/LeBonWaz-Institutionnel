@@ -267,6 +267,7 @@
                 <form
                   action="https://formspree.io/f/xgvreeog"
                   method="POST"
+                  name="Formulaire de Devis"
                   class="quote-form needs-validation"
                   enctype="multipart/form-data"
                   novalidate
@@ -279,7 +280,7 @@
                       <input
                         type="text"
                         id="quoteName"
-                        name="name"
+                        name="Nom et prénom du client pour le Devis"
                         required
                         placeholder="Ex. Laure M."
                         data-i18n-placeholder="quote.form.name.placeholder"
@@ -292,7 +293,7 @@
                       <input
                         type="text"
                         id="quoteCompany"
-                        name="company"
+                        name="Organisation du Client pour le Devis"
                         placeholder="Nom de votre entreprise"
                         data-i18n-placeholder="quote.form.company.placeholder"
                       />
@@ -304,7 +305,7 @@
                       <input
                         type="email"
                         id="quoteEmail"
-                        name="email"
+                        name="Email professionnel du Client pour le Devis"
                         required
                         placeholder="nom@example.com"
                         data-i18n-placeholder="quote.form.email.placeholder"
@@ -317,7 +318,7 @@
                       <input
                         type="tel"
                         id="quotePhone"
-                        name="phone"
+                        name="Téléphone du Client pour le Devis"
                         placeholder="+241 00 00 00 00"
                         data-i18n-placeholder="quote.form.phone.placeholder"
                       />
@@ -329,7 +330,7 @@
                       <input
                         type="text"
                         id="quoteSector"
-                        name="sector"
+                        name="Secteur d'activité du Client pour le Devis"
                         placeholder="Énergie, distribution, services..."
                         data-i18n-placeholder="quote.form.sector.placeholder"
                       />
@@ -338,26 +339,48 @@
                       <label for="quoteNeed" data-i18n="quote.form.need"
                         >Type de besoin*</label
                       >
-                      <select id="quoteNeed" name="need" required>
+                      <select
+                        id="quoteNeed"
+                        name="Catégorie du Client pour le Devis"
+                        required
+                      >
                         <option value="" selected disabled>
                           Choisissez une catégorie
                         </option>
-                        <option value="commerce" data-i18n="quote.form.need.1">
+                        <option
+                          value="Marketplace & e-commerce"
+                          name="Marketplace & e-commerce"
+                          data-i18n="quote.form.need.1"
+                        >
                           Marketplace & e-commerce
                         </option>
-                        <option value="mobility" data-i18n="quote.form.need.2">
-                          Mobilité & flotte logistique
-                        </option>
-                        <option value="energy" data-i18n="quote.form.need.3">
+                        <option
+                          value="Mobilité & flotte logistique"
+                          name="Mobilité & flotte logistique"
+                          Mobilité
+                          &
+                          flotte
+                          logistique
+                        ></option>
+                        <option
+                          value="Solutions énergétiques"
+                          name="Solutions énergétiques"
+                          data-i18n="quote.form.need.3"
+                        >
                           Solutions énergétiques
                         </option>
                         <option
-                          value="procurement"
+                          value="Centrale d'achat & sourcing"
+                          name="Centrale d'achat & sourcing"
                           data-i18n="quote.form.need.4"
                         >
                           Centrale d'achat & sourcing
                         </option>
-                        <option value="other" data-i18n="quote.form.need.5">
+                        <option
+                          value="Autre projet sur mesure"
+                          name="Autre projet sur mesure"
+                          data-i18n="quote.form.need.5"
+                        >
                           Autre projet sur mesure
                         </option>
                       </select>
@@ -369,7 +392,7 @@
                       <input
                         type="text"
                         id="quoteBudget"
-                        name="budget"
+                        name="Budget estimatif du Client pour le Devis"
                         placeholder="Indiquez une estimation (optionnel)"
                         data-i18n-placeholder="quote.form.budget.placeholder"
                       />
@@ -381,7 +404,7 @@
                       <input
                         type="text"
                         id="quoteTimeline"
-                        name="timeline"
+                        name="Délai souhaité du Client pour le Devis"
                         placeholder="Ex. 4 semaines"
                         data-i18n-placeholder="quote.form.timeline.placeholder"
                       />
@@ -392,7 +415,7 @@
                       >
                       <textarea
                         id="quoteMessage"
-                        name="message"
+                        name="Décrivez votre projet pour le Devis"
                         rows="5"
                         required
                         placeholder="Partagez votre besoin, votre contexte et vos objectifs"
@@ -420,6 +443,7 @@
                           class="form-check-input"
                           type="checkbox"
                           value=""
+                          name="consent"
                           id="consent"
                           required
                         />
