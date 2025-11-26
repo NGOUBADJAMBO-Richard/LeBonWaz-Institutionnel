@@ -24,14 +24,51 @@
   /**
    * Mobile nav toggle
    */
-  const mobileNavToggleBtn = document.querySelector(".mobile-nav-toggle");
+  let mobileNavToggleBtn = document.querySelector(".mobile-nav-toggle");
+  // If a toggle isn't present in the markup on some pages, create a fallback
+  if (!mobileNavToggleBtn) {
+    const headerContainer =
+      document.querySelector("#header .container-fluid") ||
+      document.querySelector("#header");
+    if (headerContainer) {
+      const fallback = document.createElement("i");
+      fallback.className = "mobile-nav-toggle d-xl-none bi bi-list";
+      // append as last child of header container so it mirrors other pages
+      headerContainer.appendChild(fallback);
+      mobileNavToggleBtn = fallback;
+    }
+  }
+
+  if (mobileNavToggleBtn) {
+    // Improve accessibility: expose as a button and aria-expanded state
+    mobileNavToggleBtn.setAttribute("role", "button");
+    mobileNavToggleBtn.setAttribute("tabindex", "0");
+    mobileNavToggleBtn.setAttribute("aria-expanded", "false");
+  }
 
   function mobileNavToogle() {
-    document.querySelector("body").classList.toggle("mobile-nav-active");
-    mobileNavToggleBtn.classList.toggle("bi-list");
-    mobileNavToggleBtn.classList.toggle("bi-x");
+    const body = document.querySelector("body");
+    body.classList.toggle("mobile-nav-active");
+    if (mobileNavToggleBtn) {
+      mobileNavToggleBtn.classList.toggle("bi-list");
+      mobileNavToggleBtn.classList.toggle("bi-x");
+      const expanded = body.classList.contains("mobile-nav-active");
+      mobileNavToggleBtn.setAttribute(
+        "aria-expanded",
+        expanded ? "true" : "false"
+      );
+    }
   }
-  mobileNavToggleBtn.addEventListener("click", mobileNavToogle);
+  if (mobileNavToggleBtn) {
+    mobileNavToggleBtn.addEventListener("click", mobileNavToogle);
+    // support keyboard activation
+    mobileNavToggleBtn.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        mobileNavToogle();
+      }
+    });
+  }
 
   /**
    * Hide mobile nav on same-page/hash links
@@ -214,6 +251,23 @@
   }
 
   window.addEventListener("load", initSwiper);
+
+  /**
+   * Update CSS variable --header-height to match real header height
+   * so the page content and mobile overlay keep correct offsets.
+   */
+  function updateHeaderHeightVar() {
+    const header = document.querySelector(".header");
+    if (!header) return;
+    const h = header.offsetHeight || 72;
+    document.documentElement.style.setProperty("--header-height", h + "px");
+  }
+
+  window.addEventListener("load", updateHeaderHeightVar);
+  window.addEventListener("resize", function () {
+    // small timeout for layout stabilization
+    setTimeout(updateHeaderHeightVar, 100);
+  });
 
   let currentLanguage = "fr";
 

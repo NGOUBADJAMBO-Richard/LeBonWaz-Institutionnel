@@ -22,6 +22,7 @@
   --radius-md: 18px;
   --radius-sm: 12px;
   --section-spacing: clamp(64px, 8vw, 108px);
+  --header-height: 84px;
   color-scheme: light;
 }
 
@@ -83,6 +84,17 @@ body {
   border-bottom: 1px solid rgba(33, 52, 90, 0.06);
   box-shadow: var(--shadow-soft);
   padding-block: 14px;
+  /* Keep header fixed at top so it remains visible above hero */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 6000;
+}
+
+/* Ensure page content doesn't sit under the fixed header; JS will update the variable dynamically */
+.main {
+  padding-top: calc(var(--header-height) + 12px) !important;
 }
 
 body[data-theme="dark"] .header {
@@ -306,6 +318,7 @@ section,
   padding: clamp(32px, 6vw, 64px);
   position: relative;
   overflow: hidden;
+  z-index: 1; /* keep hero under the header */
 }
 
 .hero .hero-shell::after {
@@ -1034,19 +1047,74 @@ body[data-theme="dark"] .quote-form textarea:focus {
 
 @media (max-width: 992px) {
   .header {
-    padding-block: 12px;
+    padding-block: 18px; /* larger touch area on tablet/mobile */
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1050;
+    min-height: var(--header-height);
   }
 
+  /* Keep navmenu positioned normally by default on small screens.
+     The mobile overlay is handled by the `.mobile-nav-active .navmenu` rule
+     in the main stylesheet. Setting fixed here caused the menu to be
+     permanently fixed and overlapped content. */
   #navmenu {
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
+    position: relative;
+    top: auto;
+    right: auto;
+    height: auto;
     z-index: 1040;
+  }
+
+  /* Ensure the mobile toggle is above other content and easy to tap */
+  .mobile-nav-toggle {
+    z-index: 1060;
+    padding: 8px 10px;
+    touch-action: manipulation;
+  }
+
+  /* Limit mobile menu height so it never escapes the viewport */
+  .navmenu ul {
+    max-height: calc(100vh - 88px);
+  }
+
+  /* Stronger mobile overlay rules to ensure visibility across pages */
+  .mobile-nav-active .navmenu {
+    position: fixed !important;
+    inset: 0 !important;
+    background: rgba(8, 15, 31, 0.9) !important;
+    display: block !important;
+    padding-top: var(--header-height) !important; /* avoid header */
+    overflow: hidden !important;
+  }
+
+  .mobile-nav-active .navmenu > ul {
+    display: block !important;
+    position: fixed !important;
+    /* reduce side margins further so the white menu panel is noticeably wider */
+    inset: var(--header-height) 4px 12px 4px !important;
+    padding: 26px 0 !important; /* moderate increase in vertical space */
+    margin: 0 !important;
+    border-radius: 10px !important;
+    background: var(--nav-mobile-background-color) !important;
+    overflow-y: auto !important;
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.55) !important;
+    min-height: calc(50vh); /* make the menu panel larger on screen */
+    max-height: calc(100vh - var(--header-height) - 16px) !important;
+  }
+
+  /* Make menu items taller and easier to tap */
+  .navmenu a,
+  .navmenu a:focus {
+    padding: 18px 26px; /* slightly bigger touch targets */
+    font-size: 17px;
+  }
+
+  /* Ensure toggle and header are above overlay */
+  #header,
+  .mobile-nav-toggle {
+    z-index: 3000 !important;
   }
 
   .hero .hero-shell {
