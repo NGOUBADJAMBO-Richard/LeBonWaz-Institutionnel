@@ -708,8 +708,18 @@ body[data-theme="dark"] .commitment-card {
   border-color: rgba(255, 255, 255, 0.05);
 }
 
-.commitment-card body[data-theme="dark"]::before {
+/* Fix: ensure the large watermark number adapts in dark theme */
+body[data-theme="dark"] .commitment-card::before {
   color: rgba(255, 120, 79, 0.12);
+}
+
+/* Make commitment headings and paragraphs readable in dark mode */
+body[data-theme="dark"] .commitment-card h4 {
+  color: var(--heading-color);
+}
+
+body[data-theme="dark"] .commitment-card p {
+  color: var(--default-color);
 }
 
 .story-block {
