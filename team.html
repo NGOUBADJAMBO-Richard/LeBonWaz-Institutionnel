@@ -731,29 +731,29 @@
                   d'usage directement dans votre boîte mail.
                 </p>
                 <form
-                  action="forms/newsletter.php"
-                  method="post"
-                  class="php-email-form"
-                  id="newsletterForm"
-                >
-                  <div class="newsletter-form">
-                    <input
-                      type="email"
-                      name="email"
-                      placeholder="Votre email"
-                      data-i18n-placeholder="footer.newsletter.placeholder"
-                    /><input
-                      type="submit"
-                      value="S'abonner"
-                      data-i18n="footer.newsletter.cta"
-                    />
-                  </div>
-                  <div class="loading" data-i18n="form.loading">Chargement</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message" data-i18n="footer.newsletter.thanks">
-                    Votre demande d'abonnement a été envoyée. Merci&nbsp;!
-                  </div>
-                </form>
+              action="https://formspree.io/f/xgvreeog"
+              method="post"
+              class="php-email-form"
+              id="newsletterForm"
+            >
+              <div class="newsletter-form">
+                <input
+                  type="email"
+                  name="Email pour la Newsletter"
+                  placeholder="Votre email"
+                  data-i18n-placeholder="footer.newsletter.placeholder"
+                /><input
+                  type="submit"
+                  value="S'abonner"
+                  data-i18n="footer.newsletter.cta"
+                />
+              </div>
+              <div class="loading" data-i18n="form.loading">Chargement</div>
+              <div class="error-message"></div>
+              <div class="sent-message" data-i18n="footer.newsletter.thanks">
+                Votre demande d'abonnement a été envoyée. Merci&nbsp;!
+              </div>
+            </form>
               </div>
             </div>
           </div>
